@@ -50,3 +50,12 @@ src/os/windows/ottdres.rc
 !/config.lib
 !*.in
 *.tmp
+
+# Snapcraft
+parts/
+prime/
+stage/
+
+*.snap
+
+snap/.snapcraft
