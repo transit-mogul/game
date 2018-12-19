@@ -1,21 +1,19 @@
-##name English (UK)
-##ownname English (UK)
-##isocode en_GB
+##name English (US)
+##ownname English (US)
+##isocode en_US
 ##plural 0
 ##textdir ltr
 ##digitsep ,
 ##digitsepcur ,
 ##decimalsep .
-##winlangid 0x0809
-##grflangid 0x01
+##winlangid 0x0409
+##grflangid 0x00
 
 
 # $Id$
 
-# This file is part of OpenTTD.
-# OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
-# OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-# See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+# This file is part of Transit Mogul. The source code is licensed under the 
+# GPL v3. See intellectual-property.md for more information.
 
 
 ##id 0x0000
@@ -190,7 +188,7 @@ STR_COLOUR_BROWN                                                :Brown
 STR_COLOUR_GREY                                                 :Grey
 STR_COLOUR_WHITE                                                :White
 
-# Units used in OpenTTD
+# Units used in Transit Mogul
 STR_UNITS_VELOCITY_IMPERIAL                                     :{COMMA}{NBSP}mph
 STR_UNITS_VELOCITY_METRIC                                       :{COMMA}{NBSP}km/h
 STR_UNITS_VELOCITY_SI                                           :{COMMA}{NBSP}m/s
@@ -341,12 +339,12 @@ STR_TOOLBAR_TOOLTIP_BUILD_AIRPORTS                              :{BLACK}Build ai
 STR_TOOLBAR_TOOLTIP_LANDSCAPING                                 :{BLACK}Open the landscaping toolbar to raise/lower land, plant trees, etc.
 STR_TOOLBAR_TOOLTIP_SHOW_SOUND_MUSIC_WINDOW                     :{BLACK}Show sound/music window
 STR_TOOLBAR_TOOLTIP_SHOW_LAST_MESSAGE_NEWS                      :{BLACK}Show last message/news report, show message options
-STR_TOOLBAR_TOOLTIP_LAND_BLOCK_INFORMATION                      :{BLACK}Land area information, console, script debug, screenshots, about OpenTTD
+STR_TOOLBAR_TOOLTIP_LAND_BLOCK_INFORMATION                      :{BLACK}Land area information, console, script debug, screenshots, about Transit Mogul
 STR_TOOLBAR_TOOLTIP_SWITCH_TOOLBAR                              :{BLACK}Switch toolbars
 
 # Extra tooltips for the scenario editor toolbar
 STR_SCENEDIT_TOOLBAR_TOOLTIP_SAVE_SCENARIO_LOAD_SCENARIO        :{BLACK}Save scenario, load scenario, abandon scenario editor, exit
-STR_SCENEDIT_TOOLBAR_OPENTTD                                    :{YELLOW}OpenTTD
+STR_SCENEDIT_TOOLBAR_OPENTTD                                    :{YELLOW}Transit Mogul
 STR_SCENEDIT_TOOLBAR_SCENARIO_EDITOR                            :{YELLOW}Scenario Editor
 STR_SCENEDIT_TOOLBAR_TOOLTIP_MOVE_THE_STARTING_DATE_BACKWARD    :{BLACK}Move the starting date backward 1 year
 STR_SCENEDIT_TOOLBAR_TOOLTIP_MOVE_THE_STARTING_DATE_FORWARD     :{BLACK}Move the starting date forward 1 year
@@ -476,10 +474,10 @@ STR_ABOUT_MENU_ZOOMIN_SCREENSHOT                                :Fully zoomed in
 STR_ABOUT_MENU_DEFAULTZOOM_SCREENSHOT                           :Default zoom screenshot
 STR_ABOUT_MENU_GIANT_SCREENSHOT                                 :Whole map screenshot
 STR_ABOUT_MENU_SHOW_FRAMERATE                                   :Show frame rate
-STR_ABOUT_MENU_ABOUT_OPENTTD                                    :About 'OpenTTD'
+STR_ABOUT_MENU_ABOUT_OPENTTD                                    :About 'Transit Mogul'
 STR_ABOUT_MENU_SPRITE_ALIGNER                                   :Sprite aligner
 STR_ABOUT_MENU_TOGGLE_BOUNDING_BOXES                            :Toggle bounding boxes
-STR_ABOUT_MENU_TOGGLE_DIRTY_BLOCKS                              :Toggle colouring of dirty blocks
+STR_ABOUT_MENU_TOGGLE_DIRTY_BLOCKS                              :Toggle coloring of dirty blocks
 ############ range ends here
 
 ############ range for ordinal numbers used for the place in the highscore window
@@ -750,7 +748,7 @@ STR_SMALLMAP_LEGENDA_DESERT                                     :{TINY_FONT}{BLA
 STR_SMALLMAP_LEGENDA_SNOW                                       :{TINY_FONT}{BLACK}Snow
 
 STR_SMALLMAP_TOOLTIP_TOGGLE_TOWN_NAMES_ON_OFF                   :{BLACK}Toggle town names on/off on map
-STR_SMALLMAP_CENTER                                             :{BLACK}Centre the smallmap on the current position
+STR_SMALLMAP_CENTER                                             :{BLACK}Center the minimap on the current position
 STR_SMALLMAP_INDUSTRY                                           :{TINY_FONT}{STRING} ({NUM})
 STR_SMALLMAP_LINKSTATS                                          :{TINY_FONT}{STRING}
 STR_SMALLMAP_COMPANY                                            :{TINY_FONT}{COMPANY}
@@ -978,7 +976,7 @@ STR_GAME_OPTIONS_LANGUAGE                                       :{BLACK}Language
 STR_GAME_OPTIONS_LANGUAGE_TOOLTIP                               :{BLACK}Select the interface language to use
 
 STR_GAME_OPTIONS_FULLSCREEN                                     :{BLACK}Fullscreen
-STR_GAME_OPTIONS_FULLSCREEN_TOOLTIP                             :{BLACK}Check this box to play OpenTTD fullscreen mode
+STR_GAME_OPTIONS_FULLSCREEN_TOOLTIP                             :{BLACK}Check this box to play Transit Mogul fullscreen mode
 
 STR_GAME_OPTIONS_RESOLUTION                                     :{BLACK}Screen resolution
 STR_GAME_OPTIONS_RESOLUTION_TOOLTIP                             :{BLACK}Select the screen resolution to use
@@ -1140,7 +1138,7 @@ STR_CONFIG_SETTING_ORIGINAL                                     :Original
 STR_CONFIG_SETTING_REALISTIC                                    :Realistic
 
 STR_CONFIG_SETTING_HORIZONTAL_POS_LEFT                          :Left
-STR_CONFIG_SETTING_HORIZONTAL_POS_CENTER                        :Centre
+STR_CONFIG_SETTING_HORIZONTAL_POS_CENTER                        :Center
 STR_CONFIG_SETTING_HORIZONTAL_POS_RIGHT                         :Right
 
 STR_CONFIG_SETTING_MAXIMUM_INITIAL_LOAN                         :Maximum initial loan: {STRING2}
@@ -1721,7 +1719,7 @@ STR_CONFIG_ERROR_INVALID_GRF                                    :{WHITE}... igno
 STR_CONFIG_ERROR_INVALID_GRF_NOT_FOUND                          :not found
 STR_CONFIG_ERROR_INVALID_GRF_UNSAFE                             :unsafe for static use
 STR_CONFIG_ERROR_INVALID_GRF_SYSTEM                             :system NewGRF
-STR_CONFIG_ERROR_INVALID_GRF_INCOMPATIBLE                       :incompatible to this version of OpenTTD
+STR_CONFIG_ERROR_INVALID_GRF_INCOMPATIBLE                       :incompatible to this version of Transit Mogul
 STR_CONFIG_ERROR_INVALID_GRF_UNKNOWN                            :unknown
 STR_CONFIG_ERROR_INVALID_SAVEGAME_COMPRESSION_LEVEL             :{WHITE}... compression level '{RAW_STRING}' is not valid
 STR_CONFIG_ERROR_INVALID_SAVEGAME_COMPRESSION_ALGORITHM         :{WHITE}... savegame format '{RAW_STRING}' is not available. Reverting to '{RAW_STRING}'
@@ -1729,10 +1727,10 @@ STR_CONFIG_ERROR_INVALID_BASE_GRAPHICS_NOT_FOUND                :{WHITE}... igno
 STR_CONFIG_ERROR_INVALID_BASE_SOUNDS_NOT_FOUND                  :{WHITE}... ignoring Base Sounds set '{RAW_STRING}': not found
 STR_CONFIG_ERROR_INVALID_BASE_MUSIC_NOT_FOUND                   :{WHITE}... ignoring Base Music set '{RAW_STRING}': not found
 STR_CONFIG_ERROR_OUT_OF_MEMORY                                  :{WHITE}Out of memory
-STR_CONFIG_ERROR_SPRITECACHE_TOO_BIG                            :{WHITE}Allocating {BYTES} of spritecache failed. The spritecache was reduced to {BYTES}. This will reduce the performance of OpenTTD. To reduce memory requirements you can try to disable 32bpp graphics and/or zoom-in levels
+STR_CONFIG_ERROR_SPRITECACHE_TOO_BIG                            :{WHITE}Allocating {BYTES} of spritecache failed. The spritecache was reduced to {BYTES}. This will reduce the performance of Transit Mogul. To reduce memory requirements you can try to disable 32bpp graphics and/or zoom-in levels
 
 # Intro window
-STR_INTRO_CAPTION                                               :{WHITE}OpenTTD {REV}
+STR_INTRO_CAPTION                                               :{WHITE}Transit Mogul {REV}
 
 STR_INTRO_NEW_GAME                                              :{BLACK}New Game
 STR_INTRO_LOAD_GAME                                             :{BLACK}Load Game
@@ -1767,14 +1765,14 @@ STR_INTRO_TOOLTIP_CONFIG_SETTINGS_TREE                          :{BLACK}Display 
 STR_INTRO_TOOLTIP_NEWGRF_SETTINGS                               :{BLACK}Display NewGRF settings
 STR_INTRO_TOOLTIP_ONLINE_CONTENT                                :{BLACK}Check for new and updated content to download
 STR_INTRO_TOOLTIP_SCRIPT_SETTINGS                               :{BLACK}Display AI/Game script settings
-STR_INTRO_TOOLTIP_QUIT                                          :{BLACK}Exit 'OpenTTD'
+STR_INTRO_TOOLTIP_QUIT                                          :{BLACK}Exit 'Transit Mogul'
 
 STR_INTRO_BASESET                                               :{BLACK}The currently selected base graphics set is missing {NUM} sprite{P "" s}. Please check for updates for the baseset.
-STR_INTRO_TRANSLATION                                           :{BLACK}This translation misses {NUM} string{P "" s}. Please help make OpenTTD better by signing up as translator. See readme.txt for details.
+STR_INTRO_TRANSLATION                                           :{BLACK}This translation misses {NUM} string{P "" s}. Please help make Transit Mogul better by signing up as translator. See readme.txt for details.
 
 # Quit window
 STR_QUIT_CAPTION                                                :{WHITE}Exit
-STR_QUIT_ARE_YOU_SURE_YOU_WANT_TO_EXIT_OPENTTD                  :{YELLOW}Are you sure you want to exit OpenTTD and return to {STRING}?
+STR_QUIT_ARE_YOU_SURE_YOU_WANT_TO_EXIT_OPENTTD                  :{YELLOW}Are you sure you want to exit Transit Mogul and return to {STRING}?
 STR_QUIT_YES                                                    :{BLACK}Yes
 STR_QUIT_NO                                                     :{BLACK}No
 
@@ -1867,16 +1865,16 @@ STR_FACE_ADVANCED_TOOLTIP                                       :{BLACK}Advanced
 STR_FACE_SIMPLE                                                 :{BLACK}Simple
 STR_FACE_SIMPLE_TOOLTIP                                         :{BLACK}Simple face selection
 STR_FACE_LOAD                                                   :{BLACK}Load
-STR_FACE_LOAD_TOOLTIP                                           :{BLACK}Load favourite face
-STR_FACE_LOAD_DONE                                              :{WHITE}Your favourite face has been loaded from the OpenTTD configuration file
+STR_FACE_LOAD_TOOLTIP                                           :{BLACK}Load favorite face
+STR_FACE_LOAD_DONE                                              :{WHITE}Your favorite face has been loaded from the Transit Mogul configuration file
 STR_FACE_FACECODE                                               :{BLACK}Player face no.
 STR_FACE_FACECODE_TOOLTIP                                       :{BLACK}View and/or set face number of the company president
 STR_FACE_FACECODE_CAPTION                                       :{WHITE}View and/or set president face number
 STR_FACE_FACECODE_SET                                           :{WHITE}New face number code has been set
 STR_FACE_FACECODE_ERR                                           :{WHITE}Couldn't set president face number - must be a number between 0 and 4,294,967,295!
 STR_FACE_SAVE                                                   :{BLACK}Save
-STR_FACE_SAVE_TOOLTIP                                           :{BLACK}Save favourite face
-STR_FACE_SAVE_DONE                                              :{WHITE}This face will be saved as your favourite in the OpenTTD configuration file
+STR_FACE_SAVE_TOOLTIP                                           :{BLACK}Save favorite face
+STR_FACE_SAVE_DONE                                              :{WHITE}This face will be saved as your favorite in the Transit Mogul configuration file
 STR_FACE_EUROPEAN                                               :{BLACK}European
 STR_FACE_SELECT_EUROPEAN                                        :{BLACK}Select European faces
 STR_FACE_AFRICAN                                                :{BLACK}African
@@ -2214,9 +2212,9 @@ STR_CONTENT_SELECT_UPDATES_CAPTION_TOOLTIP                      :{BLACK}Mark all
 STR_CONTENT_UNSELECT_ALL_CAPTION                                :{BLACK}Unselect all
 STR_CONTENT_UNSELECT_ALL_CAPTION_TOOLTIP                        :{BLACK}Mark all content to be not downloaded
 STR_CONTENT_SEARCH_EXTERNAL                                     :{BLACK}Search external websites
-STR_CONTENT_SEARCH_EXTERNAL_TOOLTIP                             :{BLACK}Search content not available on OpenTTD's content service on websites not associated to OpenTTD
-STR_CONTENT_SEARCH_EXTERNAL_DISCLAIMER_CAPTION                  :{WHITE}You are leaving OpenTTD!
-STR_CONTENT_SEARCH_EXTERNAL_DISCLAIMER                          :{WHITE}The terms and conditions for downloading content from external websites vary.{}You will have to refer to the external sites for instructions how to install the content into OpenTTD.{}Do you want to continue?
+STR_CONTENT_SEARCH_EXTERNAL_TOOLTIP                             :{BLACK}Search content not available on Transit Mogul's content service on websites not associated to Transit Mogul
+STR_CONTENT_SEARCH_EXTERNAL_DISCLAIMER_CAPTION                  :{WHITE}You are leaving Transit Mogul!
+STR_CONTENT_SEARCH_EXTERNAL_DISCLAIMER                          :{WHITE}The terms and conditions for downloading content from external websites vary.{}You will have to refer to the external sites for instructions how to install the content into Transit Mogul.{}Do you want to continue?
 STR_CONTENT_FILTER_TITLE                                        :{BLACK}Tag/name filter:
 STR_CONTENT_OPEN_URL                                            :{BLACK}Visit website
 STR_CONTENT_OPEN_URL_TOOLTIP                                    :{BLACK}Visit the website for this content
@@ -2228,7 +2226,7 @@ STR_CONTENT_DETAIL_SUBTITLE_UNSELECTED                          :{SILVER}You hav
 STR_CONTENT_DETAIL_SUBTITLE_SELECTED                            :{SILVER}You have selected this to be downloaded
 STR_CONTENT_DETAIL_SUBTITLE_AUTOSELECTED                        :{SILVER}This dependency has been selected to be downloaded
 STR_CONTENT_DETAIL_SUBTITLE_ALREADY_HERE                        :{SILVER}You already have this
-STR_CONTENT_DETAIL_SUBTITLE_DOES_NOT_EXIST                      :{SILVER}This content is unknown and can't be downloaded in OpenTTD
+STR_CONTENT_DETAIL_SUBTITLE_DOES_NOT_EXIST                      :{SILVER}This content is unknown and can't be downloaded in Transit Mogul
 STR_CONTENT_DETAIL_UPDATE                                       :{SILVER}This is a replacement for an existing {STRING}
 STR_CONTENT_DETAIL_NAME                                         :{SILVER}Name: {WHITE}{RAW_STRING}
 STR_CONTENT_DETAIL_VERSION                                      :{SILVER}Version: {WHITE}{RAW_STRING}
@@ -2239,7 +2237,7 @@ STR_CONTENT_DETAIL_FILESIZE                                     :{SILVER}Downloa
 STR_CONTENT_DETAIL_SELECTED_BECAUSE_OF                          :{SILVER}Selected because of: {WHITE}{RAW_STRING}
 STR_CONTENT_DETAIL_DEPENDENCIES                                 :{SILVER}Dependencies: {WHITE}{RAW_STRING}
 STR_CONTENT_DETAIL_TAGS                                         :{SILVER}Tags: {WHITE}{RAW_STRING}
-STR_CONTENT_NO_ZLIB                                             :{WHITE}OpenTTD is built without "zlib" support...
+STR_CONTENT_NO_ZLIB                                             :{WHITE}Transit Mogul is built without "zlib" support...
 STR_CONTENT_NO_ZLIB_SUB                                         :{WHITE}... downloading content is not possible!
 
 # Order of these is important!
@@ -2269,9 +2267,9 @@ STR_CONTENT_ERROR_COULD_NOT_DOWNLOAD_FILE_NOT_WRITABLE          :{WHITE}... file
 STR_CONTENT_ERROR_COULD_NOT_EXTRACT                             :{WHITE}Could not decompress the downloaded file
 
 STR_MISSING_GRAPHICS_SET_CAPTION                                :{WHITE}Missing graphics
-STR_MISSING_GRAPHICS_SET_MESSAGE                                :{BLACK}OpenTTD requires graphics to function but none could be found. Do you allow OpenTTD to download and install these graphics?
+STR_MISSING_GRAPHICS_SET_MESSAGE                                :{BLACK}Transit Mogul requires graphics to function but none could be found. Do you allow Transit Mogul to download and install these graphics?
 STR_MISSING_GRAPHICS_YES_DOWNLOAD                               :{BLACK}Yes, download the graphics
-STR_MISSING_GRAPHICS_NO_QUIT                                    :{BLACK}No, exit OpenTTD
+STR_MISSING_GRAPHICS_NO_QUIT                                    :{BLACK}No, exit Transit Mogul
 
 # Transparency settings window
 STR_TRANSPARENCY_CAPTION                                        :{WHITE}Transparency Options
@@ -2694,11 +2692,11 @@ STR_LAI_OBJECT_DESCRIPTION_LIGHTHOUSE                           :Lighthouse
 STR_LAI_OBJECT_DESCRIPTION_COMPANY_HEADQUARTERS                 :Company headquarters
 STR_LAI_OBJECT_DESCRIPTION_COMPANY_OWNED_LAND                   :Company-owned land
 
-# About OpenTTD window
-STR_ABOUT_OPENTTD                                               :{WHITE}About OpenTTD
+# About Transit Mogul window
+STR_ABOUT_OPENTTD                                               :{WHITE}About Transit Mogul
 STR_ABOUT_ORIGINAL_COPYRIGHT                                    :{BLACK}Original copyright {COPYRIGHT} 1995 Chris Sawyer, All rights reserved
-STR_ABOUT_VERSION                                               :{BLACK}OpenTTD version {REV}
-STR_ABOUT_COPYRIGHT_OPENTTD                                     :{BLACK}OpenTTD {COPYRIGHT} 2002-2018 The OpenTTD team
+STR_ABOUT_VERSION                                               :{BLACK}Transit Mogul version {REV}
+STR_ABOUT_COPYRIGHT_OPENTTD                                     :{BLACK}Transit Mogul {COPYRIGHT} 2002-2018 The Transit Mogul team
 
 # Framerate display window
 STR_FRAMERATE_CAPTION                                           :{WHITE}Frame rate
@@ -2895,7 +2893,7 @@ STR_NEWGRF_SETTINGS_PARAMETER                                   :{BLACK}Paramete
 STR_NEWGRF_SETTINGS_NO_INFO                                     :{BLACK}No information available
 STR_NEWGRF_SETTINGS_NOT_FOUND                                   :{RED}Matching file not found
 STR_NEWGRF_SETTINGS_DISABLED                                    :{RED}Disabled
-STR_NEWGRF_SETTINGS_INCOMPATIBLE                                :{RED}Incompatible with this version of OpenTTD
+STR_NEWGRF_SETTINGS_INCOMPATIBLE                                :{RED}Incompatible with this version of Transit Mogul
 
 # NewGRF save preset window
 STR_SAVE_PRESET_CAPTION                                         :{WHITE}Save preset
@@ -2952,13 +2950,13 @@ STR_NEWGRF_ERROR_MSG_WARNING                                    :{RED}Warning: {
 STR_NEWGRF_ERROR_MSG_ERROR                                      :{RED}Error: {SILVER}{RAW_STRING}
 STR_NEWGRF_ERROR_MSG_FATAL                                      :{RED}Fatal: {SILVER}{RAW_STRING}
 STR_NEWGRF_ERROR_FATAL_POPUP                                    :{WHITE}A fatal NewGRF error has occurred: {}{STRING5}
-STR_NEWGRF_ERROR_VERSION_NUMBER                                 :{1:RAW_STRING} will not work with the TTDPatch version reported by OpenTTD
+STR_NEWGRF_ERROR_VERSION_NUMBER                                 :{1:RAW_STRING} will not work with the TTDPatch version reported by Transit Mogul
 STR_NEWGRF_ERROR_DOS_OR_WINDOWS                                 :{1:RAW_STRING} is for the {RAW_STRING} version of TTD
 STR_NEWGRF_ERROR_UNSET_SWITCH                                   :{1:RAW_STRING} is designed to be used with {RAW_STRING}
 STR_NEWGRF_ERROR_INVALID_PARAMETER                              :Invalid parameter for {1:RAW_STRING}: parameter {RAW_STRING} ({NUM})
 STR_NEWGRF_ERROR_LOAD_BEFORE                                    :{1:RAW_STRING} must be loaded before {RAW_STRING}
 STR_NEWGRF_ERROR_LOAD_AFTER                                     :{1:RAW_STRING} must be loaded after {RAW_STRING}
-STR_NEWGRF_ERROR_OTTD_VERSION_NUMBER                            :{1:RAW_STRING} requires OpenTTD version {RAW_STRING} or better
+STR_NEWGRF_ERROR_OTTD_VERSION_NUMBER                            :{1:RAW_STRING} requires Transit Mogul version {RAW_STRING} or better
 STR_NEWGRF_ERROR_AFTER_TRANSLATED_FILE                          :the GRF file it was designed to translate
 STR_NEWGRF_ERROR_TOO_MANY_NEWGRFS_LOADED                        :Too many NewGRFs are loaded
 STR_NEWGRF_ERROR_STATIC_GRF_CAUSES_DESYNC                       :Loading {1:RAW_STRING} as static NewGRF with {RAW_STRING} could cause desyncs
@@ -2976,7 +2974,7 @@ STR_NEWGRF_ERROR_INDPROD_CALLBACK                               :Invalid industr
 
 # NewGRF related 'general' warnings
 STR_NEWGRF_POPUP_CAUTION_CAPTION                                :{WHITE}Caution!
-STR_NEWGRF_CONFIRMATION_TEXT                                    :{YELLOW}You are about to make changes to a running game. This can crash OpenTTD or break the game state. Do not file bug reports about these issues.{}Are you absolutely sure about this?
+STR_NEWGRF_CONFIRMATION_TEXT                                    :{YELLOW}You are about to make changes to a running game. This can crash Transit Mogul or break the game state. Do not file bug reports about these issues.{}Are you absolutely sure about this?
 
 STR_NEWGRF_DUPLICATE_GRFID                                      :{WHITE}Can't add file: duplicate GRF ID
 STR_NEWGRF_COMPATIBLE_LOADED                                    :{ORANGE}Matching file not found (compatible GRF loaded)
@@ -2985,7 +2983,7 @@ STR_NEWGRF_TOO_MANY_NEWGRFS                                     :{WHITE}Can't ad
 STR_NEWGRF_COMPATIBLE_LOAD_WARNING                              :{WHITE}Compatible GRF(s) loaded for missing files
 STR_NEWGRF_DISABLED_WARNING                                     :{WHITE}Missing GRF file(s) have been disabled
 STR_NEWGRF_UNPAUSE_WARNING_TITLE                                :{YELLOW}Missing GRF file(s)
-STR_NEWGRF_UNPAUSE_WARNING                                      :{WHITE}Unpausing can crash OpenTTD. Do not file bug reports for subsequent crashes.{}Do you really want to unpause?
+STR_NEWGRF_UNPAUSE_WARNING                                      :{WHITE}Unpausing can crash Transit Mogul. Do not file bug reports for subsequent crashes.{}Do you really want to unpause?
 
 # NewGRF status
 STR_NEWGRF_LIST_NONE                                            :None
@@ -3038,7 +3036,7 @@ STR_TOWN_DIRECTORY_CAPTION                                      :{WHITE}Towns
 STR_TOWN_DIRECTORY_NONE                                         :{ORANGE}- None -
 STR_TOWN_DIRECTORY_TOWN                                         :{ORANGE}{TOWN}{BLACK} ({COMMA})
 STR_TOWN_DIRECTORY_CITY                                         :{ORANGE}{TOWN}{YELLOW} (City){BLACK} ({COMMA})
-STR_TOWN_DIRECTORY_LIST_TOOLTIP                                 :{BLACK}Town names - click on name to centre main view on town. Ctrl+Click opens a new viewport on town location
+STR_TOWN_DIRECTORY_LIST_TOOLTIP                                 :{BLACK}Town names - click on name to center main view on town. Ctrl+Click opens a new viewport on town location
 STR_TOWN_POPULATION                                             :{BLACK}World population: {COMMA}
 
 # Town view window
@@ -3056,7 +3054,7 @@ STR_TOWN_VIEW_TOWN_GROWS_EVERY                                  :{BLACK}Town gro
 STR_TOWN_VIEW_TOWN_GROWS_EVERY_FUNDED                           :{BLACK}Town grows every {ORANGE}{COMMA}{BLACK}{NBSP}day{P "" s} (funded)
 STR_TOWN_VIEW_TOWN_GROW_STOPPED                                 :{BLACK}Town is {RED}not{BLACK} growing
 STR_TOWN_VIEW_NOISE_IN_TOWN                                     :{BLACK}Noise limit in town: {ORANGE}{COMMA}{BLACK}  max: {ORANGE}{COMMA}
-STR_TOWN_VIEW_CENTER_TOOLTIP                                    :{BLACK}Centre the main view on town location. Ctrl+Click opens a new viewport on town location
+STR_TOWN_VIEW_CENTER_TOOLTIP                                    :{BLACK}Center the main view on town location. Ctrl+Click opens a new viewport on town location
 STR_TOWN_VIEW_LOCAL_AUTHORITY_BUTTON                            :{BLACK}Local authority
 STR_TOWN_VIEW_LOCAL_AUTHORITY_TOOLTIP                           :{BLACK}Show information on local authority
 STR_TOWN_VIEW_RENAME_TOOLTIP                                    :{BLACK}Change town name
@@ -3105,7 +3103,7 @@ STR_GOALS_SPECTATOR_NONE                                        :{ORANGE}- Not a
 STR_GOALS_PROGRESS                                              :{ORANGE}{RAW_STRING}
 STR_GOALS_PROGRESS_COMPLETE                                     :{GREEN}{RAW_STRING}
 STR_GOALS_COMPANY_TITLE                                         :{BLACK}Company goals:
-STR_GOALS_TOOLTIP_CLICK_ON_SERVICE_TO_CENTER                    :{BLACK}Click on goal to centre main view on industry/town/tile. Ctrl+Click opens a new viewport on industry/town/tile location
+STR_GOALS_TOOLTIP_CLICK_ON_SERVICE_TO_CENTER                    :{BLACK}Click on goal to center main view on industry/town/tile. Ctrl+Click opens a new viewport on industry/town/tile location
 
 # Goal question window
 STR_GOAL_QUESTION_CAPTION_QUESTION                              :Question
@@ -3141,7 +3139,7 @@ STR_SUBSIDIES_OFFERED_FROM_TO                                   :{ORANGE}{STRING
 STR_SUBSIDIES_NONE                                              :{ORANGE}- None -
 STR_SUBSIDIES_SUBSIDISED_TITLE                                  :{BLACK}Services already subsidised:
 STR_SUBSIDIES_SUBSIDISED_FROM_TO                                :{ORANGE}{STRING} from {STRING2} to {STRING2}{YELLOW} ({COMPANY}{YELLOW}, until {DATE_SHORT})
-STR_SUBSIDIES_TOOLTIP_CLICK_ON_SERVICE_TO_CENTER                :{BLACK}Click on service to centre main view on industry/town. Ctrl+Click opens a new viewport on industry/town location
+STR_SUBSIDIES_TOOLTIP_CLICK_ON_SERVICE_TO_CENTER                :{BLACK}Click on service to center main view on industry/town. Ctrl+Click opens a new viewport on industry/town location
 
 # Story book window
 STR_STORY_BOOK_CAPTION                                          :{WHITE}{COMPANY} Story Book
@@ -3156,7 +3154,7 @@ STR_STORY_BOOK_NEXT_PAGE_TOOLTIP                                :{BLACK}Go to ne
 STR_STORY_BOOK_INVALID_GOAL_REF                                 :{RED}Invalid goal reference
 
 # Station list window
-STR_STATION_LIST_TOOLTIP                                        :{BLACK}Station names - click on name to centre main view on station. Ctrl+Click opens a new viewport on station location
+STR_STATION_LIST_TOOLTIP                                        :{BLACK}Station names - click on name to center main view on station. Ctrl+Click opens a new viewport on station location
 STR_STATION_LIST_USE_CTRL_TO_SELECT_MORE                        :{BLACK}Hold Ctrl to select more than one item
 STR_STATION_LIST_CAPTION                                        :{WHITE}{COMPANY} - {COMMA} Station{P "" s}
 STR_STATION_LIST_STATION                                        :{YELLOW}{STATION} {STATION_FEATURES}
@@ -3218,7 +3216,7 @@ STR_CARGO_RATING_EXCELLENT                                      :Excellent
 STR_CARGO_RATING_OUTSTANDING                                    :Outstanding
 ############ range for rating ends
 
-STR_STATION_VIEW_CENTER_TOOLTIP                                 :{BLACK}Centre main view on station location. Ctrl+Click opens a new viewport on station location
+STR_STATION_VIEW_CENTER_TOOLTIP                                 :{BLACK}Center main view on station location. Ctrl+Click opens a new viewport on station location
 STR_STATION_VIEW_RENAME_TOOLTIP                                 :{BLACK}Change name of station
 
 STR_STATION_VIEW_SCHEDULED_TRAINS_TOOLTIP                       :{BLACK}Show all trains which have this station on their schedule
@@ -3233,9 +3231,9 @@ STR_STATION_VIEW_CLOSE_AIRPORT_TOOLTIP                          :{BLACK}Prevent 
 
 # Waypoint/buoy view window
 STR_WAYPOINT_VIEW_CAPTION                                       :{WHITE}{WAYPOINT}
-STR_WAYPOINT_VIEW_CENTER_TOOLTIP                                :{BLACK}Centre main view on waypoint location. Ctrl+Click opens a new viewport on waypoint location
+STR_WAYPOINT_VIEW_CENTER_TOOLTIP                                :{BLACK}Center main view on waypoint location. Ctrl+Click opens a new viewport on waypoint location
 STR_WAYPOINT_VIEW_CHANGE_WAYPOINT_NAME                          :{BLACK}Change waypoint name
-STR_BUOY_VIEW_CENTER_TOOLTIP                                    :{BLACK}Centre main view on buoy location. Ctrl+Click opens a new viewport on buoy location
+STR_BUOY_VIEW_CENTER_TOOLTIP                                    :{BLACK}Center main view on buoy location. Ctrl+Click opens a new viewport on buoy location
 STR_BUOY_VIEW_CHANGE_BUOY_NAME                                  :{BLACK}Change buoy name
 
 STR_EDIT_WAYPOINT_NAME                                          :{WHITE}Edit waypoint name
@@ -3340,13 +3338,13 @@ STR_INDUSTRY_DIRECTORY_NONE                                     :{ORANGE}- None 
 STR_INDUSTRY_DIRECTORY_ITEM                                     :{ORANGE}{INDUSTRY}{BLACK} ({CARGO_LONG}{RAW_STRING}){YELLOW} ({COMMA}% transported)
 STR_INDUSTRY_DIRECTORY_ITEM_TWO                                 :{ORANGE}{INDUSTRY}{BLACK} ({CARGO_LONG}{RAW_STRING}/{CARGO_LONG}{RAW_STRING}){YELLOW} ({COMMA}%/{COMMA}% transported)
 STR_INDUSTRY_DIRECTORY_ITEM_NOPROD                              :{ORANGE}{INDUSTRY}
-STR_INDUSTRY_DIRECTORY_LIST_CAPTION                             :{BLACK}Industry names - click on name to centre main view on industry. Ctrl+Click opens a new viewport on industry location
+STR_INDUSTRY_DIRECTORY_LIST_CAPTION                             :{BLACK}Industry names - click on name to center main view on industry. Ctrl+Click opens a new viewport on industry location
 
 # Industry view
 STR_INDUSTRY_VIEW_CAPTION                                       :{WHITE}{INDUSTRY}
 STR_INDUSTRY_VIEW_PRODUCTION_LAST_MONTH_TITLE                   :{BLACK}Production last month:
 STR_INDUSTRY_VIEW_TRANSPORTED                                   :{YELLOW}{CARGO_LONG}{RAW_STRING}{BLACK} ({COMMA}% transported)
-STR_INDUSTRY_VIEW_LOCATION_TOOLTIP                              :{BLACK}Centre the main view on industry location. Ctrl+Click opens a new viewport on industry location
+STR_INDUSTRY_VIEW_LOCATION_TOOLTIP                              :{BLACK}Center the main view on industry location. Ctrl+Click opens a new viewport on industry location
 STR_INDUSTRY_VIEW_PRODUCTION_LEVEL                              :{BLACK}Production level: {YELLOW}{COMMA}%
 STR_INDUSTRY_VIEW_INDUSTRY_ANNOUNCED_CLOSURE                    :{YELLOW}The industry has announced imminent closure!
 
@@ -3563,10 +3561,10 @@ STR_DEPOT_CLONE_ROAD_VEHICLE_DEPOT_INFO                         :{BLACK}This wil
 STR_DEPOT_CLONE_SHIP_DEPOT_INFO                                 :{BLACK}This will buy a copy of a ship. Click this button and then on a ship inside or outside the depot. Ctrl+Click will share the orders. Shift+Click shows estimated cost without purchase
 STR_DEPOT_CLONE_AIRCRAFT_INFO_HANGAR_WINDOW                     :{BLACK}This will buy a copy of an aircraft. Click this button and then on an aircraft inside or outside the hangar. Ctrl+Click will share the orders. Shift+Click shows estimated cost without purchase
 
-STR_DEPOT_TRAIN_LOCATION_TOOLTIP                                :{BLACK}Centre main view on train depot location. Ctrl+Click opens a new viewport on train depot location
-STR_DEPOT_ROAD_VEHICLE_LOCATION_TOOLTIP                         :{BLACK}Centre main view on road vehicle depot location. Ctrl+Click opens a new viewport on road depot location
-STR_DEPOT_SHIP_LOCATION_TOOLTIP                                 :{BLACK}Centre main view on ship depot location. Ctrl+Click opens a new viewport on ship depot location
-STR_DEPOT_AIRCRAFT_LOCATION_TOOLTIP                             :{BLACK}Centre main view on hangar location. Ctrl+Click opens a new viewport on hangar location
+STR_DEPOT_TRAIN_LOCATION_TOOLTIP                                :{BLACK}Center main view on train depot location. Ctrl+Click opens a new viewport on train depot location
+STR_DEPOT_ROAD_VEHICLE_LOCATION_TOOLTIP                         :{BLACK}Center main view on road vehicle depot location. Ctrl+Click opens a new viewport on road depot location
+STR_DEPOT_SHIP_LOCATION_TOOLTIP                                 :{BLACK}Center main view on ship depot location. Ctrl+Click opens a new viewport on ship depot location
+STR_DEPOT_AIRCRAFT_LOCATION_TOOLTIP                             :{BLACK}Center main view on hangar location. Ctrl+Click opens a new viewport on hangar location
 
 STR_DEPOT_VEHICLE_ORDER_LIST_TRAIN_TOOLTIP                      :{BLACK}Get a list of all trains with the current depot in their orders
 STR_DEPOT_VEHICLE_ORDER_LIST_ROAD_VEHICLE_TOOLTIP               :{BLACK}Get a list of all road vehicles with the current depot in their orders
@@ -3646,10 +3644,10 @@ STR_REPLACE_REMOVE_WAGON_HELP                                   :{BLACK}Make aut
 # Vehicle view
 STR_VEHICLE_VIEW_CAPTION                                        :{WHITE}{VEHICLE}
 
-STR_VEHICLE_VIEW_TRAIN_LOCATION_TOOLTIP                         :{BLACK}Centre main view on train's location. Ctrl+Click will follow train in main view
-STR_VEHICLE_VIEW_ROAD_VEHICLE_LOCATION_TOOLTIP                  :{BLACK}Centre main view on vehicle's location. Ctrl+Click will follow vehicle in main view
-STR_VEHICLE_VIEW_SHIP_LOCATION_TOOLTIP                          :{BLACK}Centre main view on ship's location. Ctrl+Click will follow ship in main view
-STR_VEHICLE_VIEW_AIRCRAFT_LOCATION_TOOLTIP                      :{BLACK}Centre main view on aircraft's location. Ctrl+Click will follow aircraft in main view
+STR_VEHICLE_VIEW_TRAIN_LOCATION_TOOLTIP                         :{BLACK}Center main view on train's location. Ctrl+Click will follow train in main view
+STR_VEHICLE_VIEW_ROAD_VEHICLE_LOCATION_TOOLTIP                  :{BLACK}Center main view on vehicle's location. Ctrl+Click will follow vehicle in main view
+STR_VEHICLE_VIEW_SHIP_LOCATION_TOOLTIP                          :{BLACK}Center main view on ship's location. Ctrl+Click will follow ship in main view
+STR_VEHICLE_VIEW_AIRCRAFT_LOCATION_TOOLTIP                      :{BLACK}Center main view on aircraft's location. Ctrl+Click will follow aircraft in main view
 
 STR_VEHICLE_VIEW_TRAIN_SEND_TO_DEPOT_TOOLTIP                    :{BLACK}Send train to depot. Ctrl+Click will only service
 STR_VEHICLE_VIEW_ROAD_VEHICLE_SEND_TO_DEPOT_TOOLTIP             :{BLACK}Send vehicle to depot. Ctrl+Click will only service
@@ -4245,7 +4243,7 @@ STR_ERROR_NO_SPACE_FOR_TOWN                                     :{WHITE}... ther
 STR_ERROR_TOWN_EXPAND_WARN_NO_ROADS                             :{WHITE}The town will not build roads. You can enable building of roads via Settings->Environment->Towns
 STR_ERROR_ROAD_WORKS_IN_PROGRESS                                :{WHITE}Road works in progress
 STR_ERROR_TOWN_CAN_T_DELETE                                     :{WHITE}Can't delete this town...{}A station or depot is referring to the town or a town owned tile can't be removed
-STR_ERROR_STATUE_NO_SUITABLE_PLACE                              :{WHITE}... there is no suitable place for a statue in the centre of this town
+STR_ERROR_STATUE_NO_SUITABLE_PLACE                              :{WHITE}... there is no suitable place for a statue in the center of this town
 
 # Industry related errors
 STR_ERROR_TOO_MANY_INDUSTRIES                                   :{WHITE}... too many industries
@@ -4532,7 +4530,7 @@ STR_ERROR_CAN_T_PLACE_SIGN_HERE                                 :{WHITE}Can't pl
 STR_ERROR_CAN_T_CHANGE_SIGN_NAME                                :{WHITE}Can't change sign name...
 STR_ERROR_CAN_T_DELETE_SIGN                                     :{WHITE}Can't delete sign...
 
-# Translatable comment for OpenTTD's desktop shortcut
+# Translatable comment for Transit Mogul's desktop shortcut
 STR_DESKTOP_SHORTCUT_COMMENT                                    :A simulation game based on Transport Tycoon Deluxe
 
 # Translatable descriptions in media/baseset/*.ob* files
@@ -4577,7 +4575,7 @@ STR_TOWN_BUILDING_NAME_STADIUM_2                                :Stadium
 STR_TOWN_BUILDING_NAME_OFFICES_1                                :Offices
 STR_TOWN_BUILDING_NAME_HOUSES_2                                 :Houses
 STR_TOWN_BUILDING_NAME_CINEMA_1                                 :Cinema
-STR_TOWN_BUILDING_NAME_SHOPPING_MALL_1                          :Shopping centre
+STR_TOWN_BUILDING_NAME_SHOPPING_MALL_1                          :Shopping center
 STR_TOWN_BUILDING_NAME_IGLOO_1                                  :Igloo
 STR_TOWN_BUILDING_NAME_TEPEES_1                                 :Tepees
 STR_TOWN_BUILDING_NAME_TEAPOT_HOUSE_1                           :Teapot-House
