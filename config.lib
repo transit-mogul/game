@@ -35,7 +35,7 @@ set_default() {
 	config_log="config.log"
 	prefix_dir="/usr/local"
 	binary_dir="games"
-	data_dir="share/games/openttd"
+	data_dir="share/games/transit-mogul"
 	doc_dir="1"
 	icon_dir="share/pixmaps"
 	icon_theme_dir="1"
@@ -45,8 +45,8 @@ set_default() {
 	man_dir="1"
 	menu_dir="1"
 	menu_group="Game;"
-	menu_name="OpenTTD"
-	binary_name="openttd"
+	menu_name="Transit Mogul"
+	binary_name="transit-mogul"
 	enable_debug="0"
 	enable_desync_debug="0"
 	enable_profiling="0"
@@ -1016,7 +1016,7 @@ check_params() {
 	fi
 
 	if [ "$os" = "OSX" ] && [ "$with_application_bundle" = "1" ]; then
-		OSXAPP="OpenTTD.app"
+		OSXAPP="TransitMogul.app"
 	else
 		OSXAPP=""
 	fi
@@ -1097,9 +1097,9 @@ check_params() {
 
 	if [ "$personal_dir" = "1" ]; then
 		if [ "$os" = "MINGW" ] || [ "$os" = "CYGWIN" ] || [ "$os" = "HAIKU" ]; then
-			personal_dir="OpenTTD"
+			personal_dir="TransitMogul"
 		elif [ "$os" = "OSX" ]; then
-			personal_dir="Documents/OpenTTD"
+			personal_dir="Documents/TransitMogul"
 		else
 			personal_dir=".openttd"
 		fi
@@ -1110,7 +1110,7 @@ check_params() {
 	if [ "$shared_dir" = "1" ]; then
 		# we are using default values
 		if [ "$os" = "OSX" ]; then
-			shared_dir="/Library/Application\\\\ Support/OpenTTD"
+			shared_dir="/Library/Application\\\\ Support/TransitMogul"
 		else
 			shared_dir=""
 		fi

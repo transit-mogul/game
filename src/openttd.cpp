@@ -151,7 +151,7 @@ static void ShowHelp()
 	char buf[8192];
 	char *p = buf;
 
-	p += seprintf(p, lastof(buf), "OpenTTD %s\n", _openttd_revision);
+	p += seprintf(p, lastof(buf), "Transit Mogul %s\n", _openttd_revision);
 	p = strecpy(p,
 		"\n"
 		"\n"
