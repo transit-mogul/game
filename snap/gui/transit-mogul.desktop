@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Transit Mogul
+Icon=${SNAP}/meta/gui/transit-mogul.png
+Exec=transit-mogul %u
+Terminal=false
+Categories=Game;
+Comment=A clone of Transport Tycoon Deluxe
+Keywords=game;simulation;transport;tycoon;deluxe;economics;multiplayer;money;train;ship;bus;truck;aircraft;cargo;
