@@ -30,8 +30,8 @@ docs/source/*
 .kdev4
 .kdev4/*
 *.kdev4
-media/openttd.desktop
-media/openttd.desktop.install
+media/transit-mogul.desktop
+media/transit-mogul.desktop.install
 objs/*
 projects/.vs
 projects/Debug

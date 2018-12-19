@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file network.cpp Base functions for networking support. */
@@ -1033,7 +1033,7 @@ static void NetworkGenerateServerId()
 	char coding_string[NETWORK_NAME_LENGTH];
 	int di;
 
-	seprintf(coding_string, lastof(coding_string), "%d%s", (uint)Random(), "OpenTTD Server ID");
+	seprintf(coding_string, lastof(coding_string), "%d%s", (uint)Random(), "transit_mogul Server ID");
 
 	/* Generate the MD5 hash */
 	checksum.Append((const uint8*)coding_string, strlen(coding_string));

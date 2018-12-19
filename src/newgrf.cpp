@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file newgrf.cpp Base of all NewGRF support. */
@@ -58,7 +58,7 @@
 
 /* TTDPatch extended GRF format codec
  * (c) Petr Baudis 2004 (GPL'd)
- * Changes by Florian octo Forster are (c) by the OpenTTD development team.
+ * Changes by Florian octo Forster are (c) by the transit_mogul development team.
  *
  * Contains portions of documentation by TTDPatch team.
  * Thanks especially to Josef Drexler for the documentation as well as a lot
@@ -476,7 +476,7 @@ static void AddStringForMapping(StringID source, StringID *target)
 }
 
 /**
- * Perform a mapping from TTDPatch's string IDs to OpenTTD's
+ * Perform a mapping from TTDPatch's string IDs to transit_mogul's
  * string IDs, but only for the ones we are aware off; the rest
  * like likely unused and will show a warning.
  * @param str the string ID to convert
@@ -541,7 +541,7 @@ static StringID TTDPStringIDToOTTDStringIDMapping(StringID str)
 
 /**
  * Used when setting an object's property to map to the GRF's strings
- * while taking in consideration the "drift" between TTDPatch string system and OpenTTD's one
+ * while taking in consideration the "drift" between TTDPatch string system and transit_mogul's one
  * @param grfid Id of the grf file.
  * @param str StringID that we want to have the equivalent in OoenTTD.
  * @return The properly adjusted StringID.
@@ -726,7 +726,7 @@ static void MapSpriteMappingRecolour(PalSpriteID *grf_sprite)
 
 /**
  * Read a sprite and a palette from the GRF and convert them into a format
- * suitable to OpenTTD.
+ * suitable to transit_mogul.
  * @param buf                 Input stream.
  * @param read_flags          Whether to read TileLayoutFlags.
  * @param invert_action1_flag Set to true, if palette bit 15 means 'not from action 1'.
@@ -2793,10 +2793,10 @@ static ChangeInfoResult GlobalVarChangeInfo(uint gvid, int numinfo, int prop, By
 
 				byte newgrf_id = buf->ReadByte(); // The NewGRF (custom) identifier.
 				while (newgrf_id != 0) {
-					const char *name = buf->ReadString(); // The name for the OpenTTD identifier.
+					const char *name = buf->ReadString(); // The name for the transit_mogul identifier.
 
 					/* We'll just ignore the UTF8 identifier character. This is (fairly)
-					 * safe as OpenTTD's strings gender/cases are usually in ASCII which
+					 * safe as transit_mogul's strings gender/cases are usually in ASCII which
 					 * is just a subset of UTF8, or they need the bigger UTF8 characters
 					 * such as Cyrillic. Thus we will simply assume they're all UTF8. */
 					WChar c;
@@ -2806,15 +2806,15 @@ static ChangeInfoResult GlobalVarChangeInfo(uint gvid, int numinfo, int prop, By
 					LanguageMap::Mapping map;
 					map.newgrf_id = newgrf_id;
 					if (prop == 0x13) {
-						map.openttd_id = lang->GetGenderIndex(name);
-						if (map.openttd_id >= MAX_NUM_GENDERS) {
+						map.transit_mogul_id = lang->GetGenderIndex(name);
+						if (map.transit_mogul_id >= MAX_NUM_GENDERS) {
 							grfmsg(1, "GlobalVarChangeInfo: Gender name %s is not known, ignoring", name);
 						} else {
 							_cur.grffile->language_map[curidx].gender_map.push_back(map);
 						}
 					} else {
-						map.openttd_id = lang->GetCaseIndex(name);
-						if (map.openttd_id >= MAX_NUM_CASES) {
+						map.transit_mogul_id = lang->GetCaseIndex(name);
+						if (map.transit_mogul_id >= MAX_NUM_CASES) {
 							grfmsg(1, "GlobalVarChangeInfo: Case name %s is not known, ignoring", name);
 						} else {
 							_cur.grffile->language_map[curidx].case_map.push_back(map);
@@ -2944,17 +2944,17 @@ static ChangeInfoResult CargoChangeInfo(uint cid, int numinfo, int prop, ByteRea
 
 			case 0x0B: // String for singular quantity of cargo (e.g. 1 tonne of coal)
 			case 0x1B: // String for cargo units
-				/* String for units of cargo. This is different in OpenTTD
+				/* String for units of cargo. This is different in transit_mogul
 				 * (e.g. tonnes) to TTDPatch (e.g. {COMMA} tonne of coal).
-				 * Property 1B is used to set OpenTTD's behaviour. */
+				 * Property 1B is used to set transit_mogul's behaviour. */
 				AddStringForMapping(buf->ReadWord(), &cs->units_volume);
 				break;
 
 			case 0x0C: // String for plural quantity of cargo (e.g. 10 tonnes of coal)
 			case 0x1C: // String for any amount of cargo
-				/* Strings for an amount of cargo. This is different in OpenTTD
+				/* Strings for an amount of cargo. This is different in transit_mogul
 				 * (e.g. {WEIGHT} of coal) to TTDPatch (e.g. {COMMA} tonnes of coal).
-				 * Property 1C is used to set OpenTTD's behaviour. */
+				 * Property 1C is used to set transit_mogul's behaviour. */
 				AddStringForMapping(buf->ReadWord(), &cs->quantifier);
 				break;
 
@@ -6142,7 +6142,7 @@ static const Action5Type _action5_types[] = {
 	/* 0x12 */ { A5BLOCK_ALLOW_OFFSET, SPR_AQUEDUCT_BASE,            1, AQUEDUCT_SPRITE_COUNT,                       "Aqueduct graphics"        },
 	/* 0x13 */ { A5BLOCK_ALLOW_OFFSET, SPR_AUTORAIL_BASE,            1, AUTORAIL_SPRITE_COUNT,                       "Autorail graphics"        },
 	/* 0x14 */ { A5BLOCK_ALLOW_OFFSET, SPR_FLAGS_BASE,               1, FLAGS_SPRITE_COUNT,                          "Flag graphics"            },
-	/* 0x15 */ { A5BLOCK_ALLOW_OFFSET, SPR_OPENTTD_BASE,             1, OPENTTD_SPRITE_COUNT,                        "OpenTTD GUI graphics"     },
+	/* 0x15 */ { A5BLOCK_ALLOW_OFFSET, SPR_TRANSIT_MOGUL_BASE,             1, TRANSIT_MOGUL_SPRITE_COUNT,                        "transit_mogul GUI graphics"     },
 	/* 0x16 */ { A5BLOCK_ALLOW_OFFSET, SPR_AIRPORT_PREVIEW_BASE,     1, SPR_AIRPORT_PREVIEW_COUNT,                   "Airport preview graphics" },
 	/* 0x17 */ { A5BLOCK_ALLOW_OFFSET, SPR_RAILTYPE_TUNNEL_BASE,     1, RAILTYPE_TUNNEL_BASE_COUNT,                  "Railtype tunnel base"     },
 	/* 0x18 */ { A5BLOCK_ALLOW_OFFSET, SPR_PALETTE_BASE,             1, PALETTE_SPRITE_COUNT,                        "Palette"                  },
@@ -6163,7 +6163,7 @@ static void GraphicsNew(ByteReader *buf)
 	ClrBit(type, 7); // Clear the high bit as that only indicates whether there is an offset.
 
 	if ((type == 0x0D) && (num == 10) && HasBit(_cur.grfconfig->flags, GCF_SYSTEM)) {
-		/* Special not-TTDP-compatible case used in openttd.grf
+		/* Special not-TTDP-compatible case used in transit_mogul.grf
 		 * Missing shore sprites and initialisation of SPR_SHORE_BASE */
 		grfmsg(2, "GraphicsNew: Loading 10 missing shore sprites from extra grf.");
 		LoadNextSprite(SPR_SHORE_BASE +  0, _cur.file_index, _cur.nfo_line++, _cur.grf_container_ver); // SLOPE_STEEP_S
@@ -6339,7 +6339,7 @@ bool GetGlobalVariable(byte param, uint32 *value, const GRFFile *grffile)
 			*value = 0x3F; // constant fake value to avoid desync
 			return true;
 
-		case 0x1D: // TTD Platform, 00=TTDPatch, 01=OpenTTD
+		case 0x1D: // TTD Platform, 00=TTDPatch, 01=transit_mogul
 			*value = 1;
 			return true;
 
@@ -6364,8 +6364,8 @@ bool GetGlobalVariable(byte param, uint32 *value, const GRFFile *grffile)
 			return true;
 		}
 
-		case 0x21: // OpenTTD version
-			*value = _openttd_newgrf_version;
+		case 0x21: // transit_mogul version
+			*value = _transit_mogul_newgrf_version;
 			return true;
 
 		case 0x22: // difficulty level
@@ -6722,7 +6722,7 @@ static void ScanInfo(ByteReader *buf)
 
 	if (grf_version < 2 || grf_version > 8) {
 		SetBit(_cur.grfconfig->flags, GCF_INVALID);
-		DEBUG(grf, 0, "%s: NewGRF \"%s\" (GRFID %08X) uses GRF version %d, which is incompatible with this version of OpenTTD.", _cur.grfconfig->filename, name, BSWAP32(grfid), grf_version);
+		DEBUG(grf, 0, "%s: NewGRF \"%s\" (GRFID %08X) uses GRF version %d, which is incompatible with this version of transit_mogul.", _cur.grfconfig->filename, name, BSWAP32(grfid), grf_version);
 	}
 
 	/* GRF IDs starting with 0xFF are reserved for internal TTDPatch use */
@@ -9477,7 +9477,7 @@ void LoadNewGRFFile(GRFConfig *config, uint file_index, GrfLoadingStage stage, S
 /**
  * Relocates the old shore sprites at new positions.
  *
- * 1. If shore sprites are neither loaded by Action5 nor ActionA, the extra sprites from openttd(w/d).grf are used. (SHORE_REPLACE_ONLY_NEW)
+ * 1. If shore sprites are neither loaded by Action5 nor ActionA, the extra sprites from transit_mogul(w/d).grf are used. (SHORE_REPLACE_ONLY_NEW)
  * 2. If a newgrf replaces some shore sprites by ActionA. The (maybe also replaced) grass tiles are used for corner shores. (SHORE_REPLACE_ACTION_A)
  * 3. If a newgrf replaces shore sprites by Action5 any shore replacement by ActionA has no effect. (SHORE_REPLACE_ACTION_5)
  */

@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file crashlog.cpp Implementation of generic function to be called to log a crash */
@@ -111,24 +111,24 @@ char *CrashLog::LogCompiler(char *buffer, const char *last) const
 }
 
 /**
- * Writes OpenTTD's version to the buffer.
+ * Writes transit_mogul's version to the buffer.
  * @param buffer The begin where to write at.
  * @param last   The last position in the buffer to write to.
  * @return the position of the \c '\0' character after the buffer.
  */
-char *CrashLog::LogOpenTTDVersion(char *buffer, const char *last) const
+char *CrashLog::LogTransitMogulVersion(char *buffer, const char *last) const
 {
 	return buffer + seprintf(buffer, last,
-			"OpenTTD version:\n"
+			"Transit Mogul version:\n"
 			" Version:    %s (%d)\n"
 			" NewGRF ver: %08x\n"
 			" Bits:       %d\n"
 			" Endian:     %s\n"
 			" Dedicated:  %s\n"
 			" Build date: %s\n\n",
-			_openttd_revision,
-			_openttd_revision_modified,
-			_openttd_newgrf_version,
+			_transit_mogul_revision,
+			_transit_mogul_revision_modified,
+			_transit_mogul_newgrf_version,
 #ifdef _SQ64
 			64,
 #else
@@ -144,7 +144,7 @@ char *CrashLog::LogOpenTTDVersion(char *buffer, const char *last) const
 #else
 			"no",
 #endif
-			_openttd_build_date
+			_transit_mogul_build_date
 	);
 }
 
@@ -337,7 +337,7 @@ char *CrashLog::LogRecentNews(char *buffer, const char *last) const
 char *CrashLog::FillCrashLog(char *buffer, const char *last) const
 {
 	time_t cur_time = time(nullptr);
-	buffer += seprintf(buffer, last, "*** OpenTTD Crash Report ***\n\n");
+	buffer += seprintf(buffer, last, "*** transit_mogul Crash Report ***\n\n");
 	buffer += seprintf(buffer, last, "Crash at: %s", asctime(gmtime(&cur_time)));
 
 	YearMonthDay ymd;
@@ -345,7 +345,7 @@ char *CrashLog::FillCrashLog(char *buffer, const char *last) const
 	buffer += seprintf(buffer, last, "In game date: %i-%02i-%02i (%i)\n\n", ymd.year, ymd.month + 1, ymd.day, _date_fract);
 
 	buffer = this->LogError(buffer, last, CrashLog::message);
-	buffer = this->LogOpenTTDVersion(buffer, last);
+	buffer = this->LogTransitMogulVersion(buffer, last);
 	buffer = this->LogRegisters(buffer, last);
 	buffer = this->LogStacktrace(buffer, last);
 	buffer = this->LogOSVersion(buffer, last);
@@ -356,7 +356,7 @@ char *CrashLog::FillCrashLog(char *buffer, const char *last) const
 	buffer = this->LogGamelog(buffer, last);
 	buffer = this->LogRecentNews(buffer, last);
 
-	buffer += seprintf(buffer, last, "*** End of OpenTTD Crash Report ***\n");
+	buffer += seprintf(buffer, last, "*** End of transit_mogul Crash Report ***\n");
 	return buffer;
 }
 

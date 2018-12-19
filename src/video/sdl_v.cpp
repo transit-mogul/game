@@ -389,7 +389,7 @@ bool VideoDriver_SDL::CreateMainSurface(uint w, uint h)
 
 	InitPalette();
 
-	seprintf(caption, lastof(caption), "OpenTTD %s", _openttd_revision);
+	seprintf(caption, lastof(caption), "Transit Mogul %s", _transit_mogul_revision);
 	SDL_WM_SetCaption(caption, caption);
 
 	GameSizeChanged();

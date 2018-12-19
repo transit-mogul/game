@@ -230,8 +230,8 @@ static void LoadSpriteTables()
 
 	LoadNewGRF(SPR_NEWGRFS_BASE, i, 2);
 
-	uint total_extra_graphics = SPR_NEWGRFS_BASE - SPR_OPENTTD_BASE;
-	_missing_extra_graphics = GetSpriteCountForSlot(i, SPR_OPENTTD_BASE, SPR_NEWGRFS_BASE);
+	uint total_extra_graphics = SPR_NEWGRFS_BASE - SPR_TRANSIT_MOGUL_BASE;
+	_missing_extra_graphics = GetSpriteCountForSlot(i, SPR_TRANSIT_MOGUL_BASE, SPR_NEWGRFS_BASE);
 	DEBUG(sprite, 1, "%u extra sprites, %u from baseset, %u from fallback", total_extra_graphics, total_extra_graphics - _missing_extra_graphics, _missing_extra_graphics);
 
 	/* The original baseset extra graphics intentionally make use of the fallback graphics.

@@ -136,7 +136,7 @@ mrproper:
 	done
 	$(Q)rm -rf objs
 	$(Q)rm -f Makefile Makefile.am Makefile.bundle
-	$(Q)rm -f media/openttd.desktop media/openttd.desktop.install
+	$(Q)rm -f media/transit-mogul.desktop media/transit-mogul.desktop.install
 	$(Q)rm -f $(CONFIG_CACHE_SOURCE_LIST) config.cache config.pwd config.log $(CONFIG_CACHE_PWD)
 # directories for bundle generation
 	$(Q)rm -rf $(BUNDLE_DIR)

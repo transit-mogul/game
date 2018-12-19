@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file network_server.cpp Server part of the network protocol. */
@@ -894,7 +894,7 @@ NetworkRecvStatus ServerNetworkGameSocketHandler::Receive_CLIENT_JOIN(Packet *p)
 	uint32 newgrf_version = p->Recv_uint32();
 
 	/* Check if the client has revision control enabled */
-	if (!IsNetworkCompatibleVersion(client_revision) || _openttd_newgrf_version != newgrf_version) {
+	if (!IsNetworkCompatibleVersion(client_revision) || _transit_mogul_newgrf_version != newgrf_version) {
 		/* Different revisions!! */
 		return this->SendError(NETWORK_ERROR_WRONG_REVISION);
 	}

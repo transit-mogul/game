@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="5000"
+   height="5000"
+   id="svg2"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="transit-mogul.svg">
+  <metadata
+     id="metadata42">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3098"
+     inkscape:window-height="1689"
+     id="namedview40"
+     showgrid="false"
+     inkscape:zoom="0.17677669"
+     inkscape:cx="1117.4652"
+     inkscape:cy="2212.7392"
+     inkscape:window-x="102"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     inkscape:pagecheckerboard="true"
+     inkscape:lockguides="true" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient907">
+      <stop
+         id="stop903"
+         offset="0"
+         style="stop-color:#0029fe;stop-opacity:1" />
+      <stop
+         id="stop905"
+         offset="1"
+         style="stop-color:#6d96f2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient907"
+       id="linearGradient852"
+       x1="2003.0591"
+       y1="4564.5576"
+       x2="-1492.9238"
+       y2="1068.5747"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(3280.4663,-2816.5661)" />
+  </defs>
+  <rect
+     style="opacity:1;fill:url(#linearGradient852);fill-opacity:1;stroke:#00000a;stroke-width:55.93600082;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+     id="rect830"
+     width="3495.9829"
+     height="3495.9829"
+     x="1787.5425"
+     y="-1747.9915"
+     transform="rotate(45)" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot909"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1733.33349609px;line-height:1.25;font-family:'Russo One';-inkscape-font-specification:'Russo One';letter-spacing:0px;word-spacing:0px;fill:#fefefe;fill-opacity:1;stroke:#00000a;stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     transform="translate(146.28572,410.31274)"><flowRegion
+       id="flowRegion911"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1733.33349609px;font-family:'Russo One';-inkscape-font-specification:'Russo One';fill:#fefefe;fill-opacity:1;stroke:#00000a;stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><rect
+         id="rect913"
+         width="3032.074"
+         height="2585.1824"
+         x="1080.4592"
+         y="1147.6821"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1733.33349609px;font-family:'Russo One';-inkscape-font-specification:'Russo One';fill:#fefefe;fill-opacity:1;stroke:#00000a;stroke-width:50;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></flowRegion><flowPara
+       id="flowPara915">TM</flowPara></flowRoot></svg>
