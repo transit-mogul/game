@@ -79,7 +79,7 @@ if [ "$os" = "MINGW" ] || [ "$os" = "CYGWIN" ] || [ "$os" = "OS2" ] || [ "$os" =
 	EXE=".exe"
 fi
 
-TTD="openttd$EXE"
+TTD="transit-mogul$EXE"
 STRGEN="strgen$EXE"
 DEPEND="depend$EXE"
 SETTINGSGEN="settings_gen$EXE"
