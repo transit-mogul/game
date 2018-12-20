@@ -1742,7 +1742,7 @@ bool AfterLoadGame()
 		 * 2) shares that are owned by inactive companies or self
 		 *     (caused by cheating clients in earlier revisions) */
 		FOR_ALL_COMPANIES(c) {
-			for (uint i = 0; i < 4; i++) {
+			for (int i = 0; i < 100; i++) {
 				CompanyID company = c->share_owners[i];
 				if (company == INVALID_COMPANY) continue;
 				if (!Company::IsValidID(company) || company == c->index) c->share_owners[i] = INVALID_COMPANY;

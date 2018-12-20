@@ -254,8 +254,10 @@ enum Commands {
 
 	CMD_PAUSE,                        ///< pause the game
 
-	CMD_BUY_SHARE_IN_COMPANY,         ///< buy a share from a company
-	CMD_SELL_SHARE_IN_COMPANY,        ///< sell a share from a company
+	CMD_BUY_1PC_SHARE_IN_COMPANY,     ///< buy 1% share from a company
+	CMD_BUY_10PC_SHARE_IN_COMPANY,    ///< buy 10% share from a company
+	CMD_SELL_1PC_SHARE_IN_COMPANY,    ///< sell 1% share from a company
+	CMD_SELL_10PC_SHARE_IN_COMPANY,   ///< sell 10% share from a company
 	CMD_BUY_COMPANY,                  ///< buy a company which is bankrupt
 
 	CMD_FOUND_TOWN,                   ///< found a town

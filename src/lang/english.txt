@@ -1772,7 +1772,7 @@ STR_INTRO_TRANSLATION                                           :{BLACK}This tra
 
 # Quit window
 STR_QUIT_CAPTION                                                :{WHITE}Exit
-STR_QUIT_ARE_YOU_SURE_YOU_WANT_TO_EXIT_OPENTTD                  :{YELLOW}Are you sure you want to exit Transit Mogul and return to {STRING}?
+STR_QUIT_ARE_YOU_SURE_YOU_WANT_TO_EXIT_OPENTTD                  :{YELLOW}Are you sure you want to exit Transit Mogul completely? Did you save?
 STR_QUIT_YES                                                    :{BLACK}Yes
 STR_QUIT_NO                                                     :{BLACK}No
 
@@ -3308,10 +3308,14 @@ STR_COMPANY_VIEW_COMPANY_NAME_TOOLTIP                           :{BLACK}Change t
 STR_COMPANY_VIEW_PRESIDENT_NAME_BUTTON                          :{BLACK}Manager Name
 STR_COMPANY_VIEW_PRESIDENT_NAME_TOOLTIP                         :{BLACK}Change the manager's name
 
-STR_COMPANY_VIEW_BUY_SHARE_BUTTON                               :{BLACK}Buy 25% share in company
-STR_COMPANY_VIEW_SELL_SHARE_BUTTON                              :{BLACK}Sell 25% share in company
-STR_COMPANY_VIEW_BUY_SHARE_TOOLTIP                              :{BLACK}Buy 25% share in this company. Shift+Click shows estimated cost without purchasing any share
-STR_COMPANY_VIEW_SELL_SHARE_TOOLTIP                             :{BLACK}Sell 25% share in this company. Shift+Click shows estimated income without selling any share
+STR_COMPANY_VIEW_BUY_1PC_SHARE_BUTTON                           :{BLACK}Buy 1% of Shares
+STR_COMPANY_VIEW_BUY_1PC_SHARE_TOOLTIP                          :{BLACK}Shift+Click shows estimated cost without purchasing any shares.
+STR_COMPANY_VIEW_BUY_10PC_SHARE_BUTTON                          :{BLACK}Buy 10% of Shares
+STR_COMPANY_VIEW_BUY_10PC_SHARE_TOOLTIP                         :{BLACK}Shift+Click shows estimated cost without purchasing any shares.
+STR_COMPANY_VIEW_SELL_1PC_SHARE_BUTTON                          :{BLACK}Sell 1% of Shares
+STR_COMPANY_VIEW_SELL_1PC_SHARE_TOOLTIP                         :{BLACK}Shift+Click shows estimated income without selling any shares.
+STR_COMPANY_VIEW_SELL_10PC_SHARE_BUTTON                         :{BLACK}Sell 10% of Shares
+STR_COMPANY_VIEW_SELL_10PC_SHARE_TOOLTIP                        :{BLACK}Shift+Click shows estimated income without selling any shares.
 
 STR_COMPANY_VIEW_COMPANY_NAME_QUERY_CAPTION                     :Company Name
 STR_COMPANY_VIEW_PRESIDENT_S_NAME_QUERY_CAPTION                 :Manager's Name
@@ -4227,8 +4231,8 @@ STR_ERROR_CAN_T_REPAY_LOAN                                      :{WHITE}Can't re
 STR_ERROR_INSUFFICIENT_FUNDS                                    :{WHITE}Can't give away money that is loaned from the bank...
 STR_ERROR_CAN_T_BUY_COMPANY                                     :{WHITE}Can't buy company...
 STR_ERROR_CAN_T_BUILD_COMPANY_HEADQUARTERS                      :{WHITE}Can't build company headquarters...
-STR_ERROR_CAN_T_BUY_25_SHARE_IN_THIS                            :{WHITE}Can't buy 25% share in this company...
-STR_ERROR_CAN_T_SELL_25_SHARE_IN                                :{WHITE}Can't sell 25% share in this company...
+STR_ERROR_CANT_BUY_SHARES                                       :{WHITE}Can't buy shares in this company...
+STR_ERROR_CANT_SELL_SHARES                                      :{WHITE}Can't sell shares in this company...
 STR_ERROR_PROTECTED                                             :{WHITE}This company is not old enough to trade shares yet...
 
 # Town related errors

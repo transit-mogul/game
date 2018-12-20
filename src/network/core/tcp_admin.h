@@ -340,10 +340,7 @@ protected:
 	 * uint8   Main company colour.
 	 * bool    Company is password protected.
 	 * uint8   Quarters of bankruptcy.
-	 * uint8   Owner of share 1.
-	 * uint8   Owner of share 2.
-	 * uint8   Owner of share 3.
-	 * uint8   Owner of share 4.
+	 * uint8   Owner of share x. (there's 100 total)
 	 * @param p The packet that was just received.
 	 * @return The state the network should have.
 	 */
