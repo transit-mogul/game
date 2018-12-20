@@ -320,10 +320,10 @@ void ChangeOwnershipOfCompanyItems(Owner old_owner, Owner new_owner)
 
 		/* See if the old_owner had shares in other companies */
 		FOR_ALL_COMPANIES(c) {
-			for (i = 0; i < 4; i++) {
+			for (i = 0; i < 100; i++) {
 				if (c->share_owners[i] == old_owner) {
-					/* Sell his shares */
-					CommandCost res = DoCommand(0, c->index, 0, DC_EXEC | DC_BANKRUPT, CMD_SELL_SHARE_IN_COMPANY);
+					/* Sell their shares */
+					CommandCost res = DoCommand(0, c->index, 0, DC_EXEC | DC_BANKRUPT, CMD_SELL_1PC_SHARE_IN_COMPANY);
 					/* Because we are in a DoCommand, we can't just execute another one and
 					 *  expect the money to be removed. We need to do it ourself! */
 					SubtractMoneyFromCompany(res);
@@ -334,11 +334,11 @@ void ChangeOwnershipOfCompanyItems(Owner old_owner, Owner new_owner)
 		/* Sell all the shares that people have on this company */
 		Backup<CompanyID> cur_company2(_current_company, FILE_LINE);
 		c = Company::Get(old_owner);
-		for (i = 0; i < 4; i++) {
+		for (i = 0; i < 100; i++) {
 			cur_company2.Change(c->share_owners[i]);
 			if (_current_company != INVALID_OWNER) {
 				/* Sell the shares */
-				CommandCost res = DoCommand(0, old_owner, 0, DC_EXEC | DC_BANKRUPT, CMD_SELL_SHARE_IN_COMPANY);
+				CommandCost res = DoCommand(0, old_owner, 0, DC_EXEC | DC_BANKRUPT, CMD_SELL_1PC_SHARE_IN_COMPANY);
 				/* Because we are in a DoCommand, we can't just execute another one and
 				 *  expect the money to be removed. We need to do it ourself! */
 				SubtractMoneyFromCompany(res);
@@ -2017,10 +2017,11 @@ extern int GetAmountOwnedBy(const Company *c, Owner owner);
  * @param p1 company to buy the shares from
  * @param p2 unused
  * @param text unused
+ * @param percent portion of company to buy
  * @return the cost of this operation or an error
  */
-CommandCost CmdBuyShareInCompany(TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text)
-{
+CommandCost CmdBuyShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text, int percent ){
+
 	CommandCost cost(EXPENSES_OTHER);
 	CompanyID target_company = (CompanyID)p1;
 	Company *c = Company::GetIfValid(target_company);
@@ -2030,36 +2031,55 @@ CommandCost CmdBuyShareInCompany(TileIndex tile, DoCommandFlag flags, uint32 p1,
 	if (c == nullptr || !_settings_game.economy.allow_shares || _current_company == target_company) return CMD_ERROR;
 
 	/* Protect new companies from hostile takeovers */
-	if (_cur_year - c->inaugurated_year < 6) return_cmd_error(STR_ERROR_PROTECTED);
+	if (_cur_year - c->inaugurated_year < 5) return_cmd_error(STR_ERROR_PROTECTED);
 
-	/* Those lines are here for network-protection (clients can be slow) */
+	/* These two if blocks are here for network-protection (clients can be slow) */
 	if (GetAmountOwnedBy(c, COMPANY_SPECTATOR) == 0) return cost;
 
 	if (GetAmountOwnedBy(c, COMPANY_SPECTATOR) == 1) {
 		if (!c->is_ai) return cost; //  We can not buy out a real company (temporarily). TODO: well, enable it obviously.
 
-		if (GetAmountOwnedBy(c, _current_company) == 3 && !MayCompanyTakeOver(_current_company, target_company)) return_cmd_error(STR_ERROR_TOO_MANY_VEHICLES_IN_GAME);
+		if (GetAmountOwnedBy(c, _current_company) == 99 && !MayCompanyTakeOver(_current_company, target_company)) return_cmd_error(STR_ERROR_TOO_MANY_VEHICLES_IN_GAME);
 	}
 
 
-	cost.AddCost(CalculateCompanyValue(c) >> 2);
-	if (flags & DC_EXEC) {
-		Owner *b = c->share_owners;
+	// Calculate <percent> of company value. 100 means 1% and 10 means 10%
+	cost.AddCost( CalculateCompanyValue(c) / percent );
 
-		while (*b != COMPANY_SPECTATOR) b++; // share owners is guaranteed to contain at least one COMPANY_SPECTATOR
-		*b = _current_company;
+	if( flags & DC_EXEC )
+	{
+		OwnerByte *b = c->share_owners;
 
-		for (int i = 0; c->share_owners[i] == _current_company;) {
-			if (++i == 4) {
+		for( int i = 0; i < (100 / percent ); i++){
+		
+			while( *b != COMPANY_SPECTATOR ){
+				b++; // share owners is guaranteed to contain at least one COMPANY_SPECTATOR
+			}
+
+			*b = _current_company;
+		}
+
+		for( int i = 0; c->share_owners[i] == _current_company; ){
+
+			if( ++i == 100 ){
+
 				c->bankrupt_value = 0;
 				DoAcquireCompany(c);
 				break;
 			}
 		}
+
 		InvalidateWindowData(WC_COMPANY, target_company);
 		CompanyAdminUpdate(c);
 	}
+
 	return cost;
+}
+CommandCost CmdBuy1pcShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text ){
+	return CmdBuyShareInCompany( tile, flags, p1, p2, text, 100 );
+}
+CommandCost CmdBuy10pcShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text ){
+	return CmdBuyShareInCompany( tile, flags, p1, p2, text, 10 );
 }
 
 /**
@@ -2069,10 +2089,11 @@ CommandCost CmdBuyShareInCompany(TileIndex tile, DoCommandFlag flags, uint32 p1,
  * @param p1 company to sell the shares from
  * @param p2 unused
  * @param text unused
+ * @param percent portion of company to sell
  * @return the cost of this operation or an error
  */
-CommandCost CmdSellShareInCompany(TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text)
-{
+CommandCost CmdSellShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text, int percent ){
+
 	CompanyID target_company = (CompanyID)p1;
 	Company *c = Company::GetIfValid(target_company);
 
@@ -2087,17 +2108,33 @@ CommandCost CmdSellShareInCompany(TileIndex tile, DoCommandFlag flags, uint32 p1
 	if (GetAmountOwnedBy(c, _current_company) == 0) return CommandCost();
 
 	/* adjust it a little to make it less profitable to sell and buy */
-	Money cost = CalculateCompanyValue(c) >> 2;
-	cost = -(cost - (cost >> 7));
+	Money cost = CalculateCompanyValue(c) / percent;
+	cost = -(cost);
 
-	if (flags & DC_EXEC) {
-		Owner *b = c->share_owners;
-		while (*b != _current_company) b++; // share owners is guaranteed to contain company
-		*b = COMPANY_SPECTATOR;
+	if( flags & DC_EXEC ){
+
+		OwnerByte *b = c->share_owners;
+		
+		for( int i = 0; i < ( 100 / percent ); i++){
+		
+			while( *b != _current_company ){
+				b++; // share owners is guaranteed to contain company
+			}
+
+			*b = COMPANY_SPECTATOR;
+		}
+
 		InvalidateWindowData(WC_COMPANY, target_company);
 		CompanyAdminUpdate(c);
 	}
+
 	return CommandCost(EXPENSES_OTHER, cost);
+}
+CommandCost CmdSell1pcShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text ){
+	return CmdSellShareInCompany( tile, flags, p1, p2, text, 100 );
+}
+CommandCost CmdSell10pcShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 p2, const char *text ){
+	return CmdSellShareInCompany( tile, flags, p1, p2, text, 10 );
 }
 
 /**

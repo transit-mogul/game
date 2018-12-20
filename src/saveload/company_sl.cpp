@@ -274,7 +274,7 @@ static const SaveLoad _company_desc[] = {
 	SLE_CONDVAR(CompanyProperties, inaugurated_year,      SLE_FILE_U8  | SLE_VAR_I32,  SL_MIN_VERSION, SLV_31),
 	SLE_CONDVAR(CompanyProperties, inaugurated_year,      SLE_INT32,                  SLV_31, SL_MAX_VERSION),
 
-	    SLE_ARR(CompanyProperties, share_owners,          SLE_UINT8, 4),
+	    SLE_ARR(CompanyProperties, share_owners,          SLE_UINT8, 100),
 
 	    SLE_VAR(CompanyProperties, num_valid_stat_ent,    SLE_UINT8),
 

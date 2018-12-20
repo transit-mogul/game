@@ -17,6 +17,7 @@
 
 sudo apt-get install -y \
 	build-essential \
+	gawk \
 	pkg-config \
 	libfontconfig-dev \
 	libicu-dev \
