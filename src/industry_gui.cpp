@@ -2299,7 +2299,6 @@ struct IndustryCargoesWindow : public Window {
 			case LT_TEMPERATE: climate_mask = HZ_TEMP; break;
 			case LT_ARCTIC:    climate_mask = HZ_SUBARTC_ABOVE | HZ_SUBARTC_BELOW; break;
 			case LT_TROPIC:    climate_mask = HZ_SUBTROPIC; break;
-			case LT_TOYLAND:   climate_mask = HZ_TOYLND; break;
 			default: NOT_REACHED();
 		}
 		for (uint i = 0; i < length; i++) {

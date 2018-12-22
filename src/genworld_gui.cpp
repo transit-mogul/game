@@ -72,8 +72,6 @@ static const NWidgetPart _nested_generate_landscape_widgets[] = {
 			NWidget(NWID_SPACER), SetFill(1, 0),
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_GL_TROPICAL), SetDataTip(SPR_SELECT_SUB_TROPICAL, STR_INTRO_TOOLTIP_SUB_TROPICAL_LANDSCAPE),
 			NWidget(NWID_SPACER), SetFill(1, 0),
-			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_GL_TOYLAND), SetDataTip(SPR_SELECT_TOYLAND, STR_INTRO_TOOLTIP_TOYLAND_LANDSCAPE),
-			NWidget(NWID_SPACER), SetFill(1, 0),
 		EndContainer(),
 		NWidget(NWID_SPACER), SetMinimalSize(0, 11),
 		NWidget(NWID_HORIZONTAL), SetPIP(10, 5, 10),
@@ -190,8 +188,6 @@ static const NWidgetPart _nested_heightmap_load_widgets[] = {
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_GL_ARCTIC), SetDataTip(SPR_SELECT_SUB_ARCTIC, STR_INTRO_TOOLTIP_SUB_ARCTIC_LANDSCAPE),
 			NWidget(NWID_SPACER), SetFill(1, 0),
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_GL_TROPICAL), SetDataTip(SPR_SELECT_SUB_TROPICAL, STR_INTRO_TOOLTIP_SUB_TROPICAL_LANDSCAPE),
-			NWidget(NWID_SPACER), SetFill(1, 0),
-			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_GL_TOYLAND), SetDataTip(SPR_SELECT_TOYLAND, STR_INTRO_TOOLTIP_TOYLAND_LANDSCAPE),
 			NWidget(NWID_SPACER), SetFill(1, 0),
 		EndContainer(),
 		NWidget(NWID_SPACER), SetMinimalSize(0, 11), SetFill(0, 1),
@@ -400,7 +396,6 @@ struct GenerateLandscapeWindow : public Window {
 		this->SetWidgetLoweredState(WID_GL_TEMPERATE, _settings_newgame.game_creation.landscape == LT_TEMPERATE);
 		this->SetWidgetLoweredState(WID_GL_ARCTIC,    _settings_newgame.game_creation.landscape == LT_ARCTIC);
 		this->SetWidgetLoweredState(WID_GL_TROPICAL,  _settings_newgame.game_creation.landscape == LT_TROPIC);
-		this->SetWidgetLoweredState(WID_GL_TOYLAND,   _settings_newgame.game_creation.landscape == LT_TOYLAND);
 
 		/* You can't select smoothness / non-water borders if not terragenesis */
 		if (mode == GLWM_GENERATE) {
@@ -534,7 +529,6 @@ struct GenerateLandscapeWindow : public Window {
 			case WID_GL_TEMPERATE:
 			case WID_GL_ARCTIC:
 			case WID_GL_TROPICAL:
-			case WID_GL_TOYLAND:
 				SetNewLandscapeType(widget - WID_GL_TEMPERATE);
 				break;
 
@@ -919,7 +913,6 @@ struct CreateScenarioWindow : public Window
 		this->SetWidgetLoweredState(WID_CS_TEMPERATE, _settings_newgame.game_creation.landscape == LT_TEMPERATE);
 		this->SetWidgetLoweredState(WID_CS_ARCTIC,    _settings_newgame.game_creation.landscape == LT_ARCTIC);
 		this->SetWidgetLoweredState(WID_CS_TROPICAL,  _settings_newgame.game_creation.landscape == LT_TROPIC);
-		this->SetWidgetLoweredState(WID_CS_TOYLAND,   _settings_newgame.game_creation.landscape == LT_TOYLAND);
 
 		this->DrawWidgets();
 	}
@@ -956,7 +949,6 @@ struct CreateScenarioWindow : public Window
 			case WID_CS_TEMPERATE:
 			case WID_CS_ARCTIC:
 			case WID_CS_TROPICAL:
-			case WID_CS_TOYLAND:
 				this->RaiseWidget(_settings_newgame.game_creation.landscape + WID_CS_TEMPERATE);
 				SetNewLandscapeType(widget - WID_CS_TEMPERATE);
 				break;
@@ -1069,7 +1061,6 @@ static const NWidgetPart _nested_create_scenario_widgets[] = {
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_CS_TEMPERATE), SetDataTip(SPR_SELECT_TEMPERATE, STR_INTRO_TOOLTIP_TEMPERATE),
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_CS_ARCTIC), SetDataTip(SPR_SELECT_SUB_ARCTIC, STR_INTRO_TOOLTIP_SUB_ARCTIC_LANDSCAPE),
 			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_CS_TROPICAL), SetDataTip(SPR_SELECT_SUB_TROPICAL, STR_INTRO_TOOLTIP_SUB_TROPICAL_LANDSCAPE),
-			NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_CS_TOYLAND), SetDataTip(SPR_SELECT_TOYLAND, STR_INTRO_TOOLTIP_TOYLAND_LANDSCAPE),
 		EndContainer(),
 		NWidget(NWID_HORIZONTAL), SetPIP(10, 8, 10),
 			/* Green generation type buttons: 'Flat land' and 'Random land'. */

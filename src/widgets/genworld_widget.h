@@ -17,7 +17,6 @@ enum GenerateLandscapeWidgets {
 	WID_GL_TEMPERATE,                   ///< Button with icon "Temperate".
 	WID_GL_ARCTIC,                      ///< Button with icon "Arctic".
 	WID_GL_TROPICAL,                    ///< Button with icon "Tropical".
-	WID_GL_TOYLAND,                     ///< Button with icon "Toyland".
 
 	WID_GL_MAPSIZE_X_PULLDOWN,          ///< Dropdown 'map X size'.
 	WID_GL_MAPSIZE_Y_PULLDOWN,          ///< Dropdown 'map Y size'.
@@ -64,7 +63,6 @@ enum CreateScenarioWidgets {
 	WID_CS_TEMPERATE,              ///< Select temperate landscape style.
 	WID_CS_ARCTIC,                 ///< Select arctic landscape style.
 	WID_CS_TROPICAL,               ///< Select tropical landscape style.
-	WID_CS_TOYLAND,                ///< Select toy-land landscape style.
 	WID_CS_EMPTY_WORLD,            ///< Generate an empty flat world.
 	WID_CS_RANDOM_WORLD,           ///< Generate random land button
 	WID_CS_MAPSIZE_X_PULLDOWN,     ///< Pull-down arrow for x map size.

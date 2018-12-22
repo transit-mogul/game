@@ -46,16 +46,6 @@ STR_CARGO_PLURAL_GOLD                                           :Gold
 STR_CARGO_PLURAL_WATER                                          :Water
 STR_CARGO_PLURAL_WHEAT                                          :Wheat
 STR_CARGO_PLURAL_RUBBER                                         :Rubber
-STR_CARGO_PLURAL_SUGAR                                          :Sugar
-STR_CARGO_PLURAL_TOYS                                           :Toys
-STR_CARGO_PLURAL_CANDY                                          :Sweets
-STR_CARGO_PLURAL_COLA                                           :Cola
-STR_CARGO_PLURAL_COTTON_CANDY                                   :Candyfloss
-STR_CARGO_PLURAL_BUBBLES                                        :Bubbles
-STR_CARGO_PLURAL_TOFFEE                                         :Toffee
-STR_CARGO_PLURAL_BATTERIES                                      :Batteries
-STR_CARGO_PLURAL_PLASTIC                                        :Plastic
-STR_CARGO_PLURAL_FIZZY_DRINKS                                   :Fizzy Drinks
 
 # Singular cargo name
 STR_CARGO_SINGULAR_NOTHING                                      :
@@ -80,16 +70,6 @@ STR_CARGO_SINGULAR_GOLD                                         :Gold
 STR_CARGO_SINGULAR_WATER                                        :Water
 STR_CARGO_SINGULAR_WHEAT                                        :Wheat
 STR_CARGO_SINGULAR_RUBBER                                       :Rubber
-STR_CARGO_SINGULAR_SUGAR                                        :Sugar
-STR_CARGO_SINGULAR_TOY                                          :Toy
-STR_CARGO_SINGULAR_CANDY                                        :Sweet
-STR_CARGO_SINGULAR_COLA                                         :Cola
-STR_CARGO_SINGULAR_COTTON_CANDY                                 :Candyfloss
-STR_CARGO_SINGULAR_BUBBLE                                       :Bubble
-STR_CARGO_SINGULAR_TOFFEE                                       :Toffee
-STR_CARGO_SINGULAR_BATTERY                                      :Battery
-STR_CARGO_SINGULAR_PLASTIC                                      :Plastic
-STR_CARGO_SINGULAR_FIZZY_DRINK                                  :Fizzy Drink
 
 # Quantity of cargo
 STR_QUANTITY_NOTHING                                            :
@@ -114,16 +94,6 @@ STR_QUANTITY_GOLD                                               :{COMMA}{NBSP}ba
 STR_QUANTITY_WATER                                              :{VOLUME_LONG} of water
 STR_QUANTITY_WHEAT                                              :{WEIGHT_LONG} of wheat
 STR_QUANTITY_RUBBER                                             :{VOLUME_LONG} of rubber
-STR_QUANTITY_SUGAR                                              :{WEIGHT_LONG} of sugar
-STR_QUANTITY_TOYS                                               :{COMMA}{NBSP}toy{P "" s}
-STR_QUANTITY_SWEETS                                             :{COMMA}{NBSP}bag{P "" s} of sweets
-STR_QUANTITY_COLA                                               :{VOLUME_LONG} of cola
-STR_QUANTITY_CANDYFLOSS                                         :{WEIGHT_LONG} of candyfloss
-STR_QUANTITY_BUBBLES                                            :{COMMA} bubble{P "" s}
-STR_QUANTITY_TOFFEE                                             :{WEIGHT_LONG} of toffee
-STR_QUANTITY_BATTERIES                                          :{COMMA} batter{P y ies}
-STR_QUANTITY_PLASTIC                                            :{VOLUME_LONG} of plastic
-STR_QUANTITY_FIZZY_DRINKS                                       :{COMMA} fizzy drink{P "" s}
 STR_QUANTITY_N_A                                                :N/A
 
 # Two letter abbreviation of cargo name
@@ -149,16 +119,6 @@ STR_ABBREV_GOLD                                                 :{TINY_FONT}GD
 STR_ABBREV_WATER                                                :{TINY_FONT}WR
 STR_ABBREV_WHEAT                                                :{TINY_FONT}WH
 STR_ABBREV_RUBBER                                               :{TINY_FONT}RB
-STR_ABBREV_SUGAR                                                :{TINY_FONT}SG
-STR_ABBREV_TOYS                                                 :{TINY_FONT}TY
-STR_ABBREV_SWEETS                                               :{TINY_FONT}SW
-STR_ABBREV_COLA                                                 :{TINY_FONT}CL
-STR_ABBREV_CANDYFLOSS                                           :{TINY_FONT}CF
-STR_ABBREV_BUBBLES                                              :{TINY_FONT}BU
-STR_ABBREV_TOFFEE                                               :{TINY_FONT}TF
-STR_ABBREV_BATTERIES                                            :{TINY_FONT}BA
-STR_ABBREV_PLASTIC                                              :{TINY_FONT}PL
-STR_ABBREV_FIZZY_DRINKS                                         :{TINY_FONT}FZ
 STR_ABBREV_NONE                                                 :{TINY_FONT}NO
 STR_ABBREV_ALL                                                  :{TINY_FONT}ALL
 
@@ -1787,7 +1747,6 @@ STR_INTRO_TOOLTIP_MULTIPLAYER                                   :{BLACK}Start a 
 STR_INTRO_TOOLTIP_TEMPERATE                                     :{BLACK}Select 'temperate' landscape style
 STR_INTRO_TOOLTIP_SUB_ARCTIC_LANDSCAPE                          :{BLACK}Select 'sub-arctic' landscape style
 STR_INTRO_TOOLTIP_SUB_TROPICAL_LANDSCAPE                        :{BLACK}Select 'sub-tropical' landscape style
-STR_INTRO_TOOLTIP_TOYLAND_LANDSCAPE                             :{BLACK}Select 'toyland' landscape style
 
 STR_INTRO_TOOLTIP_GAME_OPTIONS                                  :{BLACK}Display game options
 STR_INTRO_TOOLTIP_HIGHSCORE                                     :{BLACK}Display highscore table
@@ -1833,7 +1792,6 @@ STR_CHEAT_EDIT_MAX_HL_QUERY_CAPT                                :{WHITE}Edit the
 STR_CHEAT_SWITCH_CLIMATE_TEMPERATE_LANDSCAPE                    :Temperate landscape
 STR_CHEAT_SWITCH_CLIMATE_SUB_ARCTIC_LANDSCAPE                   :Sub-arctic landscape
 STR_CHEAT_SWITCH_CLIMATE_SUB_TROPICAL_LANDSCAPE                 :Sub-tropical landscape
-STR_CHEAT_SWITCH_CLIMATE_TOYLAND_LANDSCAPE                      :Toyland landscape
 STR_CHEAT_CHANGE_DATE                                           :{LTBLUE}Change date: {ORANGE}{DATE_SHORT}
 STR_CHEAT_CHANGE_DATE_QUERY_CAPT                                :{WHITE}Change current year
 STR_CHEAT_SETUP_PROD                                            :{LTBLUE}Enable modifying production values: {ORANGE}{STRING1}
@@ -4670,8 +4628,6 @@ STR_TOWN_BUILDING_NAME_CINEMA_1                                 :Cinema
 STR_TOWN_BUILDING_NAME_SHOPPING_MALL_1                          :Shopping center
 STR_TOWN_BUILDING_NAME_IGLOO_1                                  :Igloo
 STR_TOWN_BUILDING_NAME_TEPEES_1                                 :Tepees
-STR_TOWN_BUILDING_NAME_TEAPOT_HOUSE_1                           :Teapot-House
-STR_TOWN_BUILDING_NAME_PIGGY_BANK_1                             :Piggy-Bank
 
 ##id 0x4800
 # industry names
@@ -4701,17 +4657,6 @@ STR_INDUSTRY_NAME_WATER_TOWER                                   :Water Tower
 STR_INDUSTRY_NAME_FACTORY_2                                     :Factory
 STR_INDUSTRY_NAME_FARM_2                                        :Farm
 STR_INDUSTRY_NAME_LUMBER_MILL                                   :Lumber Mill
-STR_INDUSTRY_NAME_COTTON_CANDY_FOREST                           :Candyfloss Forest
-STR_INDUSTRY_NAME_CANDY_FACTORY                                 :Sweet Factory
-STR_INDUSTRY_NAME_BATTERY_FARM                                  :Battery Farm
-STR_INDUSTRY_NAME_COLA_WELLS                                    :Cola Wells
-STR_INDUSTRY_NAME_TOY_SHOP                                      :Toy Shop
-STR_INDUSTRY_NAME_TOY_FACTORY                                   :Toy Factory
-STR_INDUSTRY_NAME_PLASTIC_FOUNTAINS                             :Plastic Fountains
-STR_INDUSTRY_NAME_FIZZY_DRINK_FACTORY                           :Fizzy Drink Factory
-STR_INDUSTRY_NAME_BUBBLE_GENERATOR                              :Bubble Generator
-STR_INDUSTRY_NAME_TOFFEE_QUARRY                                 :Toffee Quarry
-STR_INDUSTRY_NAME_SUGAR_MINE                                    :Sugar Mine
 
 ############ WARNING, using range 0x6000 for strings that are stored in the savegame
 ############ These strings may never get a new id, or savegames will break!
@@ -4799,16 +4744,6 @@ STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_COPPER_ORE_HOPPER             :Copper Ore Hopp
 STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_WATER_TANKER                  :Water Tanker
 STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_FRUIT_TRUCK                   :Fruit Truck
 STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_RUBBER_TRUCK                  :Rubber Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_SUGAR_TRUCK                   :Sugar Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_COTTON_CANDY_HOPPER           :Candyfloss Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_TOFFEE_HOPPER                 :Toffee Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_BUBBLE_VAN                    :Bubble Van
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_COLA_TANKER                   :Cola Tanker
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_CANDY_VAN                     :Sweet Van
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_TOY_VAN                       :Toy Van
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_BATTERY_TRUCK                 :Battery Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_FIZZY_DRINK_TRUCK             :Fizzy Drink Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_RAIL_PLASTIC_TRUCK                 :Plastic Truck
 STR_VEHICLE_NAME_TRAIN_ENGINE_MONORAIL_X2001_ELECTRIC           :'X2001' (Electric)
 STR_VEHICLE_NAME_TRAIN_ENGINE_MONORAIL_MILLENNIUM_Z1_ELECTRIC   :'Millennium Z1' (Electric)
 STR_VEHICLE_NAME_TRAIN_ENGINE_MONORAIL_WIZZOWOW_Z99             :Wizzowow Z99
@@ -4829,16 +4764,6 @@ STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_COPPER_ORE_HOPPER         :Copper Ore Hopp
 STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_WATER_TANKER              :Water Tanker
 STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_FRUIT_TRUCK               :Fruit Truck
 STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_RUBBER_TRUCK              :Rubber Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_SUGAR_TRUCK               :Sugar Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_COTTON_CANDY_HOPPER       :Candyfloss Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_TOFFEE_HOPPER             :Toffee Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_BUBBLE_VAN                :Bubble Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_COLA_TANKER               :Cola Tanker
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_CANDY_VAN                 :Sweet Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_TOY_VAN                   :Toy Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_BATTERY_TRUCK             :Battery Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_FIZZY_DRINK_TRUCK         :Fizzy Drink Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MONORAIL_PLASTIC_TRUCK             :Plastic Truck
 STR_VEHICLE_NAME_TRAIN_ENGINE_MAGLEV_LEV1_LEVIATHAN_ELECTRIC    :Lev1 'Leviathan' (Electric)
 STR_VEHICLE_NAME_TRAIN_ENGINE_MAGLEV_LEV2_CYCLOPS_ELECTRIC      :Lev2 'Cyclops' (Electric)
 STR_VEHICLE_NAME_TRAIN_ENGINE_MAGLEV_LEV3_PEGASUS_ELECTRIC      :Lev3 'Pegasus' (Electric)
@@ -4861,16 +4786,6 @@ STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_COPPER_ORE_HOPPER           :Copper Ore Hopp
 STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_WATER_TANKER                :Water Tanker
 STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_FRUIT_TRUCK                 :Fruit Truck
 STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_RUBBER_TRUCK                :Rubber Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_SUGAR_TRUCK                 :Sugar Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_COTTON_CANDY_HOPPER         :Candyfloss Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_TOFFEE_HOPPER               :Toffee Hopper
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_BUBBLE_VAN                  :Bubble Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_COLA_TANKER                 :Cola Tanker
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_CANDY_VAN                   :Sweet Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_TOY_VAN                     :Toy Van
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_BATTERY_TRUCK               :Battery Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_FIZZY_DRINK_TRUCK           :Fizzy Drink Truck
-STR_VEHICLE_NAME_TRAIN_WAGON_MAGLEV_PLASTIC_TRUCK               :Plastic Truck
 STR_VEHICLE_NAME_ROAD_VEHICLE_MPS_REGAL_BUS                     :MPS Regal Bus
 STR_VEHICLE_NAME_ROAD_VEHICLE_HEREFORD_LEOPARD_BUS              :Hereford Leopard Bus
 STR_VEHICLE_NAME_ROAD_VEHICLE_FOSTER_BUS                        :Foster Bus
@@ -4929,36 +4844,6 @@ STR_VEHICLE_NAME_ROAD_VEHICLE_KELLING_FRUIT_TRUCK               :Kelling Fruit T
 STR_VEHICLE_NAME_ROAD_VEHICLE_BALOGH_RUBBER_TRUCK               :Balogh Rubber Truck
 STR_VEHICLE_NAME_ROAD_VEHICLE_UHL_RUBBER_TRUCK                  :Uhl Rubber Truck
 STR_VEHICLE_NAME_ROAD_VEHICLE_RMT_RUBBER_TRUCK                  :RMT Rubber Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_SUGAR_TRUCK           :MightyMover Sugar Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_SUGAR_TRUCK           :Powernaught Sugar Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_SUGAR_TRUCK              :Wizzowow Sugar Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_COLA_TRUCK            :MightyMover Cola Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_COLA_TRUCK            :Powernaught Cola Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_COLA_TRUCK               :Wizzowow Cola Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_COTTON_CANDY          :MightyMover Candyfloss Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_COTTON_CANDY          :Powernaught Candyfloss Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_COTTON_CANDY_TRUCK       :Wizzowow Candyfloss Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_TOFFEE_TRUCK          :MightyMover Toffee Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_TOFFEE_TRUCK          :Powernaught Toffee Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_TOFFEE_TRUCK             :Wizzowow Toffee Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_TOY_VAN               :MightyMover Toy Van
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_TOY_VAN               :Powernaught Toy Van
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_TOY_VAN                  :Wizzowow Toy Van
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_CANDY_TRUCK           :MightyMover Sweet Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_CANDY_TRUCK           :Powernaught Sweet Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_CANDY_TRUCK              :Wizzowow Sweet Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_BATTERY_TRUCK         :MightyMover Battery Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_BATTERY_TRUCK         :Powernaught Battery Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_BATTERY_TRUCK            :Wizzowow Battery Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_FIZZY_DRINK           :MightyMover Fizzy Drink Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_FIZZY_DRINK           :Powernaught Fizzy Drink Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_FIZZY_DRINK_TRUCK        :Wizzowow Fizzy Drink Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_PLASTIC_TRUCK         :MightyMover Plastic Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_PLASTIC_TRUCK         :Powernaught Plastic Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_PLASTIC_TRUCK            :Wizzowow Plastic Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_MIGHTYMOVER_BUBBLE_TRUCK          :MightyMover Bubble Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_POWERNAUGHT_BUBBLE_TRUCK          :Powernaught Bubble Truck
-STR_VEHICLE_NAME_ROAD_VEHICLE_WIZZOWOW_BUBBLE_TRUCK             :Wizzowow Bubble Truck
 STR_VEHICLE_NAME_SHIP_MPS_OIL_TANKER                            :MPS Oil Tanker
 STR_VEHICLE_NAME_SHIP_CS_INC_OIL_TANKER                         :CS-Inc. Oil Tanker
 STR_VEHICLE_NAME_SHIP_MPS_PASSENGER_FERRY                       :MPS Passenger Ferry

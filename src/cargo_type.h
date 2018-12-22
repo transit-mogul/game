@@ -51,18 +51,6 @@ enum CargoType {
 	CT_WATER        =  9,
 	CT_DIAMONDS     = 10,
 
-	/* Toyland */
-	CT_SUGAR        =  1,
-	CT_TOYS         =  3,
-	CT_BATTERIES    =  4,
-	CT_CANDY        =  5,
-	CT_TOFFEE       =  6,
-	CT_COLA         =  7,
-	CT_COTTON_CANDY =  8,
-	CT_BUBBLES      =  9,
-	CT_PLASTIC      = 10,
-	CT_FIZZY_DRINKS = 11,
-
 	NUM_CARGO       = 64,   ///< Maximal number of cargo types in a game.
 
 	CT_AUTO_REFIT   = 0xFD, ///< Automatically choose cargo type when doing auto refitting.

@@ -478,7 +478,6 @@ void SQGSWindow_Register(Squirrel *engine)
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_TEMPERATE,                          "WID_GL_TEMPERATE");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_ARCTIC,                             "WID_GL_ARCTIC");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_TROPICAL,                           "WID_GL_TROPICAL");
-	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_TOYLAND,                            "WID_GL_TOYLAND");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_MAPSIZE_X_PULLDOWN,                 "WID_GL_MAPSIZE_X_PULLDOWN");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_MAPSIZE_Y_PULLDOWN,                 "WID_GL_MAPSIZE_Y_PULLDOWN");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_GL_TOWN_PULLDOWN,                      "WID_GL_TOWN_PULLDOWN");
@@ -511,7 +510,6 @@ void SQGSWindow_Register(Squirrel *engine)
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_TEMPERATE,                          "WID_CS_TEMPERATE");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_ARCTIC,                             "WID_CS_ARCTIC");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_TROPICAL,                           "WID_CS_TROPICAL");
-	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_TOYLAND,                            "WID_CS_TOYLAND");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_EMPTY_WORLD,                        "WID_CS_EMPTY_WORLD");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_RANDOM_WORLD,                       "WID_CS_RANDOM_WORLD");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_CS_MAPSIZE_X_PULLDOWN,                 "WID_CS_MAPSIZE_X_PULLDOWN");
@@ -609,7 +607,6 @@ void SQGSWindow_Register(Squirrel *engine)
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_TEMPERATE_LANDSCAPE,               "WID_SGI_TEMPERATE_LANDSCAPE");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_ARCTIC_LANDSCAPE,                  "WID_SGI_ARCTIC_LANDSCAPE");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_TROPIC_LANDSCAPE,                  "WID_SGI_TROPIC_LANDSCAPE");
-	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_TOYLAND_LANDSCAPE,                 "WID_SGI_TOYLAND_LANDSCAPE");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_BASESET_SELECTION,                 "WID_SGI_BASESET_SELECTION");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_BASESET,                           "WID_SGI_BASESET");
 	SQGSWindow.DefSQConst(engine, ScriptWindow::WID_SGI_TRANSLATION_SELECTION,             "WID_SGI_TRANSLATION_SELECTION");

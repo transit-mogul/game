@@ -29,7 +29,6 @@ public:
 		LT_TEMPERATE  = ::LT_TEMPERATE, ///< Temperate climate.
 		LT_ARCTIC     = ::LT_ARCTIC,    ///< Arctic climate.
 		LT_TROPIC     = ::LT_TROPIC,    ///< Tropic climate.
-		LT_TOYLAND    = ::LT_TOYLAND,   ///< Toyland climate.
 	};
 
 	/**
