@@ -23,7 +23,6 @@ enum SelectGameIntroWidgets {
 	WID_SGI_TEMPERATE_LANDSCAPE,   ///< Select temperate landscape button.
 	WID_SGI_ARCTIC_LANDSCAPE,      ///< Select arctic landscape button.
 	WID_SGI_TROPIC_LANDSCAPE,      ///< Select tropic landscape button.
-	WID_SGI_TOYLAND_LANDSCAPE,     ///< Select toyland landscape button.
 	WID_SGI_BASESET_SELECTION,     ///< Baseset selection.
 	WID_SGI_BASESET,               ///< Baseset errors.
 	WID_SGI_TRANSLATION_SELECTION, ///< Translation selection.

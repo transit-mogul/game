@@ -1527,22 +1527,6 @@ static char *GetSpecialTownNameString(char *buff, int ind, uint32 seed, const ch
 	return GenerateTownNameString(buff, last, ind, seed);
 }
 
-static const char * const _silly_company_names[] = {
-	"Bloggs Brothers",
-	"Tiny Transport Ltd.",
-	"Express Travel",
-	"Comfy-Coach & Co.",
-	"Crush & Bump Ltd.",
-	"Broken & Late Ltd.",
-	"Sam Speedy & Son",
-	"Supersonic Travel",
-	"Mike's Motors",
-	"Lightning International",
-	"Pannik & Loozit Ltd.",
-	"Inter-City Transport",
-	"Getout & Pushit Ltd."
-};
-
 static const char * const _surname_list[] = {
 	"Adams",
 	"Allan",
@@ -1575,21 +1559,6 @@ static const char * const _surname_list[] = {
 	"Watkins"
 };
 
-static const char * const _silly_surname_list[] = {
-	"Grumpy",
-	"Dozy",
-	"Speedy",
-	"Nosey",
-	"Dribble",
-	"Mushroom",
-	"Cabbage",
-	"Sniffle",
-	"Fishy",
-	"Swindle",
-	"Sneaky",
-	"Nutkins"
-};
-
 static const char _initial_name_letters[] = {
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 	'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'W',
@@ -1600,13 +1569,8 @@ static char *GenAndCoName(char *buff, uint32 arg, const char *last)
 	const char * const *base;
 	uint num;
 
-	if (_settings_game.game_creation.landscape == LT_TOYLAND) {
-		base = _silly_surname_list;
-		num  = lengthof(_silly_surname_list);
-	} else {
-		base = _surname_list;
-		num  = lengthof(_surname_list);
-	}
+	base = _surname_list;
+	num  = lengthof(_surname_list);
 
 	buff = strecpy(buff, base[num * GB(arg, 16, 8) >> 8], last);
 	buff = strecpy(buff, " & Co.", last);
@@ -1630,13 +1594,8 @@ static char *GenPresidentName(char *buff, uint32 x, const char *last)
 		buff = strecpy(buff, initial, last);
 	}
 
-	if (_settings_game.game_creation.landscape == LT_TOYLAND) {
-		base = _silly_surname_list;
-		num  = lengthof(_silly_surname_list);
-	} else {
-		base = _surname_list;
-		num  = lengthof(_surname_list);
-	}
+	base = _surname_list;
+	num  = lengthof(_surname_list);
 
 	buff = strecpy(buff, base[num * GB(x, 16, 8) >> 8], last);
 
@@ -1646,8 +1605,9 @@ static char *GenPresidentName(char *buff, uint32 x, const char *last)
 static char *GetSpecialNameString(char *buff, int ind, StringParameters *args, const char *last)
 {
 	switch (ind) {
-		case 1: // not used
-			return strecpy(buff, _silly_company_names[min(args->GetInt32() & 0xFFFF, lengthof(_silly_company_names) - 1)], last);
+		case 1:
+			error("No silly name support.");
+			break;
 
 		case 2: // used for Foobar & Co company names
 			return GenAndCoName(buff, args->GetInt32(), last);

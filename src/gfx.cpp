@@ -1080,7 +1080,7 @@ void DoPaletteAnimations()
 	}
 
 	/* Dark blue water */
-	s = (_settings_game.game_creation.landscape == LT_TOYLAND) ? ev->dark_water_toyland : ev->dark_water;
+	s = ev->dark_water;
 	j = EXTR(320, EPV_CYCLES_DARK_WATER);
 	for (i = 0; i != EPV_CYCLES_DARK_WATER; i++) {
 		*palette_pos++ = s[j];
@@ -1089,7 +1089,7 @@ void DoPaletteAnimations()
 	}
 
 	/* Glittery water */
-	s = (_settings_game.game_creation.landscape == LT_TOYLAND) ? ev->glitter_water_toyland : ev->glitter_water;
+	s = ev->glitter_water;
 	j = EXTR(128, EPV_CYCLES_GLITTER_WATER);
 	for (i = 0; i != EPV_CYCLES_GLITTER_WATER / 3; i++) {
 		*palette_pos++ = s[j];

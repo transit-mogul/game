@@ -1139,7 +1139,7 @@ static const SpriteID SPR_CARGO_STEEL                 = 4306;
 static const SpriteID SPR_CARGO_VALUES_GOLD           = 4307;  // shared between temperate and arctic
 static const SpriteID SPR_CARGO_FRUIT                 = 4308;
 static const SpriteID SPR_CARGO_COPPER_ORE            = 4309;
-static const SpriteID SPR_CARGO_WATERCOLA             = 4310;  // shared between desert and toyland
+static const SpriteID SPR_CARGO_WATERCOLA             = 4310;
 static const SpriteID SPR_CARGO_DIAMONDS              = 4311;
 static const SpriteID SPR_CARGO_FOOD                  = 4312;
 static const SpriteID SPR_CARGO_PAPER                 = 4313;
@@ -1339,8 +1339,6 @@ static const SpriteID SPR_SELECT_SUB_ARCTIC          = 4884;
 static const SpriteID SPR_SELECT_SUB_ARCTIC_PUSHED   = 4885;
 static const SpriteID SPR_SELECT_SUB_TROPICAL        = 4886;
 static const SpriteID SPR_SELECT_SUB_TROPICAL_PUSHED = 4887;
-static const SpriteID SPR_SELECT_TOYLAND             = 4888;
-static const SpriteID SPR_SELECT_TOYLAND_PUSHED      = 4889;
 
 /** Cursor sprite numbers */
 

@@ -37,7 +37,6 @@ bool _palette_remap_grf[MAX_FILE_SLOTS];
 static const SpriteID * const _landscape_spriteindexes[] = {
 	_landscape_spriteindexes_arctic,
 	_landscape_spriteindexes_tropic,
-	_landscape_spriteindexes_toyland,
 };
 
 /**
@@ -425,7 +424,7 @@ MD5File::ChecksumResult MD5File::CheckMD5(Subdirectory subdir, size_t max_size) 
 }
 
 /** Names corresponding to the GraphicsFileType */
-static const char * const _graphics_file_names[] = { "base", "logos", "arctic", "tropical", "toyland", "extra" };
+static const char * const _graphics_file_names[] = { "base", "logos", "arctic", "tropical", "extra" };
 
 /** Implementation */
 template <class T, size_t Tnum_files, bool Tsearch_in_tars>

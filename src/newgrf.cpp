@@ -507,11 +507,7 @@ static StringID TTDPStringIDToOTTDStringIDMapping(StringID str)
 	if (str >= begin && str <= end) return str + (stringid - begin)
 
 	/* We have some changes in our cargo strings, resulting in some missing. */
-	TEXTID_TO_STRINGID(0x000E, 0x002D, STR_CARGO_PLURAL_NOTHING,                      STR_CARGO_PLURAL_FIZZY_DRINKS);
-	TEXTID_TO_STRINGID(0x002E, 0x004D, STR_CARGO_SINGULAR_NOTHING,                    STR_CARGO_SINGULAR_FIZZY_DRINK);
 	if (str >= 0x004E && str <= 0x006D) return units_volume[str - 0x004E];
-	TEXTID_TO_STRINGID(0x006E, 0x008D, STR_QUANTITY_NOTHING,                          STR_QUANTITY_FIZZY_DRINKS);
-	TEXTID_TO_STRINGID(0x008E, 0x00AD, STR_ABBREV_NOTHING,                            STR_ABBREV_FIZZY_DRINKS);
 	TEXTID_TO_STRINGID(0x00D1, 0x00E0, STR_COLOUR_DARK_BLUE,                          STR_COLOUR_WHITE);
 
 	/* Map building names according to our lang file changes. There are several
@@ -519,10 +515,8 @@ static StringID TTDPStringIDToOTTDStringIDMapping(StringID str)
 	 * to use original house names. */
 	TEXTID_TO_STRINGID(0x200F, 0x201F, STR_TOWN_BUILDING_NAME_TALL_OFFICE_BLOCK_1,    STR_TOWN_BUILDING_NAME_OLD_HOUSES_1);
 	TEXTID_TO_STRINGID(0x2036, 0x2041, STR_TOWN_BUILDING_NAME_COTTAGES_1,             STR_TOWN_BUILDING_NAME_SHOPPING_MALL_1);
-	TEXTID_TO_STRINGID(0x2059, 0x205C, STR_TOWN_BUILDING_NAME_IGLOO_1,                STR_TOWN_BUILDING_NAME_PIGGY_BANK_1);
 
 	/* Same thing for industries */
-	TEXTID_TO_STRINGID(0x4802, 0x4826, STR_INDUSTRY_NAME_COAL_MINE,                   STR_INDUSTRY_NAME_SUGAR_MINE);
 	TEXTID_TO_STRINGID(0x482D, 0x482E, STR_NEWS_INDUSTRY_CONSTRUCTION,                STR_NEWS_INDUSTRY_PLANTED);
 	TEXTID_TO_STRINGID(0x4832, 0x4834, STR_NEWS_INDUSTRY_CLOSURE_GENERAL,             STR_NEWS_INDUSTRY_CLOSURE_LACK_OF_TREES);
 	TEXTID_TO_STRINGID(0x4835, 0x4838, STR_NEWS_INDUSTRY_PRODUCTION_INCREASE_GENERAL, STR_NEWS_INDUSTRY_PRODUCTION_INCREASE_FARM);
@@ -2404,10 +2398,9 @@ static ChangeInfoResult TownHouseChangeInfo(uint hid, int numinfo, int prop, Byt
 			case 0x0F: { // Goods/candy, food/fizzy drinks acceptance
 				int8 goods = buf->ReadByte();
 
-				/* If value of goods is negative, it means in fact food or, if in toyland, fizzy_drink acceptance.
-				 * Else, we have "standard" 3rd cargo type, goods or candy, for toyland once more */
-				CargoID cid = (goods >= 0) ? ((_settings_game.game_creation.landscape == LT_TOYLAND) ? CT_CANDY : CT_GOODS) :
-						((_settings_game.game_creation.landscape == LT_TOYLAND) ? CT_FIZZY_DRINKS : CT_FOOD);
+				/* If value of goods is negative, it means in fact food acceptance.
+				 * Else, we have "standard" 3rd cargo type, goods */
+				CargoID cid = (goods < 0) ? CT_FOOD : CT_GOODS;
 
 				/* Make sure the cargo type is valid in this climate. */
 				if (!CargoSpec::Get(cid)->IsValid()) goods = 0;
@@ -5911,7 +5904,7 @@ bool GetGlobalVariable(byte param, uint32 *value, const GRFFile *grffile)
 			return true;
 		}
 
-		case 0x03: // current climate, 0=temp, 1=arctic, 2=trop, 3=toyland
+		case 0x03: // current climate, 0=temp, 1=arctic, 2=trop
 			*value = _settings_game.game_creation.landscape;
 			return true;
 
@@ -7994,7 +7987,6 @@ static void InitializeGRFSpecial()
 	                   |                                                      (1 << 0x0E)  // fullloadany
 	                   |                                                      (1 << 0x0F)  // planespeed
 	                   |                                                      (0 << 0x10)  // moreindustriesperclimate - obsolete
-	                   |                                                      (0 << 0x11)  // moretoylandfeatures
 	                   |                                                      (1 << 0x12)  // newstations
 	                   |                                                      (1 << 0x13)  // tracktypecostdiff
 	                   |                                                      (1 << 0x14)  // manualconvert

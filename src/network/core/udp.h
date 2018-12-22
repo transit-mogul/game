@@ -99,7 +99,7 @@ protected:
 	 *   1+       2       width of the map in tiles
 	 *   1+       2       height of the map in tiles
 	 *   1+       1       type of map:
-	 *                    (0 = temperate, 1 = arctic, 2 = desert, 3 = toyland)
+	 *                    (0 = temperate, 1 = arctic, 2 = desert)
 	 *   1+       1       whether the server is dedicated (0 = no, 1 = yes)
 	 * @param p           The received packet.
 	 * @param client_addr The origin of the packet.

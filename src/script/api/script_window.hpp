@@ -1001,7 +1001,7 @@ public:
 	};
 
 	/* automatically generated from ../../widgets/cheat_widget.h */
-	/** Widgets of the #CheatWindow class.. */
+	/** Widgets of the #CheatWindow class. */
 	enum CheatWidgets {
 		WID_C_PANEL                                  = ::WID_C_PANEL,                                  ///< Panel where all cheats are shown in.
 	};
@@ -1031,10 +1031,10 @@ public:
 		WID_C_COLOUR_SCHEME                          = ::WID_C_COLOUR_SCHEME,                          ///< Button to change colour scheme.
 		WID_C_PRESIDENT_NAME                         = ::WID_C_PRESIDENT_NAME,                         ///< Button to change president name.
 		WID_C_COMPANY_NAME                           = ::WID_C_COMPANY_NAME,                           ///< Button to change company name.
-		WID_C_BUY_1PC_SHARE                          = ::WID_C_BUY_1PC_SHARE,                          ///< Button to buy a share.
-		WID_C_BUY_10PC_SHARE                         = ::WID_C_BUY_10PC_SHARE,                         ///< Button to buy a share.
-		WID_C_SELL_1PC_SHARE                         = ::WID_C_SELL_1PC_SHARE,                         ///< Button to sell a share.
-		WID_C_SELL_10PC_SHARE                        = ::WID_C_SELL_10PC_SHARE,                        ///< Button to sell a share.
+		WID_C_BUY_1PC_SHARE                          = ::WID_C_BUY_1PC_SHARE,                          ///< Button to buy 1% share.
+		WID_C_BUY_10PC_SHARE                         = ::WID_C_BUY_10PC_SHARE,                         ///< Button to buy 10% share.
+		WID_C_SELL_1PC_SHARE                         = ::WID_C_SELL_1PC_SHARE,                         ///< Button to sell 1% share.
+		WID_C_SELL_10PC_SHARE                        = ::WID_C_SELL_10PC_SHARE,                        ///< Button to sell 10% share.
 
 		WID_C_SELECT_VIEW_BUILD_HQ                   = ::WID_C_SELECT_VIEW_BUILD_HQ,                   ///< Panel about HQ.
 		WID_C_VIEW_HQ                                = ::WID_C_VIEW_HQ,                                ///< Button to view the HQ.
@@ -1274,6 +1274,7 @@ public:
 		WID_SL_CAPTION                               = ::WID_SL_CAPTION,                               ///< Caption of the window.
 		WID_SL_SORT_BYNAME                           = ::WID_SL_SORT_BYNAME,                           ///< Sort by name button.
 		WID_SL_SORT_BYDATE                           = ::WID_SL_SORT_BYDATE,                           ///< Sort by date button.
+		WID_SL_FILTER                                = ::WID_SL_FILTER,                                ///< Filter list of files
 		WID_SL_BACKGROUND                            = ::WID_SL_BACKGROUND,                            ///< Background of window.
 		WID_SL_FILE_BACKGROUND                       = ::WID_SL_FILE_BACKGROUND,                       ///< Background of file selection.
 		WID_SL_HOME_BUTTON                           = ::WID_SL_HOME_BUTTON,                           ///< Home button.
@@ -1315,7 +1316,6 @@ public:
 		WID_GL_TEMPERATE                             = ::WID_GL_TEMPERATE,                             ///< Button with icon "Temperate".
 		WID_GL_ARCTIC                                = ::WID_GL_ARCTIC,                                ///< Button with icon "Arctic".
 		WID_GL_TROPICAL                              = ::WID_GL_TROPICAL,                              ///< Button with icon "Tropical".
-		WID_GL_TOYLAND                               = ::WID_GL_TOYLAND,                               ///< Button with icon "Toyland".
 
 		WID_GL_MAPSIZE_X_PULLDOWN                    = ::WID_GL_MAPSIZE_X_PULLDOWN,                    ///< Dropdown 'map X size'.
 		WID_GL_MAPSIZE_Y_PULLDOWN                    = ::WID_GL_MAPSIZE_Y_PULLDOWN,                    ///< Dropdown 'map Y size'.
@@ -1362,7 +1362,6 @@ public:
 		WID_CS_TEMPERATE                             = ::WID_CS_TEMPERATE,                             ///< Select temperate landscape style.
 		WID_CS_ARCTIC                                = ::WID_CS_ARCTIC,                                ///< Select arctic landscape style.
 		WID_CS_TROPICAL                              = ::WID_CS_TROPICAL,                              ///< Select tropical landscape style.
-		WID_CS_TOYLAND                               = ::WID_CS_TOYLAND,                               ///< Select toy-land landscape style.
 		WID_CS_EMPTY_WORLD                           = ::WID_CS_EMPTY_WORLD,                           ///< Generate an empty flat world.
 		WID_CS_RANDOM_WORLD                          = ::WID_CS_RANDOM_WORLD,                          ///< Generate random land button
 		WID_CS_MAPSIZE_X_PULLDOWN                    = ::WID_CS_MAPSIZE_X_PULLDOWN,                    ///< Pull-down arrow for x map size.
@@ -1531,7 +1530,6 @@ public:
 		WID_SGI_TEMPERATE_LANDSCAPE                  = ::WID_SGI_TEMPERATE_LANDSCAPE,                  ///< Select temperate landscape button.
 		WID_SGI_ARCTIC_LANDSCAPE                     = ::WID_SGI_ARCTIC_LANDSCAPE,                     ///< Select arctic landscape button.
 		WID_SGI_TROPIC_LANDSCAPE                     = ::WID_SGI_TROPIC_LANDSCAPE,                     ///< Select tropic landscape button.
-		WID_SGI_TOYLAND_LANDSCAPE                    = ::WID_SGI_TOYLAND_LANDSCAPE,                    ///< Select toyland landscape button.
 		WID_SGI_BASESET_SELECTION                    = ::WID_SGI_BASESET_SELECTION,                    ///< Baseset selection.
 		WID_SGI_BASESET                              = ::WID_SGI_BASESET,                              ///< Baseset errors.
 		WID_SGI_TRANSLATION_SELECTION                = ::WID_SGI_TRANSLATION_SELECTION,                ///< Translation selection.

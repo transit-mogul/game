@@ -471,7 +471,7 @@ static uint32 VehicleGetVariable(Vehicle *v, const VehicleScopeResolver *object,
 				const Vehicle *u;
 				byte cargo_classes = 0;
 				uint8 common_cargoes[NUM_CARGO];
-				uint8 common_subtypes[256];
+				uint8 common_subtypes[173];
 				byte user_def_data = 0;
 				CargoID common_cargo_type = CT_INVALID;
 				uint8 common_subtype = 0xFF; // Return 0xFF if nothing is carried

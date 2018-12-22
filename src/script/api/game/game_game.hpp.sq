@@ -24,7 +24,6 @@ void SQGSGame_Register(Squirrel *engine)
 	SQGSGame.DefSQConst(engine, ScriptGame::LT_TEMPERATE, "LT_TEMPERATE");
 	SQGSGame.DefSQConst(engine, ScriptGame::LT_ARCTIC,    "LT_ARCTIC");
 	SQGSGame.DefSQConst(engine, ScriptGame::LT_TROPIC,    "LT_TROPIC");
-	SQGSGame.DefSQConst(engine, ScriptGame::LT_TOYLAND,   "LT_TOYLAND");
 
 	SQGSGame.DefSQStaticMethod(engine, &ScriptGame::Pause,         "Pause",         1, ".");
 	SQGSGame.DefSQStaticMethod(engine, &ScriptGame::Unpause,       "Unpause",       1, ".");
