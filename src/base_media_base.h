@@ -242,7 +242,6 @@ enum GraphicsFileType {
 	GFT_LOGOS,    ///< Logos, landscape icons and original terrain generator sprites
 	GFT_ARCTIC,   ///< Landscape replacement sprites for arctic
 	GFT_TROPICAL, ///< Landscape replacement sprites for tropical
-	GFT_TOYLAND,  ///< Landscape replacement sprites for toyland
 	GFT_EXTRA,    ///< Extra sprites that were not part of the original sprites
 	MAX_GFT,      ///< We are looking for this amount of GRFs
 };

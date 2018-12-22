@@ -105,12 +105,10 @@ static const uint EPV_CYCLES_GLITTER_WATER = 15; ///< length of the glittery wat
 /** Description of tables for the palette animation */
 struct ExtraPaletteValues {
 	Colour dark_water[EPV_CYCLES_DARK_WATER];               ///< dark blue water
-	Colour dark_water_toyland[EPV_CYCLES_DARK_WATER];       ///< dark blue water Toyland
 	Colour lighthouse[EPV_CYCLES_LIGHTHOUSE];               ///< lighthouse & stadium
 	Colour oil_refinery[EPV_CYCLES_OIL_REFINERY];           ///< oil refinery
 	Colour fizzy_drink[EPV_CYCLES_FIZZY_DRINK];             ///< fizzy drinks
 	Colour glitter_water[EPV_CYCLES_GLITTER_WATER];         ///< glittery water
-	Colour glitter_water_toyland[EPV_CYCLES_GLITTER_WATER]; ///< glittery water Toyland
 };
 
 /** Actual palette animation tables */
@@ -118,10 +116,6 @@ static const ExtraPaletteValues _extra_palette_values = {
 	/* dark blue water */
 	{ M( 32,  68, 112), M( 36,  72, 116), M( 40,  76, 120), M( 44,  80, 124),
 	  M( 48,  84, 128) },
-
-	/* dark blue water Toyland */
-	{ M( 28, 108, 124), M( 32, 112, 128), M( 36, 116, 132), M( 40, 120, 136),
-	  M( 44, 124, 140) },
 
 	/* lighthouse & stadium */
 	{ M(240, 208,   0), M(  0,   0,   0), M(  0,   0,   0), M(  0,   0,   0) },
@@ -138,12 +132,6 @@ static const ExtraPaletteValues _extra_palette_values = {
 	{ M(216, 244, 252), M(172, 208, 224), M(132, 172, 196), M(100, 132, 168),
 	  M( 72, 100, 144), M( 72, 100, 144), M( 72, 100, 144), M( 72, 100, 144),
 	  M( 72, 100, 144), M( 72, 100, 144), M( 72, 100, 144), M( 72, 100, 144),
-	  M(100, 132, 168), M(132, 172, 196), M(172, 208, 224) },
-
-	/* glittery water Toyland */
-	{ M(216, 244, 252), M(180, 220, 232), M(148, 200, 216), M(116, 180, 196),
-	  M( 92, 164, 184), M( 92, 164, 184), M( 92, 164, 184), M( 92, 164, 184),
-	  M( 92, 164, 184), M( 92, 164, 184), M( 92, 164, 184), M( 92, 164, 184),
-	  M(116, 180, 196), M(148, 200, 216), M(180, 220, 232) }
+	  M(100, 132, 168), M(132, 172, 196), M(172, 208, 224) }
 };
 #undef M

@@ -27,7 +27,7 @@ static const byte TOWN_HOUSE_COMPLETED = 3;
 static const HouseID NUM_HOUSES_PER_GRF = 255;    ///< Number of supported houses per NewGRF; limited to 255 to allow extending Action3 with an extended byte later on.
 
 static const uint HOUSE_NO_CLASS      = 0;
-static const HouseID NEW_HOUSE_OFFSET = 110;    ///< Offset for new houses.
+static const HouseID NEW_HOUSE_OFFSET = 91;    ///< Offset for new houses.
 static const HouseID NUM_HOUSES       = 512;    ///< Total number of houses.
 static const HouseID INVALID_HOUSE_ID = 0xFFFF;
 
@@ -82,7 +82,6 @@ enum HouseZones {                  ///< Bit  Value       Meaning
 	HZ_TEMP              = 0x1000,  ///< 12   1000        can appear in temperate climate
 	HZ_SUBARTC_BELOW     = 0x2000,  ///< 13   2000        can appear in sub-arctic climate below the snow line
 	HZ_SUBTROPIC         = 0x4000,  ///< 14   4000        can appear in subtropical climate
-	HZ_TOYLND            = 0x8000,  ///< 15   8000        can appear in toyland climate
 	HZ_CLIMALL           = 0xF800,  ///< Bitmask of all climate bits
 };
 DECLARE_ENUM_AS_BIT_SET(HouseZones)

@@ -69,6 +69,6 @@ static const uint NETWORK_NUM_LANGUAGES           =   36; ///< Number of known l
  * there is a compile assertion to check that this NUM_LANDSCAPE is equal
  * to NETWORK_NUM_LANDSCAPES.
  */
-static const uint NETWORK_NUM_LANDSCAPES          =    4;
+static const uint NETWORK_NUM_LANDSCAPES          =    3;
 
 #endif /* NETWORK_CORE_CONFIG_H */

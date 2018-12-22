@@ -144,9 +144,9 @@ static TreeType GetRandomTreeType(TileIndex tile, uint seed)
 				case TROPICZONE_DESERT:  return (TreeType)((seed > 12) ? TREE_INVALID : TREE_CACTUS);
 				default:                 return (TreeType)(seed * TREE_COUNT_RAINFOREST / 256 + TREE_RAINFOREST);
 			}
-
+		
 		default:
-			return (TreeType)(seed * TREE_COUNT_TOYLAND / 256 + TREE_TOYLAND);
+			error( "Not a valid landscape/climate." );
 	}
 }
 
@@ -312,7 +312,7 @@ void GenerateTrees()
 	total = ScaleByMapSize(DEFAULT_TREE_STEPS);
 	if (_settings_game.game_creation.landscape == LT_TROPIC) total += ScaleByMapSize(DEFAULT_RAINFOREST_TREE_STEPS);
 	total *= i;
-	uint num_groups = (_settings_game.game_creation.landscape != LT_TOYLAND) ? ScaleByMapSize(GB(Random(), 0, 5) + 25) : 0;
+	uint num_groups = ScaleByMapSize(GB(Random(), 0, 5) + 25);
 	total += num_groups * DEFAULT_TREE_STEPS;
 	SetGeneratingWorldProgress(GWP_TREE, total);
 
@@ -391,7 +391,7 @@ CommandCost CmdPlantTree(TileIndex tile, DoCommandFlag flags, uint32 p1, uint32 
 						/* No rain forest trees outside the rain forest, except in the editor mode where it makes those tiles rain forest tile */
 						(IsInsideMM(treetype, TREE_RAINFOREST, TREE_CACTUS) && GetTropicZone(tile) != TROPICZONE_RAINFOREST && _game_mode != GM_EDITOR) ||
 						/* And no subtropical trees in the desert/rain forest */
-						(IsInsideMM(treetype, TREE_SUB_TROPICAL, TREE_TOYLAND) && GetTropicZone(tile) != TROPICZONE_NORMAL))) {
+						(IsInsideMM(treetype, TREE_SUB_TROPICAL, TREE_INVALID) && GetTropicZone(tile) != TROPICZONE_NORMAL))) {
 					msg = STR_ERROR_TREE_WRONG_TERRAIN_FOR_TREE_TYPE;
 					continue;
 				}
