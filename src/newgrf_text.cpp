@@ -1,17 +1,17 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
  * @file newgrf_text.cpp
  * Implementation of  Action 04 "universal holder" structure and functions.
  * This file implements a linked-lists of strings,
- * holding everything that the newgrf action 04 will send over to OpenTTD.
+ * holding everything that the newgrf action 04 will send over to transit_mogul.
  * One of the biggest problems is that Dynamic lang Array uses ISO codes
  * as way to identifying current user lang, while newgrf uses bit shift codes
  * not related to ISO.  So equivalence functionality had to be set.
@@ -164,31 +164,31 @@ static GRFTextEntry _grf_text[TAB_SIZE_NEWGRF];
 static byte _currentLangID = GRFLX_ENGLISH;  ///< by default, english is used.
 
 /**
- * Get the mapping from the NewGRF supplied ID to OpenTTD's internal ID.
+ * Get the mapping from the NewGRF supplied ID to transit_mogul's internal ID.
  * @param newgrf_id The NewGRF ID to map.
  * @param gender    Whether to map genders or cases.
- * @return The, to OpenTTD's internal ID, mapped index, or -1 if there is no mapping.
+ * @return The, to transit_mogul's internal ID, mapped index, or -1 if there is no mapping.
  */
 int LanguageMap::GetMapping(int newgrf_id, bool gender) const
 {
 	const std::vector<Mapping> &map = gender ? this->gender_map : this->case_map;
 	for (const Mapping &m : map) {
-		if (m.newgrf_id == newgrf_id) return m.openttd_id;
+		if (m.newgrf_id == newgrf_id) return m.transit_mogul_id;
 	}
 	return -1;
 }
 
 /**
- * Get the mapping from OpenTTD's internal ID to the NewGRF supplied ID.
- * @param openttd_id The OpenTTD ID to map.
+ * Get the mapping from transit_mogul's internal ID to the NewGRF supplied ID.
+ * @param transit_mogul_id The transit_mogul ID to map.
  * @param gender     Whether to map genders or cases.
  * @return The, to the NewGRF supplied ID, mapped index, or -1 if there is no mapping.
  */
-int LanguageMap::GetReverseMapping(int openttd_id, bool gender) const
+int LanguageMap::GetReverseMapping(int transit_mogul_id, bool gender) const
 {
 	const std::vector<Mapping> &map = gender ? this->gender_map : this->case_map;
 	for (const Mapping &m : map) {
-		if (m.openttd_id == openttd_id) return m.newgrf_id;
+		if (m.transit_mogul_id == transit_mogul_id) return m.newgrf_id;
 	}
 	return -1;
 }
@@ -328,7 +328,7 @@ struct UnmappedChoiceList : ZeroedMemoryAllocator {
 };
 
 /**
- * Translate TTDPatch string codes into something OpenTTD can handle (better).
+ * Translate TTDPatch string codes into something transit_mogul can handle (better).
  * @param grfid          The (NewGRF) ID associated with this string
  * @param language_id    The (NewGRF) language ID associated with this string.
  * @param allow_newlines Whether newlines are allowed in the string or not.
@@ -439,7 +439,7 @@ char *TranslateTTDPatchCodes(uint32 grfid, uint8 language_id, bool allow_newline
 					 * when drawn over multiple lines or right-to-left translations, which
 					 * make the behaviour peculiar, e.g. only happening at specific width
 					 * of windows. Or we need to add another pass over the string to just
-					 * support this. As such it is not implemented in OpenTTD. */
+					 * support this. As such it is not implemented in transit_mogul. */
 					case 0x03: {
 						if (str[0] == '\0' || str[1] == '\0') goto string_end;
 						uint16 tmp  = ((uint8)*str++);
@@ -960,9 +960,9 @@ void RewindTextRefStack()
  * @param scc   the string control code that has been read
  * @param buff  the buffer we're writing to
  * @param str   the string that we need to write
- * @param argv  the OpenTTD stack of values
+ * @param argv  the transit_mogul stack of values
  * @param argv_size space on the stack \a argv
- * @param modify_argv When true, modify the OpenTTD stack.
+ * @param modify_argv When true, modify the transit_mogul stack.
  * @return the string control code to "execute" now
  */
 uint RemapNewGRFStringControlCode(uint scc, char *buf_start, char **buff, const char **str, int64 *argv, uint argv_size, bool modify_argv)

@@ -8,5 +8,5 @@ Icon=!!TTD!!
 Exec=!!TTD!!
 Terminal=false
 Categories=!!MENU_GROUP!!
-Comment=A clone of Transport Tycoon Deluxe
+Comment=A fork of OpenTTD
 Keywords=game;simulation;transport;tycoon;deluxe;economics;multiplayer;money;train;ship;bus;truck;aircraft;cargo;

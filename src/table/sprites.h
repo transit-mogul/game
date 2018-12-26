@@ -55,120 +55,120 @@ static const SpriteID SPR_ASCII_SPACE_BIG   = 450;
 static const SpriteID SPR_LARGE_SMALL_WINDOW = 682;
 
 /** Extra graphic spritenumbers */
-static const SpriteID SPR_OPENTTD_BASE   = 4896;
-static const uint16 OPENTTD_SPRITE_COUNT = 184;
+static const SpriteID SPR_TRANSIT_MOGUL_BASE   = 4896;
+static const uint16 TRANSIT_MOGUL_SPRITE_COUNT = 184;
 
 /* Halftile-selection sprites */
-static const SpriteID SPR_HALFTILE_SELECTION_FLAT = SPR_OPENTTD_BASE;
-static const SpriteID SPR_HALFTILE_SELECTION_DOWN = SPR_OPENTTD_BASE + 4;
-static const SpriteID SPR_HALFTILE_SELECTION_UP   = SPR_OPENTTD_BASE + 8;
+static const SpriteID SPR_HALFTILE_SELECTION_FLAT = SPR_TRANSIT_MOGUL_BASE;
+static const SpriteID SPR_HALFTILE_SELECTION_DOWN = SPR_TRANSIT_MOGUL_BASE + 4;
+static const SpriteID SPR_HALFTILE_SELECTION_UP   = SPR_TRANSIT_MOGUL_BASE + 8;
 
-static const SpriteID SPR_SQUARE             = SPR_OPENTTD_BASE + 38;  // coloured square (used for newgrf compatibility)
-static const SpriteID SPR_BLOT               = SPR_OPENTTD_BASE + 39;  // coloured circle (used for server compatibility and installed content)
-static const SpriteID SPR_LOCK               = SPR_OPENTTD_BASE + 40;  // lock icon (for password protected servers)
-static const SpriteID SPR_BOX_EMPTY          = SPR_OPENTTD_BASE + 41;
-static const SpriteID SPR_BOX_CHECKED        = SPR_OPENTTD_BASE + 42;
-static const SpriteID SPR_WARNING_SIGN       = SPR_OPENTTD_BASE + 43;  // warning sign (shown if there are any newgrf errors)
-static const SpriteID SPR_WINDOW_RESIZE_RIGHT= SPR_OPENTTD_BASE + 44;  // resize icon to the right
-static const SpriteID SPR_WINDOW_RESIZE_LEFT = SPR_OPENTTD_BASE + 149; // resize icon to the left
-static const SpriteID SPR_WINDOW_SHADE       = SPR_OPENTTD_BASE + 151; // shade the window icon
-static const SpriteID SPR_WINDOW_UNSHADE     = SPR_OPENTTD_BASE + 152; // unshade the window icon
-static const SpriteID SPR_WINDOW_DEBUG       = SPR_OPENTTD_BASE + 153; // NewGRF debug window icon
-static const SpriteID SPR_IMG_PLAY_MUSIC_RTL = SPR_OPENTTD_BASE + 150; // play music button, but then for RTL users
+static const SpriteID SPR_SQUARE             = SPR_TRANSIT_MOGUL_BASE + 38;  // coloured square (used for newgrf compatibility)
+static const SpriteID SPR_BLOT               = SPR_TRANSIT_MOGUL_BASE + 39;  // coloured circle (used for server compatibility and installed content)
+static const SpriteID SPR_LOCK               = SPR_TRANSIT_MOGUL_BASE + 40;  // lock icon (for password protected servers)
+static const SpriteID SPR_BOX_EMPTY          = SPR_TRANSIT_MOGUL_BASE + 41;
+static const SpriteID SPR_BOX_CHECKED        = SPR_TRANSIT_MOGUL_BASE + 42;
+static const SpriteID SPR_WARNING_SIGN       = SPR_TRANSIT_MOGUL_BASE + 43;  // warning sign (shown if there are any newgrf errors)
+static const SpriteID SPR_WINDOW_RESIZE_RIGHT= SPR_TRANSIT_MOGUL_BASE + 44;  // resize icon to the right
+static const SpriteID SPR_WINDOW_RESIZE_LEFT = SPR_TRANSIT_MOGUL_BASE + 149; // resize icon to the left
+static const SpriteID SPR_WINDOW_SHADE       = SPR_TRANSIT_MOGUL_BASE + 151; // shade the window icon
+static const SpriteID SPR_WINDOW_UNSHADE     = SPR_TRANSIT_MOGUL_BASE + 152; // unshade the window icon
+static const SpriteID SPR_WINDOW_DEBUG       = SPR_TRANSIT_MOGUL_BASE + 153; // NewGRF debug window icon
+static const SpriteID SPR_IMG_PLAY_MUSIC_RTL = SPR_TRANSIT_MOGUL_BASE + 150; // play music button, but then for RTL users
 /* Arrow icons pointing in all 4 directions */
-static const SpriteID SPR_ARROW_DOWN         = SPR_OPENTTD_BASE + 45;
-static const SpriteID SPR_ARROW_UP           = SPR_OPENTTD_BASE + 46;
-static const SpriteID SPR_ARROW_LEFT         = SPR_OPENTTD_BASE + 47;
-static const SpriteID SPR_ARROW_RIGHT        = SPR_OPENTTD_BASE + 48;
-static const SpriteID SPR_HOUSE_ICON         = SPR_OPENTTD_BASE + 49;
-static const SpriteID SPR_SHARED_ORDERS_ICON = SPR_OPENTTD_BASE + 50;
-static const SpriteID SPR_PIN_UP             = SPR_OPENTTD_BASE + 51;  // pin icon
-static const SpriteID SPR_PIN_DOWN           = SPR_OPENTTD_BASE + 52;
+static const SpriteID SPR_ARROW_DOWN         = SPR_TRANSIT_MOGUL_BASE + 45;
+static const SpriteID SPR_ARROW_UP           = SPR_TRANSIT_MOGUL_BASE + 46;
+static const SpriteID SPR_ARROW_LEFT         = SPR_TRANSIT_MOGUL_BASE + 47;
+static const SpriteID SPR_ARROW_RIGHT        = SPR_TRANSIT_MOGUL_BASE + 48;
+static const SpriteID SPR_HOUSE_ICON         = SPR_TRANSIT_MOGUL_BASE + 49;
+static const SpriteID SPR_SHARED_ORDERS_ICON = SPR_TRANSIT_MOGUL_BASE + 50;
+static const SpriteID SPR_PIN_UP             = SPR_TRANSIT_MOGUL_BASE + 51;  // pin icon
+static const SpriteID SPR_PIN_DOWN           = SPR_TRANSIT_MOGUL_BASE + 52;
 
 static const SpriteID SPR_CLOSEBOX           = 143;
 
-static const SpriteID SPR_CIRCLE_FOLDED      = SPR_OPENTTD_BASE + 147; // (+) icon
-static const SpriteID SPR_CIRCLE_UNFOLDED    = SPR_OPENTTD_BASE + 148; // (-) icon
+static const SpriteID SPR_CIRCLE_FOLDED      = SPR_TRANSIT_MOGUL_BASE + 147; // (+) icon
+static const SpriteID SPR_CIRCLE_UNFOLDED    = SPR_TRANSIT_MOGUL_BASE + 148; // (-) icon
 
 /* on screen keyboard icons */
-static const SpriteID SPR_OSK_LEFT           = SPR_OPENTTD_BASE + 138;
-static const SpriteID SPR_OSK_RIGHT          = SPR_OPENTTD_BASE + 139;
-static const SpriteID SPR_OSK_CAPS           = SPR_OPENTTD_BASE + 140;
-static const SpriteID SPR_OSK_SHIFT          = SPR_OPENTTD_BASE + 141;
-static const SpriteID SPR_OSK_BACKSPACE      = SPR_OPENTTD_BASE + 142;
-static const SpriteID SPR_OSK_SPECIAL        = SPR_OPENTTD_BASE + 143;
+static const SpriteID SPR_OSK_LEFT           = SPR_TRANSIT_MOGUL_BASE + 138;
+static const SpriteID SPR_OSK_RIGHT          = SPR_TRANSIT_MOGUL_BASE + 139;
+static const SpriteID SPR_OSK_CAPS           = SPR_TRANSIT_MOGUL_BASE + 140;
+static const SpriteID SPR_OSK_SHIFT          = SPR_TRANSIT_MOGUL_BASE + 141;
+static const SpriteID SPR_OSK_BACKSPACE      = SPR_TRANSIT_MOGUL_BASE + 142;
+static const SpriteID SPR_OSK_SPECIAL        = SPR_TRANSIT_MOGUL_BASE + 143;
 
 /** Clone vehicles stuff */
-static const SpriteID SPR_CLONE_TRAIN    = SPR_OPENTTD_BASE + 106;
-static const SpriteID SPR_CLONE_ROADVEH  = SPR_OPENTTD_BASE + 107;
-static const SpriteID SPR_CLONE_SHIP     = SPR_OPENTTD_BASE + 108;
-static const SpriteID SPR_CLONE_AIRCRAFT = SPR_OPENTTD_BASE + 109;
+static const SpriteID SPR_CLONE_TRAIN    = SPR_TRANSIT_MOGUL_BASE + 106;
+static const SpriteID SPR_CLONE_ROADVEH  = SPR_TRANSIT_MOGUL_BASE + 107;
+static const SpriteID SPR_CLONE_SHIP     = SPR_TRANSIT_MOGUL_BASE + 108;
+static const SpriteID SPR_CLONE_AIRCRAFT = SPR_TRANSIT_MOGUL_BASE + 109;
 
-static const SpriteID SPR_SELL_TRAIN        = SPR_OPENTTD_BASE +  93;
-static const SpriteID SPR_SELL_ROADVEH      = SPR_OPENTTD_BASE +  94;
-static const SpriteID SPR_SELL_SHIP         = SPR_OPENTTD_BASE +  95;
-static const SpriteID SPR_SELL_AIRCRAFT     = SPR_OPENTTD_BASE +  96;
-static const SpriteID SPR_SELL_ALL_TRAIN    = SPR_OPENTTD_BASE +  97;
-static const SpriteID SPR_SELL_ALL_ROADVEH  = SPR_OPENTTD_BASE +  98;
-static const SpriteID SPR_SELL_ALL_SHIP     = SPR_OPENTTD_BASE +  99;
-static const SpriteID SPR_SELL_ALL_AIRCRAFT = SPR_OPENTTD_BASE + 100;
-static const SpriteID SPR_REPLACE_TRAIN     = SPR_OPENTTD_BASE + 101;
-static const SpriteID SPR_REPLACE_ROADVEH   = SPR_OPENTTD_BASE + 102;
-static const SpriteID SPR_REPLACE_SHIP      = SPR_OPENTTD_BASE + 103;
-static const SpriteID SPR_REPLACE_AIRCRAFT  = SPR_OPENTTD_BASE + 104;
-static const SpriteID SPR_SELL_CHAIN_TRAIN  = SPR_OPENTTD_BASE + 105;
+static const SpriteID SPR_SELL_TRAIN        = SPR_TRANSIT_MOGUL_BASE +  93;
+static const SpriteID SPR_SELL_ROADVEH      = SPR_TRANSIT_MOGUL_BASE +  94;
+static const SpriteID SPR_SELL_SHIP         = SPR_TRANSIT_MOGUL_BASE +  95;
+static const SpriteID SPR_SELL_AIRCRAFT     = SPR_TRANSIT_MOGUL_BASE +  96;
+static const SpriteID SPR_SELL_ALL_TRAIN    = SPR_TRANSIT_MOGUL_BASE +  97;
+static const SpriteID SPR_SELL_ALL_ROADVEH  = SPR_TRANSIT_MOGUL_BASE +  98;
+static const SpriteID SPR_SELL_ALL_SHIP     = SPR_TRANSIT_MOGUL_BASE +  99;
+static const SpriteID SPR_SELL_ALL_AIRCRAFT = SPR_TRANSIT_MOGUL_BASE + 100;
+static const SpriteID SPR_REPLACE_TRAIN     = SPR_TRANSIT_MOGUL_BASE + 101;
+static const SpriteID SPR_REPLACE_ROADVEH   = SPR_TRANSIT_MOGUL_BASE + 102;
+static const SpriteID SPR_REPLACE_SHIP      = SPR_TRANSIT_MOGUL_BASE + 103;
+static const SpriteID SPR_REPLACE_AIRCRAFT  = SPR_TRANSIT_MOGUL_BASE + 104;
+static const SpriteID SPR_SELL_CHAIN_TRAIN  = SPR_TRANSIT_MOGUL_BASE + 105;
 
-static const SpriteID SPR_PROFIT_NA         = SPR_OPENTTD_BASE + 154;
-static const SpriteID SPR_PROFIT_NEGATIVE   = SPR_OPENTTD_BASE + 155;
-static const SpriteID SPR_PROFIT_SOME       = SPR_OPENTTD_BASE + 156;
-static const SpriteID SPR_PROFIT_LOT        = SPR_OPENTTD_BASE + 157;
+static const SpriteID SPR_PROFIT_NA         = SPR_TRANSIT_MOGUL_BASE + 154;
+static const SpriteID SPR_PROFIT_NEGATIVE   = SPR_TRANSIT_MOGUL_BASE + 155;
+static const SpriteID SPR_PROFIT_SOME       = SPR_TRANSIT_MOGUL_BASE + 156;
+static const SpriteID SPR_PROFIT_LOT        = SPR_TRANSIT_MOGUL_BASE + 157;
 
-static const SpriteID SPR_UNREAD_NEWS                = SPR_OPENTTD_BASE + 158;
-static const SpriteID SPR_EXCLUSIVE_TRANSPORT        = SPR_OPENTTD_BASE + 159;
-static const SpriteID SPR_GROUP_REPLACE_PROTECT      = SPR_OPENTTD_BASE + 160;
-static const SpriteID SPR_GROUP_REPLACE_ACTIVE       = SPR_OPENTTD_BASE + 161;
+static const SpriteID SPR_UNREAD_NEWS                = SPR_TRANSIT_MOGUL_BASE + 158;
+static const SpriteID SPR_EXCLUSIVE_TRANSPORT        = SPR_TRANSIT_MOGUL_BASE + 159;
+static const SpriteID SPR_GROUP_REPLACE_PROTECT      = SPR_TRANSIT_MOGUL_BASE + 160;
+static const SpriteID SPR_GROUP_REPLACE_ACTIVE       = SPR_TRANSIT_MOGUL_BASE + 161;
 
-static const SpriteID SPR_GROUP_CREATE_TRAIN         = SPR_OPENTTD_BASE + 114;
-static const SpriteID SPR_GROUP_CREATE_ROADVEH       = SPR_OPENTTD_BASE + 115;
-static const SpriteID SPR_GROUP_CREATE_SHIP          = SPR_OPENTTD_BASE + 116;
-static const SpriteID SPR_GROUP_CREATE_AIRCRAFT      = SPR_OPENTTD_BASE + 117;
-static const SpriteID SPR_GROUP_DELETE_TRAIN         = SPR_OPENTTD_BASE + 118;
-static const SpriteID SPR_GROUP_DELETE_ROADVEH       = SPR_OPENTTD_BASE + 119;
-static const SpriteID SPR_GROUP_DELETE_SHIP          = SPR_OPENTTD_BASE + 120;
-static const SpriteID SPR_GROUP_DELETE_AIRCRAFT      = SPR_OPENTTD_BASE + 121;
-static const SpriteID SPR_GROUP_RENAME_TRAIN         = SPR_OPENTTD_BASE + 122;
-static const SpriteID SPR_GROUP_RENAME_ROADVEH       = SPR_OPENTTD_BASE + 123;
-static const SpriteID SPR_GROUP_RENAME_SHIP          = SPR_OPENTTD_BASE + 124;
-static const SpriteID SPR_GROUP_RENAME_AIRCRAFT      = SPR_OPENTTD_BASE + 125;
-static const SpriteID SPR_GROUP_REPLACE_ON_TRAIN     = SPR_OPENTTD_BASE + 126;
-static const SpriteID SPR_GROUP_REPLACE_ON_ROADVEH   = SPR_OPENTTD_BASE + 127;
-static const SpriteID SPR_GROUP_REPLACE_ON_SHIP      = SPR_OPENTTD_BASE + 128;
-static const SpriteID SPR_GROUP_REPLACE_ON_AIRCRAFT  = SPR_OPENTTD_BASE + 129;
-static const SpriteID SPR_GROUP_REPLACE_OFF_TRAIN    = SPR_OPENTTD_BASE + 130;
-static const SpriteID SPR_GROUP_REPLACE_OFF_ROADVEH  = SPR_OPENTTD_BASE + 131;
-static const SpriteID SPR_GROUP_REPLACE_OFF_SHIP     = SPR_OPENTTD_BASE + 132;
-static const SpriteID SPR_GROUP_REPLACE_OFF_AIRCRAFT = SPR_OPENTTD_BASE + 133;
+static const SpriteID SPR_GROUP_CREATE_TRAIN         = SPR_TRANSIT_MOGUL_BASE + 114;
+static const SpriteID SPR_GROUP_CREATE_ROADVEH       = SPR_TRANSIT_MOGUL_BASE + 115;
+static const SpriteID SPR_GROUP_CREATE_SHIP          = SPR_TRANSIT_MOGUL_BASE + 116;
+static const SpriteID SPR_GROUP_CREATE_AIRCRAFT      = SPR_TRANSIT_MOGUL_BASE + 117;
+static const SpriteID SPR_GROUP_DELETE_TRAIN         = SPR_TRANSIT_MOGUL_BASE + 118;
+static const SpriteID SPR_GROUP_DELETE_ROADVEH       = SPR_TRANSIT_MOGUL_BASE + 119;
+static const SpriteID SPR_GROUP_DELETE_SHIP          = SPR_TRANSIT_MOGUL_BASE + 120;
+static const SpriteID SPR_GROUP_DELETE_AIRCRAFT      = SPR_TRANSIT_MOGUL_BASE + 121;
+static const SpriteID SPR_GROUP_RENAME_TRAIN         = SPR_TRANSIT_MOGUL_BASE + 122;
+static const SpriteID SPR_GROUP_RENAME_ROADVEH       = SPR_TRANSIT_MOGUL_BASE + 123;
+static const SpriteID SPR_GROUP_RENAME_SHIP          = SPR_TRANSIT_MOGUL_BASE + 124;
+static const SpriteID SPR_GROUP_RENAME_AIRCRAFT      = SPR_TRANSIT_MOGUL_BASE + 125;
+static const SpriteID SPR_GROUP_REPLACE_ON_TRAIN     = SPR_TRANSIT_MOGUL_BASE + 126;
+static const SpriteID SPR_GROUP_REPLACE_ON_ROADVEH   = SPR_TRANSIT_MOGUL_BASE + 127;
+static const SpriteID SPR_GROUP_REPLACE_ON_SHIP      = SPR_TRANSIT_MOGUL_BASE + 128;
+static const SpriteID SPR_GROUP_REPLACE_ON_AIRCRAFT  = SPR_TRANSIT_MOGUL_BASE + 129;
+static const SpriteID SPR_GROUP_REPLACE_OFF_TRAIN    = SPR_TRANSIT_MOGUL_BASE + 130;
+static const SpriteID SPR_GROUP_REPLACE_OFF_ROADVEH  = SPR_TRANSIT_MOGUL_BASE + 131;
+static const SpriteID SPR_GROUP_REPLACE_OFF_SHIP     = SPR_TRANSIT_MOGUL_BASE + 132;
+static const SpriteID SPR_GROUP_REPLACE_OFF_AIRCRAFT = SPR_TRANSIT_MOGUL_BASE + 133;
 
-static const SpriteID SPR_GROUP_LIVERY_TRAIN         = SPR_OPENTTD_BASE + 175;
-static const SpriteID SPR_GROUP_LIVERY_ROADVEH       = SPR_OPENTTD_BASE + 176;
-static const SpriteID SPR_GROUP_LIVERY_SHIP          = SPR_OPENTTD_BASE + 177;
-static const SpriteID SPR_GROUP_LIVERY_AIRCRAFT      = SPR_OPENTTD_BASE + 178;
+static const SpriteID SPR_GROUP_LIVERY_TRAIN         = SPR_TRANSIT_MOGUL_BASE + 175;
+static const SpriteID SPR_GROUP_LIVERY_ROADVEH       = SPR_TRANSIT_MOGUL_BASE + 176;
+static const SpriteID SPR_GROUP_LIVERY_SHIP          = SPR_TRANSIT_MOGUL_BASE + 177;
+static const SpriteID SPR_GROUP_LIVERY_AIRCRAFT      = SPR_TRANSIT_MOGUL_BASE + 178;
 
-static const SpriteID SPR_TOWN_RATING_NA             = SPR_OPENTTD_BASE + 162;
-static const SpriteID SPR_TOWN_RATING_APALLING       = SPR_OPENTTD_BASE + 163;
-static const SpriteID SPR_TOWN_RATING_MEDIOCRE       = SPR_OPENTTD_BASE + 164;
-static const SpriteID SPR_TOWN_RATING_GOOD           = SPR_OPENTTD_BASE + 165;
+static const SpriteID SPR_TOWN_RATING_NA             = SPR_TRANSIT_MOGUL_BASE + 162;
+static const SpriteID SPR_TOWN_RATING_APALLING       = SPR_TRANSIT_MOGUL_BASE + 163;
+static const SpriteID SPR_TOWN_RATING_MEDIOCRE       = SPR_TRANSIT_MOGUL_BASE + 164;
+static const SpriteID SPR_TOWN_RATING_GOOD           = SPR_TRANSIT_MOGUL_BASE + 165;
 
-static const SpriteID SPR_IMG_SWITCH_TOOLBAR = SPR_OPENTTD_BASE + 144;
+static const SpriteID SPR_IMG_SWITCH_TOOLBAR = SPR_TRANSIT_MOGUL_BASE + 144;
 
-static const SpriteID SPR_IMG_DELETE_LEFT            = SPR_OPENTTD_BASE + 166;
-static const SpriteID SPR_IMG_DELETE_RIGHT           = SPR_OPENTTD_BASE + 167;
+static const SpriteID SPR_IMG_DELETE_LEFT            = SPR_TRANSIT_MOGUL_BASE + 166;
+static const SpriteID SPR_IMG_DELETE_RIGHT           = SPR_TRANSIT_MOGUL_BASE + 167;
 
-static const SpriteID SPR_WINDOW_DEFSIZE             = SPR_OPENTTD_BASE + 168;
+static const SpriteID SPR_WINDOW_DEFSIZE             = SPR_TRANSIT_MOGUL_BASE + 168;
 
-static const SpriteID SPR_IMG_CARGOFLOW              = SPR_OPENTTD_BASE + 174;
+static const SpriteID SPR_IMG_CARGOFLOW              = SPR_TRANSIT_MOGUL_BASE + 174;
 
-static const SpriteID SPR_SIGNALS_BASE  = SPR_OPENTTD_BASE + OPENTTD_SPRITE_COUNT;
+static const SpriteID SPR_SIGNALS_BASE  = SPR_TRANSIT_MOGUL_BASE + TRANSIT_MOGUL_SPRITE_COUNT;
 static const uint16 PRESIGNAL_SPRITE_COUNT                   =  48;
 static const uint16 PRESIGNAL_AND_SEMAPHORE_SPRITE_COUNT     = 112;
 static const uint16 PRESIGNAL_SEMAPHORE_AND_PBS_SPRITE_COUNT = 240;
@@ -421,10 +421,10 @@ static const SpriteID SPR_MGLV_TRACK_BASE               = 1182;
 static const SpriteID SPR_MGLV_TRACK_Y_SNOW             = 1184;
 static const SpriteID SPR_MGLV_TRACK_X_SNOW             = 1185;
 static const SpriteID SPR_MGLV_TRACK_N_S                = 1199;
-static const SpriteID SPR_WAYPOINT_X_1            = SPR_OPENTTD_BASE + 78;
-static const SpriteID SPR_WAYPOINT_X_2            = SPR_OPENTTD_BASE + 79;
-static const SpriteID SPR_WAYPOINT_Y_1            = SPR_OPENTTD_BASE + 80;
-static const SpriteID SPR_WAYPOINT_Y_2            = SPR_OPENTTD_BASE + 81;
+static const SpriteID SPR_WAYPOINT_X_1            = SPR_TRANSIT_MOGUL_BASE + 78;
+static const SpriteID SPR_WAYPOINT_X_2            = SPR_TRANSIT_MOGUL_BASE + 79;
+static const SpriteID SPR_WAYPOINT_Y_1            = SPR_TRANSIT_MOGUL_BASE + 80;
+static const SpriteID SPR_WAYPOINT_Y_2            = SPR_TRANSIT_MOGUL_BASE + 81;
 /* see _track_sloped_sprites in rail_cmd.cpp for slope offsets */
 
 /* Track fences */
@@ -509,7 +509,7 @@ static const SpriteID SPR_AIRPORT_RADAR_9             = 2688;
 static const SpriteID SPR_AIRPORT_RADAR_A             = 2689;
 static const SpriteID SPR_AIRPORT_RADAR_B             = 2690;
 static const SpriteID SPR_AIRPORT_RADAR_C             = 2691;
-static const SpriteID SPR_AIRPORT_HELIPAD             = SPR_OPENTTD_BASE + 86;
+static const SpriteID SPR_AIRPORT_HELIPAD             = SPR_TRANSIT_MOGUL_BASE + 86;
 static const SpriteID SPR_AIRPORT_HELIDEPOT_OFFICE    = 2095;
 
 /* Road Stops
@@ -664,7 +664,7 @@ static const SpriteID SPR_CROSSING_OFF_X_MONO   = 1382;
 static const SpriteID SPR_CROSSING_OFF_X_MAGLEV = 1394;
 
 /* bridge type sprites */
-static const SpriteID SPR_PILLARS_BASE = SPR_OPENTTD_BASE + 14;
+static const SpriteID SPR_PILLARS_BASE = SPR_TRANSIT_MOGUL_BASE + 14;
 
 /* Wooden bridge (type 0) */
 static const SpriteID SPR_BTWDN_RAIL_Y_REAR       = 2545;
@@ -1073,12 +1073,12 @@ static const SpriteID SPR_IMG_DYNAMITE        = 703;
 static const SpriteID SPR_IMG_ROCKS           = 4084;
 static const SpriteID SPR_IMG_DESERT          = 4085;
 static const SpriteID SPR_IMG_TRANSMITTER     = 4086;
-static const SpriteID SPR_IMG_LEVEL_LAND      = SPR_OPENTTD_BASE + 91;
-static const SpriteID SPR_IMG_BUILD_CANAL     = SPR_OPENTTD_BASE + 88;
-static const SpriteID SPR_IMG_BUILD_RIVER     = SPR_OPENTTD_BASE + 136;
+static const SpriteID SPR_IMG_LEVEL_LAND      = SPR_TRANSIT_MOGUL_BASE + 91;
+static const SpriteID SPR_IMG_BUILD_CANAL     = SPR_TRANSIT_MOGUL_BASE + 88;
+static const SpriteID SPR_IMG_BUILD_RIVER     = SPR_TRANSIT_MOGUL_BASE + 136;
 static const SpriteID SPR_IMG_BUILD_LOCK      = SPR_CANALS_BASE + 64;
 static const SpriteID SPR_IMG_PAUSE           = 726;
-static const SpriteID SPR_IMG_FASTFORWARD     = SPR_OPENTTD_BASE + 90;
+static const SpriteID SPR_IMG_FASTFORWARD     = SPR_TRANSIT_MOGUL_BASE + 90;
 static const SpriteID SPR_IMG_SETTINGS        = 751;
 static const SpriteID SPR_IMG_SAVE            = 724;
 static const SpriteID SPR_IMG_SMALLMAP        = 708;
@@ -1111,13 +1111,13 @@ static const SpriteID SPR_IMG_MESSAGES        = 680;
 static const SpriteID SPR_IMG_QUERY           = 723;
 static const SpriteID SPR_IMG_SIGN            = 4082;
 static const SpriteID SPR_IMG_BUY_LAND        = 4791;
-static const SpriteID SPR_IMG_STORY_BOOK      = SPR_OPENTTD_BASE + 169;
+static const SpriteID SPR_IMG_STORY_BOOK      = SPR_TRANSIT_MOGUL_BASE + 169;
 
 /* OpenTTD in gamescreen */
 static const SpriteID SPR_OTTD_O                = 4842;
 static const SpriteID SPR_OTTD_P                = 4841;
-static const SpriteID SPR_OTTD_E                = SPR_OPENTTD_BASE + 12;
-static const SpriteID SPR_OTTD_D                = SPR_OPENTTD_BASE + 13;
+static const SpriteID SPR_OTTD_E                = SPR_TRANSIT_MOGUL_BASE + 12;
+static const SpriteID SPR_OTTD_D                = SPR_TRANSIT_MOGUL_BASE + 13;
 static const SpriteID SPR_OTTD_N                = 4839;
 static const SpriteID SPR_OTTD_T                = 4836;
 /* Letters not used: R,A,S,Y,C (4837, 4838, 4840, 4843, 4844) */
@@ -1275,7 +1275,7 @@ static const SpriteID SPR_IMG_AIRPORT       = 744;
 static const SpriteID SPR_IMG_SHIP_DEPOT    = 748;
 static const SpriteID SPR_IMG_SHIP_DOCK     = 746;
 static const SpriteID SPR_IMG_BUOY          = 693;
-static const SpriteID SPR_IMG_AQUEDUCT      = SPR_OPENTTD_BASE + 145;
+static const SpriteID SPR_IMG_AQUEDUCT      = SPR_TRANSIT_MOGUL_BASE + 145;
 
 /* music_gui.cpp */
 static const SpriteID SPR_IMG_SKIP_TO_PREV  = 709;
@@ -1286,34 +1286,34 @@ static const SpriteID SPR_IMG_PLAY_MUSIC    = 712;
 /* road_gui.cpp */
 static const SpriteID SPR_IMG_ROAD_Y_DIR    = 1309;
 static const SpriteID SPR_IMG_ROAD_X_DIR    = 1310;
-static const SpriteID SPR_IMG_AUTOROAD      = SPR_OPENTTD_BASE + 82;
+static const SpriteID SPR_IMG_AUTOROAD      = SPR_TRANSIT_MOGUL_BASE + 82;
 static const SpriteID SPR_IMG_ROAD_DEPOT    = 1295;
 static const SpriteID SPR_IMG_BUS_STATION   = 749;
 static const SpriteID SPR_IMG_TRUCK_BAY     = 750;
 static const SpriteID SPR_IMG_BRIDGE        = 2594;
 static const SpriteID SPR_IMG_ROAD_TUNNEL   = 2429;
 static const SpriteID SPR_IMG_REMOVE        = 714;
-static const SpriteID SPR_IMG_ROAD_ONE_WAY  = SPR_OPENTTD_BASE + 134;
+static const SpriteID SPR_IMG_ROAD_ONE_WAY  = SPR_TRANSIT_MOGUL_BASE + 134;
 static const SpriteID SPR_IMG_TRAMWAY_Y_DIR = SPR_TRAMWAY_BASE + 0;
 static const SpriteID SPR_IMG_TRAMWAY_X_DIR = SPR_TRAMWAY_BASE + 1;
-static const SpriteID SPR_IMG_AUTOTRAM      = SPR_OPENTTD_BASE + 84;
+static const SpriteID SPR_IMG_AUTOTRAM      = SPR_TRANSIT_MOGUL_BASE + 84;
 
 /* rail_gui.cpp */
 static const SpriteID SPR_IMG_RAIL_NS    = 1251;
 static const SpriteID SPR_IMG_RAIL_NE    = 1252;
 static const SpriteID SPR_IMG_RAIL_EW    = 1253;
 static const SpriteID SPR_IMG_RAIL_NW    = 1254;
-static const SpriteID SPR_IMG_AUTORAIL   = SPR_OPENTTD_BASE + 53;
-static const SpriteID SPR_IMG_AUTOELRAIL = SPR_OPENTTD_BASE + 57;
-static const SpriteID SPR_IMG_AUTOMONO   = SPR_OPENTTD_BASE + 63;
-static const SpriteID SPR_IMG_AUTOMAGLEV = SPR_OPENTTD_BASE + 69;
+static const SpriteID SPR_IMG_AUTORAIL   = SPR_TRANSIT_MOGUL_BASE + 53;
+static const SpriteID SPR_IMG_AUTOELRAIL = SPR_TRANSIT_MOGUL_BASE + 57;
+static const SpriteID SPR_IMG_AUTOMONO   = SPR_TRANSIT_MOGUL_BASE + 63;
+static const SpriteID SPR_IMG_AUTOMAGLEV = SPR_TRANSIT_MOGUL_BASE + 69;
 
-static const SpriteID SPR_IMG_WAYPOINT = SPR_OPENTTD_BASE + 76;
+static const SpriteID SPR_IMG_WAYPOINT = SPR_TRANSIT_MOGUL_BASE + 76;
 
 static const SpriteID SPR_IMG_DEPOT_RAIL   = 1294;
-static const SpriteID SPR_IMG_DEPOT_ELRAIL = SPR_OPENTTD_BASE + 61;
-static const SpriteID SPR_IMG_DEPOT_MONO   = SPR_OPENTTD_BASE + 67;
-static const SpriteID SPR_IMG_DEPOT_MAGLEV = SPR_OPENTTD_BASE + 73;
+static const SpriteID SPR_IMG_DEPOT_ELRAIL = SPR_TRANSIT_MOGUL_BASE + 61;
+static const SpriteID SPR_IMG_DEPOT_MONO   = SPR_TRANSIT_MOGUL_BASE + 67;
+static const SpriteID SPR_IMG_DEPOT_MAGLEV = SPR_TRANSIT_MOGUL_BASE + 73;
 
 static const SpriteID SPR_IMG_RAIL_STATION = 1298;
 static const SpriteID SPR_IMG_RAIL_SIGNALS = 1291;
@@ -1330,22 +1330,22 @@ static const SpriteID SPR_IMG_SIGNAL_SEMAPHORE_EXIT    = SPR_SIGNALS_BASE +  92;
 static const SpriteID SPR_IMG_SIGNAL_SEMAPHORE_COMBO   = SPR_SIGNALS_BASE + 108;
 static const SpriteID SPR_IMG_SIGNAL_SEMAPHORE_PBS     = SPR_SIGNALS_BASE + 188;
 static const SpriteID SPR_IMG_SIGNAL_SEMAPHORE_PBS_OWAY= SPR_SIGNALS_BASE + 204;
-static const SpriteID SPR_IMG_SIGNAL_CONVERT           = SPR_OPENTTD_BASE + 135;
+static const SpriteID SPR_IMG_SIGNAL_CONVERT           = SPR_TRANSIT_MOGUL_BASE + 135;
 
 static const SpriteID SPR_IMG_TUNNEL_RAIL   = 2430;
 static const SpriteID SPR_IMG_TUNNEL_MONO   = 2431;
 static const SpriteID SPR_IMG_TUNNEL_MAGLEV = 2432;
 
-static const SpriteID SPR_IMG_CONVERT_RAIL   = SPR_OPENTTD_BASE + 55;
-static const SpriteID SPR_IMG_CONVERT_ELRAIL = SPR_OPENTTD_BASE + 59;
-static const SpriteID SPR_IMG_CONVERT_MONO   = SPR_OPENTTD_BASE + 65;
-static const SpriteID SPR_IMG_CONVERT_MAGLEV = SPR_OPENTTD_BASE + 71;
+static const SpriteID SPR_IMG_CONVERT_RAIL   = SPR_TRANSIT_MOGUL_BASE + 55;
+static const SpriteID SPR_IMG_CONVERT_ELRAIL = SPR_TRANSIT_MOGUL_BASE + 59;
+static const SpriteID SPR_IMG_CONVERT_MONO   = SPR_TRANSIT_MOGUL_BASE + 65;
+static const SpriteID SPR_IMG_CONVERT_MAGLEV = SPR_TRANSIT_MOGUL_BASE + 71;
 
 /* story_gui.cpp */
-static const SpriteID SPR_IMG_VIEW_LOCATION  = SPR_OPENTTD_BASE + 170;
-static const SpriteID SPR_IMG_GOAL           = SPR_OPENTTD_BASE + 171;
-static const SpriteID SPR_IMG_GOAL_COMPLETED = SPR_OPENTTD_BASE + 172;
-static const SpriteID SPR_IMG_GOAL_BROKEN_REF= SPR_OPENTTD_BASE + 173;
+static const SpriteID SPR_IMG_VIEW_LOCATION  = SPR_TRANSIT_MOGUL_BASE + 170;
+static const SpriteID SPR_IMG_GOAL           = SPR_TRANSIT_MOGUL_BASE + 171;
+static const SpriteID SPR_IMG_GOAL_COMPLETED = SPR_TRANSIT_MOGUL_BASE + 172;
+static const SpriteID SPR_IMG_GOAL_BROKEN_REF= SPR_TRANSIT_MOGUL_BASE + 173;
 
 static const SpriteID SPR_IMG_CONVERT_ROAD           = SPR_OPENTTD_BASE + 180;
 static const CursorID SPR_CURSOR_CONVERT_ROAD        = SPR_OPENTTD_BASE + 181;
@@ -1374,7 +1374,7 @@ static const CursorID SPR_CURSOR_SIGN           = 722;
 
 static const CursorID SPR_CURSOR_TREE           = 2010;
 static const CursorID SPR_CURSOR_BUY_LAND       = 4792;
-static const CursorID SPR_CURSOR_LEVEL_LAND     = SPR_OPENTTD_BASE + 92;
+static const CursorID SPR_CURSOR_LEVEL_LAND     = SPR_TRANSIT_MOGUL_BASE + 92;
 
 static const CursorID SPR_CURSOR_TOWN           = 4080;
 static const CursorID SPR_CURSOR_INDUSTRY       = 4081;
@@ -1387,10 +1387,10 @@ static const CursorID SPR_CURSOR_AIRPORT        = 2724;
 
 /* dock cursors */
 static const CursorID SPR_CURSOR_DOCK           = 3668;
-static const CursorID SPR_CURSOR_CANAL          = SPR_OPENTTD_BASE + 89;
-static const CursorID SPR_CURSOR_LOCK           = SPR_OPENTTD_BASE + 87;
-static const CursorID SPR_CURSOR_RIVER          = SPR_OPENTTD_BASE + 137;
-static const CursorID SPR_CURSOR_AQUEDUCT       = SPR_OPENTTD_BASE + 146;
+static const CursorID SPR_CURSOR_CANAL          = SPR_TRANSIT_MOGUL_BASE + 89;
+static const CursorID SPR_CURSOR_LOCK           = SPR_TRANSIT_MOGUL_BASE + 87;
+static const CursorID SPR_CURSOR_RIVER          = SPR_TRANSIT_MOGUL_BASE + 137;
+static const CursorID SPR_CURSOR_AQUEDUCT       = SPR_TRANSIT_MOGUL_BASE + 146;
 
 /* shared road & rail cursors */
 static const CursorID SPR_CURSOR_BRIDGE         = 2593;
@@ -1423,40 +1423,40 @@ static const CursorID SPR_CURSOR_TUNNEL_ELRAIL  = SPR_ELRAIL_BASE + 45;
 static const CursorID SPR_CURSOR_TUNNEL_MONO    = 2435;
 static const CursorID SPR_CURSOR_TUNNEL_MAGLEV  = 2436;
 
-static const CursorID SPR_CURSOR_AUTORAIL       = SPR_OPENTTD_BASE + 54;
-static const CursorID SPR_CURSOR_AUTOELRAIL     = SPR_OPENTTD_BASE + 58;
-static const CursorID SPR_CURSOR_AUTOMONO       = SPR_OPENTTD_BASE + 64;
-static const CursorID SPR_CURSOR_AUTOMAGLEV     = SPR_OPENTTD_BASE + 70;
+static const CursorID SPR_CURSOR_AUTORAIL       = SPR_TRANSIT_MOGUL_BASE + 54;
+static const CursorID SPR_CURSOR_AUTOELRAIL     = SPR_TRANSIT_MOGUL_BASE + 58;
+static const CursorID SPR_CURSOR_AUTOMONO       = SPR_TRANSIT_MOGUL_BASE + 64;
+static const CursorID SPR_CURSOR_AUTOMAGLEV     = SPR_TRANSIT_MOGUL_BASE + 70;
 
-static const CursorID SPR_CURSOR_WAYPOINT       = SPR_OPENTTD_BASE + 77;
+static const CursorID SPR_CURSOR_WAYPOINT       = SPR_TRANSIT_MOGUL_BASE + 77;
 
 static const CursorID SPR_CURSOR_RAIL_DEPOT     = 1296;
-static const CursorID SPR_CURSOR_ELRAIL_DEPOT   = SPR_OPENTTD_BASE + 62;
-static const CursorID SPR_CURSOR_MONO_DEPOT     = SPR_OPENTTD_BASE + 68;
-static const CursorID SPR_CURSOR_MAGLEV_DEPOT   = SPR_OPENTTD_BASE + 74;
+static const CursorID SPR_CURSOR_ELRAIL_DEPOT   = SPR_TRANSIT_MOGUL_BASE + 62;
+static const CursorID SPR_CURSOR_MONO_DEPOT     = SPR_TRANSIT_MOGUL_BASE + 68;
+static const CursorID SPR_CURSOR_MAGLEV_DEPOT   = SPR_TRANSIT_MOGUL_BASE + 74;
 
-static const CursorID SPR_CURSOR_CONVERT_RAIL   = SPR_OPENTTD_BASE + 56;
-static const CursorID SPR_CURSOR_CONVERT_ELRAIL = SPR_OPENTTD_BASE + 60;
-static const CursorID SPR_CURSOR_CONVERT_MONO   = SPR_OPENTTD_BASE + 66;
-static const CursorID SPR_CURSOR_CONVERT_MAGLEV = SPR_OPENTTD_BASE + 72;
+static const CursorID SPR_CURSOR_CONVERT_RAIL   = SPR_TRANSIT_MOGUL_BASE + 56;
+static const CursorID SPR_CURSOR_CONVERT_ELRAIL = SPR_TRANSIT_MOGUL_BASE + 60;
+static const CursorID SPR_CURSOR_CONVERT_MONO   = SPR_TRANSIT_MOGUL_BASE + 66;
+static const CursorID SPR_CURSOR_CONVERT_MAGLEV = SPR_TRANSIT_MOGUL_BASE + 72;
 
 /* road cursors */
 static const CursorID SPR_CURSOR_ROAD_NESW      = 1311;
 static const CursorID SPR_CURSOR_ROAD_NWSE      = 1312;
-static const CursorID SPR_CURSOR_AUTOROAD       = SPR_OPENTTD_BASE + 83;
+static const CursorID SPR_CURSOR_AUTOROAD       = SPR_TRANSIT_MOGUL_BASE + 83;
 static const CursorID SPR_CURSOR_TRAMWAY_NESW   = SPR_TRAMWAY_BASE + 2;
 static const CursorID SPR_CURSOR_TRAMWAY_NWSE   = SPR_TRAMWAY_BASE + 3;
-static const CursorID SPR_CURSOR_AUTOTRAM       = SPR_OPENTTD_BASE + 85;
+static const CursorID SPR_CURSOR_AUTOTRAM       = SPR_TRANSIT_MOGUL_BASE + 85;
 
 static const CursorID SPR_CURSOR_ROAD_DEPOT     = 1297;
 static const CursorID SPR_CURSOR_BUS_STATION    = 2725;
 static const CursorID SPR_CURSOR_TRUCK_STATION  = 2726;
 static const CursorID SPR_CURSOR_ROAD_TUNNEL    = 2433;
 
-static const CursorID SPR_CURSOR_CLONE_TRAIN    = SPR_OPENTTD_BASE + 110;
-static const CursorID SPR_CURSOR_CLONE_ROADVEH  = SPR_OPENTTD_BASE + 111;
-static const CursorID SPR_CURSOR_CLONE_SHIP     = SPR_OPENTTD_BASE + 112;
-static const CursorID SPR_CURSOR_CLONE_AIRPLANE = SPR_OPENTTD_BASE + 113;
+static const CursorID SPR_CURSOR_CLONE_TRAIN    = SPR_TRANSIT_MOGUL_BASE + 110;
+static const CursorID SPR_CURSOR_CLONE_ROADVEH  = SPR_TRANSIT_MOGUL_BASE + 111;
+static const CursorID SPR_CURSOR_CLONE_SHIP     = SPR_TRANSIT_MOGUL_BASE + 112;
+static const CursorID SPR_CURSOR_CLONE_AIRPLANE = SPR_TRANSIT_MOGUL_BASE + 113;
 
 /** Animation macro in table/animcursors.h (_animcursors[]) */
 

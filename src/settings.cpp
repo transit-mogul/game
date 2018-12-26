@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -12,7 +12,7 @@
  * All actions handling saving and loading of the settings/configuration goes on in this file.
  * The file consists of three parts:
  * <ol>
- * <li>Parsing the configuration file (openttd.cfg). This is achieved with the ini_ functions which
+ * <li>Parsing the configuration file (transit_mogul.cfg). This is achieved with the ini_ functions which
  *     handle various types, such as normal 'key = value' pairs, lists and value combinations of
  *     lists, strings, integers, 'bit'-masks and element selections.
  * <li>Handle reading and writing to the setting-structures from inside the game either from
@@ -81,7 +81,7 @@ ClientSettings _settings_client;
 GameSettings _settings_game;     ///< Game settings of a running game or the scenario editor.
 GameSettings _settings_newgame;  ///< Game settings for new games (updated from the intro screen).
 VehicleDefaultSettings _old_vds; ///< Used for loading default vehicles settings from old savegames
-char *_config_file; ///< Configuration file of OpenTTD
+char *_config_file; ///< Configuration file of transit_mogul
 
 typedef std::list<ErrorMessageData> ErrorList;
 static ErrorList _settings_error_list; ///< Errors while loading minimal settings.
@@ -93,7 +93,7 @@ typedef void SettingDescProcList(IniFile *ini, const char *grpname, StringList &
 static bool IsSignedVarMemType(VarType vt);
 
 /**
- * Groups in openttd.cfg that are actually lists.
+ * Groups in transit_mogul.cfg that are actually lists.
  */
 static const char * const _list_group_names[] = {
 	"bans",
@@ -1649,7 +1649,7 @@ static void GameSaveConfig(IniFile *ini, const char *grpname)
 }
 
 /**
- * Save the version of OpenTTD to the ini file.
+ * Save the version of transit_mogul to the ini file.
  * @param ini the ini to write to
  */
 static void SaveVersionInConfig(IniFile *ini)
@@ -1657,10 +1657,10 @@ static void SaveVersionInConfig(IniFile *ini)
 	IniGroup *group = ini->GetGroup("version");
 
 	char version[9];
-	seprintf(version, lastof(version), "%08X", _openttd_newgrf_version);
+	seprintf(version, lastof(version), "%08X", _transit_mogul_newgrf_version);
 
 	const char * const versions[][2] = {
-		{ "version_string", _openttd_revision },
+		{ "version_string", _transit_mogul_revision },
 		{ "version_number", version }
 	};
 

@@ -1001,7 +1001,7 @@ static char *FormatString(char *buff, const char *str_arg, StringParameters *arg
 			}
 
 			case SCC_REVISION: // {REV}
-				buff = strecpy(buff, _openttd_revision, last);
+				buff = strecpy(buff, _transit_mogul_revision, last);
 				break;
 
 			case SCC_RAW_STRING_POINTER: { // {RAW_STRING}

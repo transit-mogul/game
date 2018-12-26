@@ -151,7 +151,7 @@ static void ShowHelp()
 	char buf[8192];
 	char *p = buf;
 
-	p += seprintf(p, lastof(buf), "Transit Mogul %s\n", _openttd_revision);
+	p += seprintf(p, lastof(buf), "Transit Mogul %s\n", _transit_mogul_revision);
 	p = strecpy(p,
 		"\n"
 		"\n"
@@ -695,7 +695,7 @@ int openttd_main(int argc, char *argv[])
 	DeterminePaths(argv[0]);
 	TarScanner::DoScan(TarScanner::BASESET);
 
-	if (dedicated) DEBUG(net, 0, "Starting dedicated version %s", _openttd_revision);
+	if (dedicated) DEBUG(net, 0, "Starting dedicated version %s", _transit_mogul_revision);
 	if (_dedicated_forks && !dedicated) _dedicated_forks = false;
 
 #if defined(UNIX)
