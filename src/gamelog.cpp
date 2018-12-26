@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file gamelog.cpp Definition of functions used for logging of important changes in the game */
@@ -198,7 +198,7 @@ void GamelogPrint(GamelogPrintProc *proc)
 						default: break;
 					}
 
-					buf += seprintf(buf, lastof(buffer), "modified, _openttd_newgrf_version = 0x%08x", lc->revision.newgrf);
+					buf += seprintf(buf, lastof(buffer), "modified, _transit_mogul_newgrf_version = 0x%08x", lc->revision.newgrf);
 					break;
 
 				case GLCT_OLDVER:
@@ -415,10 +415,10 @@ void GamelogRevision()
 	if (lc == NULL) return;
 
 	memset(lc->revision.text, 0, sizeof(lc->revision.text));
-	strecpy(lc->revision.text, _openttd_revision, lastof(lc->revision.text));
+	strecpy(lc->revision.text, _transit_mogul_revision, lastof(lc->revision.text));
 	lc->revision.slver = SAVEGAME_VERSION;
-	lc->revision.modified = _openttd_revision_modified;
-	lc->revision.newgrf = _openttd_newgrf_version;
+	lc->revision.modified = _transit_mogul_revision_modified;
+	lc->revision.newgrf = _transit_mogul_newgrf_version;
 }
 
 /**
@@ -484,9 +484,9 @@ void GamelogTestRevision()
 		}
 	}
 
-	if (rev == NULL || strcmp(rev->revision.text, _openttd_revision) != 0 ||
-			rev->revision.modified != _openttd_revision_modified ||
-			rev->revision.newgrf != _openttd_newgrf_version) {
+	if (rev == NULL || strcmp(rev->revision.text, _transit_mogul_revision) != 0 ||
+			rev->revision.modified != _transit_mogul_revision_modified ||
+			rev->revision.newgrf != _transit_mogul_newgrf_version) {
 		GamelogRevision();
 	}
 }
@@ -771,7 +771,7 @@ void GamelogGRFUpdate(const GRFConfig *oldc, const GRFConfig *newc)
  * Get some basic information from the given gamelog.
  * @param gamelog_action Pointer to the gamelog to extract information from.
  * @param gamelog_actions Number of actions in the given gamelog.
- * @param[out] last_ottd_rev OpenTTD NewGRF version from the binary that saved the savegame last.
+ * @param[out] last_ottd_rev transit_mogul NewGRF version from the binary that saved the savegame last.
  * @param[out] ever_modified Max value of 'modified' from all binaries that ever saved this savegame.
  * @param[out] removed_newgrfs Set to true if any NewGRFs have been removed.
  */

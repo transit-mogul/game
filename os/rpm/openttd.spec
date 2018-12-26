@@ -183,7 +183,7 @@ ln -s -f /etc/alternatives/%{name} %{buildroot}%{_bindir}/%{name}
 %if 0%{?fedora} || 0%{?rhel_version} >= 600 || 0%{?centos_version} >= 600
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications \
         --add-category=StrategyGame \
-        media/openttd.desktop
+        media/transit-mogul.desktop
 %endif
 %endif
 

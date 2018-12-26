@@ -1118,7 +1118,7 @@ check_params() {
 
 	if [ "$doc_dir" = "1" ]; then
 		if [ "$os" = "UNIX" ] || [ "$os" = "FREEBSD" ] || [ "$os" = "DRAGONFLY" ] || [ "$os" = "OPENBSD" ] || [ "$os" = "NETBSD" ] || [ "$os" = "HPUX" ] || [ "$os" = "SUNOS" ]; then
-			doc_dir="share/doc/openttd"
+			doc_dir="share/doc/transit-mogul"
 		else
 			doc_dir="$data_dir/docs"
 		fi
@@ -1142,7 +1142,7 @@ check_params() {
 		elif [ "$os" = "OSX" ]; then
 			personal_dir="Documents/TransitMogul"
 		else
-			personal_dir=".openttd"
+			personal_dir=".transit-mogul"
 		fi
 	else
 		personal_dir="`echo $personal_dir | sed 's@\([^\]\)\\\\ @\1\\\\\\\\ @g;s@\([^\]\) @\1\\\\\\\\ @g'`"
@@ -3323,7 +3323,7 @@ generate_menu_item() {
 	"
 	log 1 "Generating menu item..."
 	mkdir -p media
-	< $ROOT_DIR/media/openttd.desktop.in sed "$MENU_REPLACE" > media/openttd.desktop
+	< $ROOT_DIR/media/transit-mogul.desktop.in sed "$MENU_REPLACE" > media/transit-mogul.desktop
 }
 
 generate_main() {

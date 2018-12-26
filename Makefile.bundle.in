@@ -20,7 +20,7 @@ VERSION := norev000
 endif
 
 ifndef BUNDLE_NAME
-BUNDLE_NAME = openttd-custom-$(VERSION)-$(OS)
+BUNDLE_NAME = transit-mogul-custom-$(VERSION)-$(OS)
 endif
 
 # An OSX application bundle needs the data files, lang files and openttd executable in a different location.
@@ -57,9 +57,6 @@ ifdef OSXAPP
 	$(Q)$(ROOT_DIR)/os/macosx/plistgen.sh                          "$(BUNDLE_DIR)/$(OSXAPP)" "$(REV)"
 	$(Q)cp    "$(ROOT_DIR)/os/macosx/splash.png"                   "$(BASESET_DIR)"
 endif
-ifeq ($(OS),UNIX)
-	$(Q)cp "$(ROOT_DIR)/media/openttd.32.bmp" "$(BASESET_DIR)/"
-endif
 	$(Q)cp "$(BIN_DIR)/$(TTD)"                "$(TTD_DIR)/"
 	$(Q)cp "$(BIN_DIR)/ai/"compat_*.nut       "$(AI_DIR)/"
 	$(Q)cp "$(BIN_DIR)/game/"compat_*.nut     "$(GAME_DIR)/"
@@ -73,22 +70,20 @@ endif
 	$(Q)cp "$(ROOT_DIR)/COPYING"              "$(BUNDLE_DIR)/"
 	$(Q)cp "$(ROOT_DIR)/known-bugs.txt"       "$(BUNDLE_DIR)/"
 	$(Q)cp "$(ROOT_DIR)/docs/multiplayer.txt" "$(BUNDLE_DIR)/docs/"
-	$(Q)cp "$(ROOT_DIR)/changelog.txt"        "$(BUNDLE_DIR)/"
 ifdef MAN_DIR
 	$(Q)mkdir -p "$(BUNDLE_DIR)/man/"
 	$(Q)cp "$(ROOT_DIR)/docs/openttd.6"       "$(BUNDLE_DIR)/man/"
 	$(Q)gzip -9 "$(BUNDLE_DIR)/man/openttd.6"
 endif
-	$(Q)cp "$(ROOT_DIR)/media/openttd.32.xpm" "$(BUNDLE_DIR)/media/"
-	$(Q)cp "$(ROOT_DIR)/media/openttd."*.png  "$(BUNDLE_DIR)/media/"
+	$(Q)cp "$(ROOT_DIR)/media/transit-mogul."*.png  "$(BUNDLE_DIR)/media/"
 	$(Q)cp "$(BIN_DIR)/scripts/"*             "$(BUNDLE_DIR)/scripts/"
 ifdef MENU_DIR
-	$(Q)cp "$(ROOT_DIR)/media/openttd.desktop" "$(BUNDLE_DIR)/media/"
-	$(Q)$(AWK) -f "$(ROOT_DIR)/media/openttd.desktop.translation.awk" "$(SRC_DIR)/lang/"*.txt | LC_ALL=C $(SORT) |  $(AWK) -f "$(ROOT_DIR)/media/openttd.desktop.filter.awk" >> "$(BUNDLE_DIR)/media/openttd.desktop"
-	$(Q)sed s/=openttd/=$(BINARY_NAME)/g "$(BUNDLE_DIR)/media/openttd.desktop" > "$(ROOT_DIR)/media/openttd.desktop.install"
+	$(Q)cp "$(ROOT_DIR)/media/transit-mogul.desktop" "$(BUNDLE_DIR)/media/"
+	$(Q)$(AWK) -f "$(ROOT_DIR)/media/transit-mogul.desktop.translation.awk" "$(SRC_DIR)/lang/"*.txt | LC_ALL=C $(SORT) |  $(AWK) -f "$(ROOT_DIR)/media/transit-mogul.desktop.filter.awk" >> "$(BUNDLE_DIR)/media/transit-mogul.desktop"
+	$(Q)sed s/=transit-mogul/=$(BINARY_NAME)/g "$(BUNDLE_DIR)/media/transit-mogul.desktop" > "$(ROOT_DIR)/media/transit-mogul.desktop.install"
 endif
-ifeq ($(TTD), openttd.exe)
-	$(Q)unix2dos "$(BUNDLE_DIR)/docs/"* "$(BUNDLE_DIR)/README.md" "$(BUNDLE_DIR)/COPYING" "$(BUNDLE_DIR)/changelog.txt" "$(BUNDLE_DIR)/known-bugs.txt"
+ifeq ($(TTD), transit-mogul.exe)
+	$(Q)unix2dos "$(BUNDLE_DIR)/docs/"* "$(BUNDLE_DIR)/README.md" "$(BUNDLE_DIR)/COPYING" "$(BUNDLE_DIR)/known-bugs.txt"
 ifeq ($(OS), DOS)
 	$(Q)cp "$(ROOT_DIR)/os/dos/cwsdpmi/cwsdpmi.txt"   "$(BUNDLE_DIR)/docs/"
 ifndef STRIP
@@ -151,15 +146,15 @@ bundle_lha: bundle
 
 bundle_dmg: bundle
 	@echo '[BUNDLE] Creating $(BUNDLE_NAME).dmg'
-	$(Q)mkdir -p "$(BUNDLES_DIR)/OpenTTD $(REV)"
-	$(Q)cp -R "$(BUNDLE_DIR)/" "$(BUNDLES_DIR)/OpenTTD $(REV)"
-	$(Q)hdiutil create -ov -format UDZO -srcfolder "$(BUNDLES_DIR)/OpenTTD $(REV)" "$(BUNDLES_DIR)/$(BUNDLE_NAME).dmg"
-	$(Q)rm -fr "$(BUNDLES_DIR)/OpenTTD $(REV)"
+	$(Q)mkdir -p "$(BUNDLES_DIR)/TransitMogul $(REV)"
+	$(Q)cp -R "$(BUNDLE_DIR)/" "$(BUNDLES_DIR)/TransitMogul $(REV)"
+	$(Q)hdiutil create -ov -format UDZO -srcfolder "$(BUNDLES_DIR)/TransitMogul $(REV)" "$(BUNDLES_DIR)/$(BUNDLE_NAME).dmg"
+	$(Q)rm -fr "$(BUNDLES_DIR)/TransitMogul $(REV)"
 
 bundle_exe: all
 	@echo '[BUNDLE] Creating $(BUNDLE_NAME).exe'
 	$(Q)mkdir -p "$(BUNDLES_DIR)"
-	$(Q)unix2dos "$(ROOT_DIR)/docs/"*.txt "$(ROOT_DIR)/README.md" "$(ROOT_DIR)/COPYING" "$(ROOT_DIR)/changelog.txt" "$(ROOT_DIR)/known-bugs.txt"
+	$(Q)unix2dos "$(ROOT_DIR)/docs/"*.txt "$(ROOT_DIR)/README.md" "$(ROOT_DIR)/COPYING" "$(ROOT_DIR)/known-bugs.txt"
 	$(Q)cd $(ROOT_DIR)/os/windows/installer && makensis.exe //DVERSION_INCLUDE=version_$(PLATFORM).txt install.nsi
 	$(Q)mv $(ROOT_DIR)/os/windows/installer/*$(PLATFORM).exe "$(BUNDLES_DIR)/$(BUNDLE_NAME).exe"
 
@@ -168,7 +163,7 @@ install:
 	@echo '[INSTALL] Cannot install the OSX Application Bundle'
 else
 install: bundle
-	@echo '[INSTALL] Installing OpenTTD'
+	@echo '[INSTALL] Installing Transit Mogul'
 	$(Q)install -d "$(INSTALL_BINARY_DIR)"
 	$(Q)install -d "$(INSTALL_ICON_DIR)"
 	$(Q)install -d "$(INSTALL_DATA_DIR)/ai"
@@ -176,7 +171,7 @@ install: bundle
 	$(Q)install -d "$(INSTALL_DATA_DIR)/baseset"
 	$(Q)install -d "$(INSTALL_DATA_DIR)/lang"
 	$(Q)install -d "$(INSTALL_DATA_DIR)/scripts"
-ifeq ($(TTD), openttd.exe)
+ifeq ($(TTD), transit-mogul.exe)
 	$(Q)install -m 755 "$(BUNDLE_DIR)/$(TTD)" "$(INSTALL_BINARY_DIR)/${BINARY_NAME}.exe"
 else
 	$(Q)install -m 755 "$(BUNDLE_DIR)/$(TTD)" "$(INSTALL_BINARY_DIR)/${BINARY_NAME}"
@@ -190,29 +185,22 @@ ifndef DO_NOT_INSTALL_DOCS
 	$(Q)install -d "$(INSTALL_DOC_DIR)"
 	$(Q)install -m 644 "$(BUNDLE_DIR)/docs/"* "$(BUNDLE_DIR)/README.md" "$(BUNDLE_DIR)/known-bugs.txt" "$(INSTALL_DOC_DIR)"
 endif
-ifndef DO_NOT_INSTALL_CHANGELOG
-	$(Q)install -d "$(INSTALL_DOC_DIR)"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/changelog.txt" "$(INSTALL_DOC_DIR)"
-endif
 ifndef DO_NOT_INSTALL_LICENSE
 	$(Q)install -d "$(INSTALL_DOC_DIR)"
 	$(Q)install -m 644 "$(BUNDLE_DIR)/COPYING" "$(INSTALL_DOC_DIR)"
 endif
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.32.xpm" "$(INSTALL_ICON_DIR)/${BINARY_NAME}.32.xpm"
 ifdef ICON_THEME_DIR
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)"
-	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/16x16/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.16.png" "$(INSTALL_ICON_THEME_DIR)/16x16/apps/${BINARY_NAME}.png"
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/32x32/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.32.png" "$(INSTALL_ICON_THEME_DIR)/32x32/apps/${BINARY_NAME}.png"
+	$(Q)install -m 644 "$(BUNDLE_DIR)/media/transit-mogul.32.png" "$(INSTALL_ICON_THEME_DIR)/32x32/apps/${BINARY_NAME}.png"
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/48x48/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.48.png" "$(INSTALL_ICON_THEME_DIR)/48x48/apps/${BINARY_NAME}.png"
+	$(Q)install -m 644 "$(BUNDLE_DIR)/media/transit-mogul.48.png" "$(INSTALL_ICON_THEME_DIR)/48x48/apps/${BINARY_NAME}.png"
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/64x64/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.64.png" "$(INSTALL_ICON_THEME_DIR)/64x64/apps/${BINARY_NAME}.png"
+	$(Q)install -m 644 "$(BUNDLE_DIR)/media/transit-mogul.64.png" "$(INSTALL_ICON_THEME_DIR)/64x64/apps/${BINARY_NAME}.png"
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/128x128/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.128.png" "$(INSTALL_ICON_THEME_DIR)/128x128/apps/${BINARY_NAME}.png"
+	$(Q)install -m 644 "$(BUNDLE_DIR)/media/transit-mogul.128.png" "$(INSTALL_ICON_THEME_DIR)/128x128/apps/${BINARY_NAME}.png"
 	$(Q)install -d "$(INSTALL_ICON_THEME_DIR)/256x256/apps"
-	$(Q)install -m 644 "$(BUNDLE_DIR)/media/openttd.256.png" "$(INSTALL_ICON_THEME_DIR)/256x256/apps/${BINARY_NAME}.png"
+	$(Q)install -m 644 "$(BUNDLE_DIR)/media/transit-mogul.256.png" "$(INSTALL_ICON_THEME_DIR)/256x256/apps/${BINARY_NAME}.png"
 else
 	$(Q)install -m 644 "$(BUNDLE_DIR)/media/"*.png "$(INSTALL_ICON_DIR)"
 endif
@@ -224,6 +212,6 @@ endif
 endif
 ifdef MENU_DIR
 	$(Q)install -d "$(INSTALL_MENU_DIR)"
-	$(Q)install -m 644 "$(ROOT_DIR)/media/openttd.desktop.install" "$(INSTALL_MENU_DIR)/${BINARY_NAME}.desktop"
+	$(Q)install -m 644 "$(ROOT_DIR)/media/transit-mogul.desktop.install" "$(INSTALL_MENU_DIR)/${BINARY_NAME}.desktop"
 endif
 endif # OSXAPP

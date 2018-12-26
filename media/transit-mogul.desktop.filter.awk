@@ -1,4 +1,4 @@
-# $Id: openttd.desktop.translation.awk 19884 2010-05-22 19:59:37Z rubidium $
+# $Id: transit-mogul.desktop.translation.awk 19884 2010-05-22 19:59:37Z rubidium $
 
 # This file is part of OpenTTD.
 # OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.

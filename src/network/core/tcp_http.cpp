@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -45,14 +45,14 @@ NetworkHTTPSocketHandler::NetworkHTTPSocketHandler(SOCKET s,
 	redirect_depth(depth),
 	sock(s)
 {
-	size_t bufferSize = strlen(url) + strlen(host) + strlen(_openttd_revision) + (data == NULL ? 0 : strlen(data)) + 128;
+	size_t bufferSize = strlen(url) + strlen(host) + strlen(_transit_mogul_revision) + (data == NULL ? 0 : strlen(data)) + 128;
 	char *buffer = AllocaM(char, bufferSize);
 
 	DEBUG(net, 7, "[tcp/http] requesting %s%s", host, url);
 	if (data != NULL) {
-		seprintf(buffer, buffer + bufferSize - 1, "POST %s HTTP/1.0\r\nHost: %s\r\nUser-Agent: OpenTTD/%s\r\nContent-Type: text/plain\r\nContent-Length: %d\r\n\r\n%s\r\n", url, host, _openttd_revision, (int)strlen(data), data);
+		seprintf(buffer, buffer + bufferSize - 1, "POST %s HTTP/1.0\r\nHost: %s\r\nUser-Agent: transit_mogul/%s\r\nContent-Type: text/plain\r\nContent-Length: %d\r\n\r\n%s\r\n", url, host, _transit_mogul_revision, (int)strlen(data), data);
 	} else {
-		seprintf(buffer, buffer + bufferSize - 1, "GET %s HTTP/1.0\r\nHost: %s\r\nUser-Agent: OpenTTD/%s\r\n\r\n", url, host, _openttd_revision);
+		seprintf(buffer, buffer + bufferSize - 1, "GET %s HTTP/1.0\r\nHost: %s\r\nUser-Agent: transit_mogul/%s\r\n\r\n", url, host, _transit_mogul_revision);
 	}
 
 	ssize_t size = strlen(buffer);
@@ -140,7 +140,7 @@ int NetworkHTTPSocketHandler::HandleHeader()
 		*end_of_line = '\r';
 
 		/* Make sure we're going to download at least something;
-		 * zero sized files are, for OpenTTD's purposes, always
+		 * zero sized files are, for transit_mogul's purposes, always
 		 * wrong. You can't have gzips of 0 bytes! */
 		if (len == 0) return_error("[tcp/http] refusing to download 0 bytes");
 

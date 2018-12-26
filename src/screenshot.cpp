@@ -303,8 +303,8 @@ static bool MakePNGImage(const char *name, ScreenshotCallback *callb, void *user
 	png_text_struct text[2];
 	memset(text, 0, sizeof(text));
 	text[0].key = const_cast<char *>("Software");
-	text[0].text = const_cast<char *>(_openttd_revision);
-	text[0].text_length = strlen(_openttd_revision);
+	text[0].text = const_cast<char *>(_transit_mogul_revision);
+	text[0].text_length = strlen(_transit_mogul_revision);
 	text[0].compression = PNG_TEXT_COMPRESSION_NONE;
 
 	char buf[8192];

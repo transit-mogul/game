@@ -208,7 +208,6 @@ static const NWidgetPart _nested_select_game_widgets[] = {
 		NWidget(NWID_SPACER), SetMinimalSize(3, 0), SetFill(1, 0),
 		NWidget(WWT_IMGBTN_2, COLOUR_ORANGE, WID_SGI_TROPIC_LANDSCAPE), SetMinimalSize(77, 55),
 							SetDataTip(SPR_SELECT_SUB_TROPICAL, STR_INTRO_TOOLTIP_SUB_TROPICAL_LANDSCAPE),
-		NWidget(NWID_SPACER), SetMinimalSize(3, 0), SetFill(1, 0),
 		NWidget(NWID_SPACER), SetMinimalSize(10, 0), SetFill(1, 0),
 	EndContainer(),
 

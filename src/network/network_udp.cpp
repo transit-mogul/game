@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -191,7 +191,7 @@ void ServerNetworkUDPSocketHandler::Receive_CLIENT_FIND_SERVER(Packet *p, Networ
 
 	strecpy(ngi.map_name, _network_game_info.map_name, lastof(ngi.map_name));
 	strecpy(ngi.server_name, _settings_client.network.server_name, lastof(ngi.server_name));
-	strecpy(ngi.server_revision, _openttd_revision, lastof(ngi.server_revision));
+	strecpy(ngi.server_revision, _transit_mogul_revision, lastof(ngi.server_revision));
 
 	Packet packet(PACKET_UDP_SERVER_RESPONSE);
 	this->SendNetworkGameInfo(&packet, &ngi);

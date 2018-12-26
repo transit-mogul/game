@@ -1,10 +1,10 @@
 /* $Id$ */
 
 /*
- * This file is part of OpenTTD.
- * OpenTTD is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
- * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of transit_mogul.
+ * transit_mogul is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2.
+ * transit_mogul is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with transit_mogul. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /** @file network_admin.cpp Server part of the admin network protocol. */
@@ -172,7 +172,7 @@ NetworkRecvStatus ServerNetworkAdminSocketHandler::SendWelcome()
 	Packet *p = new Packet(ADMIN_PACKET_SERVER_WELCOME);
 
 	p->Send_string(_settings_client.network.server_name);
-	p->Send_string(_openttd_revision);
+	p->Send_string(_transit_mogul_revision);
 	p->Send_bool  (_network_dedicated);
 
 	p->Send_string(_network_game_info.map_name);
