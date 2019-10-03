@@ -2048,7 +2048,7 @@ CommandCost CmdBuyShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p1
 
 	if( flags & DC_EXEC )
 	{
-		OwnerByte *b = c->share_owners;
+		Owner *b = c->share_owners;
 
 		for( int i = 0; i < (100 / percent ); i++){
 		
@@ -2113,7 +2113,7 @@ CommandCost CmdSellShareInCompany( TileIndex tile, DoCommandFlag flags, uint32 p
 
 	if( flags & DC_EXEC ){
 
-		OwnerByte *b = c->share_owners;
+		Owner *b = c->share_owners;
 		
 		for( int i = 0; i < ( 100 / percent ); i++){
 		

@@ -1102,7 +1102,7 @@ static const SpriteID SPR_IMG_ZOOMIN          = 735;
 static const SpriteID SPR_IMG_ZOOMOUT         = 736;
 static const SpriteID SPR_IMG_BUILDRAIL       = 727;
 static const SpriteID SPR_IMG_BUILDROAD       = 728;
-static const SpriteID SPR_IMG_BUILDTRAMS      = SPR_OPENTTD_BASE + 179;
+static const SpriteID SPR_IMG_BUILDTRAMS      = SPR_TRANSIT_MOGUL_BASE + 179;
 static const SpriteID SPR_IMG_BUILDWATER      = 729;
 static const SpriteID SPR_IMG_BUILDAIR        = 730;
 static const SpriteID SPR_IMG_LANDSCAPING     = 4083;
@@ -1347,10 +1347,10 @@ static const SpriteID SPR_IMG_GOAL           = SPR_TRANSIT_MOGUL_BASE + 171;
 static const SpriteID SPR_IMG_GOAL_COMPLETED = SPR_TRANSIT_MOGUL_BASE + 172;
 static const SpriteID SPR_IMG_GOAL_BROKEN_REF= SPR_TRANSIT_MOGUL_BASE + 173;
 
-static const SpriteID SPR_IMG_CONVERT_ROAD           = SPR_OPENTTD_BASE + 180;
-static const CursorID SPR_CURSOR_CONVERT_ROAD        = SPR_OPENTTD_BASE + 181;
-static const SpriteID SPR_IMG_CONVERT_TRAM           = SPR_OPENTTD_BASE + 182;
-static const CursorID SPR_CURSOR_CONVERT_TRAM        = SPR_OPENTTD_BASE + 183;
+static const SpriteID SPR_IMG_CONVERT_ROAD           = SPR_TRANSIT_MOGUL_BASE + 180;
+static const CursorID SPR_CURSOR_CONVERT_ROAD        = SPR_TRANSIT_MOGUL_BASE + 181;
+static const SpriteID SPR_IMG_CONVERT_TRAM           = SPR_TRANSIT_MOGUL_BASE + 182;
+static const CursorID SPR_CURSOR_CONVERT_TRAM        = SPR_TRANSIT_MOGUL_BASE + 183;
 
 /* intro_gui.cpp, genworld_gui.cpp */
 static const SpriteID SPR_SELECT_TEMPERATE           = 4882;

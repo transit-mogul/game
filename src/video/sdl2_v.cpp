@@ -258,7 +258,7 @@ bool VideoDriver_SDL::CreateMainSurface(uint w, uint h, bool resize)
 	/* Free any previously allocated shadow surface */
 	if (_sdl_surface != nullptr && _sdl_surface != _sdl_realscreen) SDL_FreeSurface(_sdl_surface);
 
-	seprintf(caption, lastof(caption), "OpenTTD %s", _openttd_revision);
+	seprintf(caption, lastof(caption), "Transit Mogul %s", _transit_mogul_revision);
 
 	if (_sdl_window == nullptr) {
 		Uint32 flags = SDL_WINDOW_SHOWN;

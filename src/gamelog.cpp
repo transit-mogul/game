@@ -50,13 +50,13 @@ static const char * GetGamelogRevisionString()
 	assert_compile(lengthof(gamelog_revision) > GAMELOG_REVISION_LENGTH);
 
 	if (IsReleasedVersion()) {
-		return _openttd_revision;
+		return _transit_mogul_revision;
 	} else if (gamelog_revision[0] == 0) {
 		/* Prefix character indication revision status */
-		assert(_openttd_revision_modified < 3);
-		gamelog_revision[0] = "gum"[_openttd_revision_modified]; // g = "git", u = "unknown", m = "modified"
+		assert(_transit_mogul_revision_modified < 3);
+		gamelog_revision[0] = "gum"[_transit_mogul_revision_modified]; // g = "git", u = "unknown", m = "modified"
 		/* Append the revision hash */
-		strecat(gamelog_revision, _openttd_revision_hash, lastof(gamelog_revision));
+		strecat(gamelog_revision, _transit_mogul_revision_hash, lastof(gamelog_revision));
 		/* Truncate string to GAMELOG_REVISION_LENGTH bytes */
 		gamelog_revision[GAMELOG_REVISION_LENGTH - 1] = '\0';
 	}

@@ -7,6 +7,7 @@ description: |
   build a transit empire.
 grade: stable
 confinement: strict
+base: core
 apps:
   transit-mogul:
     command: desktop-launch $SNAP/opt/transit-mogul/transit-mogul
@@ -21,7 +22,8 @@ parts:
   abase:
     plugin: dump
     source: http://binaries.openttd.org/bananas/basegraphic/abase-0.1.2.tar.gz
-    install: |
+    override-build: |
+      snapcraft build
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/abase
       cp -r * $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/abase/
     after: [transit-mogul]
@@ -54,10 +56,9 @@ parts:
       - libx11-xcb1
       - timidity
       - zlib1g
-    build: |
+    override-build: |
       ./configure
       make -j$(nproc)
-    install: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/
       cp -r bin/* $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/
     after: [desktop-glib-only]
@@ -83,8 +84,8 @@ parts:
     build-packages:
       - dos2unix
       - python
-    build: make
-    install: |
+    override-build: |
+      make
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/openmsx/
       cp openmsx.obm $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/openmsx/
       cp src/* $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/openmsx/
@@ -95,8 +96,8 @@ parts:
     source: https://binaries.openttd.org/extra/opensfx/0.2.3/opensfx-0.2.3-source.tar.gz
     build-packages:
       - catcodec
-    build: make
-    install: |
+    override-build: |
+      make
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/opensfx/
       cp opensfx.cat $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/opensfx/
       cp opensfx.obs $SNAPCRAFT_PART_INSTALL/opt/transit-mogul/baseset/opensfx/
