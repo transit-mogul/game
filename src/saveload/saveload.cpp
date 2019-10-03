@@ -55,7 +55,7 @@
 #include "../safeguards.h"
 
 // Minusing 201 instead of 1 below to reset savefile version for Transit Mogul
-extern const SaveLoadVersion SAVEGAME_VERSION = (SaveLoadVersion)(SL_MAX_VERSION - 201); ///< Current savegame version of Transit Mogul.
+extern const SaveLoadVersion SAVEGAME_VERSION = (SaveLoadVersion)(SL_MAX_VERSION - 1); ///< Current savegame version of Transit Mogul.
 
 SavegameType _savegame_type; ///< type of savegame we are loading
 FileToSaveLoad _file_to_saveload; ///< File to save or load in the openttd loop.
